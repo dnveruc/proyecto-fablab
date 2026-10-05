@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- STREAMING_CHUNK:Configurando metadatos y fuentes -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitácora I+D | Riego Inteligente | FabLab</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Courier+Prime&family=Inter:wght@300;400;600&display=swap');
+    </style>
+    <!-- STREAMING_CHUNK:Configurando Tailwind y animaciones personalizadas -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['Courier Prime', 'monospace'],
+                    },
+                    colors: {
+                        rustic: {
+                            bg: '#F5F4F0',
+                            dark: '#2D2B2A',
+                            accent: '#8C7D70',
+                            border: '#D1CCC5'
+                        },
+                        sage: '#9CA38F',       // Verde apagado para representar plantas/naturaleza
+                        dustyBlue: '#8C9A9E'   // Azul grisáceo para agua y tecnología
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'float-delayed': 'float 8s ease-in-out 2s infinite',
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'water-rise': 'waterRise 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+                        'water-rise-delayed': 'waterRise 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.3s forwards',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-15px)' },
+                        },
+                        waterRise: {
+                            '0%': { transform: 'translateY(40px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-rustic-bg text-rustic-dark font-sans selection:bg-dustyBlue selection:text-white antialiased relative">
+
+    <!-- STREAMING_CHUNK:Añadiendo el fondo abstracto animado -->
+    <!-- Fondo fijo con formas abstractas (Riego / Naturaleza / Datos) -->
+    <div class="fixed inset-0 z-[-1] overflow-hidden pointer-events-none bg-rustic-bg">
+        <!-- Onda de agua / Flujo de datos superior -->
+        <svg class="absolute top-[10%] left-[-10%] w-[120%] h-auto text-dustyBlue opacity-10 animate-float" viewBox="0 0 1440 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 160L48 170.7C96 181 192 203 288 186.7C384 171 480 117 576 112C672 107 768 149 864 165.3C960 181 1056 171 1152 144C1248 117 1344 75 1392 53.3L1440 32" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+        </svg>
+
+        <!-- Onda de agua / Flujo de datos inferior -->
+        <svg class="absolute bottom-[5%] left-[-5%] w-[110%] h-auto text-sage opacity-[0.08] animate-float-delayed" viewBox="0 0 1440 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 256L60 229.3C120 203 240 149 360 144C480 139 600 181 720 186.7C840 192 960 160 1080 149.3C1200 139 1320 149 1380 154.7L1440 160" stroke="currentColor" stroke-width="4" stroke-dasharray="10 10"/>
+        </svg>
+
+        <!-- Gotas / Nodos de sensores abstractos -->
+        <div class="absolute top-1/3 left-1/4 w-3 h-3 rounded-full border border-dustyBlue opacity-20 animate-pulse-slow"></div>
+        <div class="absolute bottom-1/4 right-1/3 w-4 h-4 rounded-full bg-sage opacity-10 animate-float"></div>
+        <div class="absolute top-1/2 right-1/4 w-2 h-2 rounded-full bg-dustyBlue opacity-30 animate-pulse-slow"></div>
+
+        <!-- Forma de hoja / Raíz abstracta -->
+        <svg class="absolute bottom-20 left-10 w-40 h-40 text-sage opacity-[0.04] animate-float" viewBox="0 0 100 100" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10 90 C 10 40, 50 10, 90 10 C 90 50, 50 90, 10 90 Z" />
+        </svg>
+    </div>
+
+    <!-- STREAMING_CHUNK:Pantalla de Bienvenida interactiva -->
+    <!-- PANTALLA DE BIENVENIDA -->
+    <div id="pantalla-bienvenida" class="fixed inset-0 bg-rustic-bg/95 backdrop-blur-sm flex flex-col items-center justify-center transition-all duration-700 z-40">
+        <div class="text-center opacity-0 animate-water-rise">
+            <h1 class="text-2xl md:text-4xl font-mono mb-2 tracking-widest uppercase text-rustic-accent">ECOMODULAR</h1>
+            <p class="text-sage font-mono tracking-widest mb-10 text-sm md:text-base">[ Sistema Modular Intligente para Cultivo Urbano ]</p>
+        </div>
+        <button onclick="entrarBitacora()" class="opacity-0 animate-water-rise-delayed border-2 border-rustic-dark px-10 py-3 text-lg font-semibold tracking-wider hover:bg-dustyBlue hover:border-dustyBlue hover:text-white transition-colors duration-300 relative overflow-hidden group">
+            <span class="relative z-10">BIENVENIDO</span>
+            <!-- Efecto de agua llenando el botón -->
+            <div class="absolute inset-0 bg-dustyBlue transform scale-y-0 origin-bottom group-hover:scale-y-100 transition-transform duration-500 ease-out z-0"></div>
+        </button>
+    </div>
+
+    <!-- STREAMING_CHUNK:Estructura principal y cabecera -->
+    <!-- CONTENIDO PRINCIPAL -->
+    <div id="contenido-principal" class="hidden min-h-screen opacity-0 transition-opacity duration-1000 pb-20 relative z-10">
+        
+        <header class="border-b border-rustic-border/50 backdrop-blur-md bg-rustic-bg/80 sticky top-0 py-6 px-8 md:px-16 flex flex-col md:flex-row justify-between items-baseline z-20">
+            <h2 class="text-3xl font-mono font-bold tracking-tight">Bitácora Visual</h2>
+            <div class="flex space-x-4 mt-2 md:mt-0">
+                <span class="text-sm font-mono tracking-widest text-dustyBlue uppercase flex items-center gap-2">
+                    <span class="w-2 h-2 rounded-full bg-dustyBlue animate-pulse-slow"></span> Ecomodular.
+                </span>
+                <span class="text-sm font-mono tracking-widest text-rustic-accent uppercase">| FabLab</span>
+            </div>
+        </header>
+
+        <main class="max-w-5xl mx-auto px-6 mt-16 space-y-24">
+            
+            <!-- STREAMING_CHUNK:Sección El Origen -->
+            <!-- Origen del Proyecto -->
+            <section>
+                <div class="flex items-center mb-6">
+                    <div class="w-8 h-[2px] bg-sage mr-4"></div>
+                    <h3 class="text-2xl font-mono uppercase tracking-wide">El Origen</h3>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                    <div class="space-y-4 text-lg leading-relaxed text-gray-700 font-light">
+                        <p>
+                            Documentación del proceso de investigación y desarrollo (I+D) en el FabLab. Buscamos crear soluciones tangibles mediante la fabricación digital y optimización de procesos.
+                        </p>
+                        <p class="text-base text-rustic-accent border-l-2 border-dustyBlue pl-4 py-1 italic bg-white/40">
+                            Nuestro enfoque actual: Un ecosistema de riego inteligente que lee su entorno y dosifica el agua con precisión, uniendo hardware, software y naturaleza.
+                        </p>
+                    </div>
+                   <!-- Contenedor de la foto del equipo -->
+<div class="flex items-center justify-center w-full mt-2 md:mt-0 relative group">
+    <div class="absolute inset-0 bg-sage/20 translate-x-3 translate-y-3 rounded-xl transition-transform group-hover:translate-x-1 group-hover:translate-y-1"></div>
+    <div class="w-full h-64 bg-gray-200 rounded-xl border border-rustic-border flex items-center justify-center relative z-10 overflow-hidden">
+        <!-- Imagen integrada -->
+        <img src="fotogrupo.jpg" alt="Foto del equipo FabLab" class="w-full h-full object-cover">
+    </div>
+</div>
+                </div>
+            </section>
+
+            <!-- STREAMING_CHUNK:Sección El Equipo -->
+            <!-- El Equipo (Tarjetas) -->
+            <section>
+                <div class="flex items-center mb-8">
+                    <div class="w-8 h-[2px] bg-dustyBlue mr-4"></div>
+                    <h3 class="text-2xl font-mono uppercase tracking-wide">El Equipo</h3>
+                </div>
+                
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                    <!-- Tarjeta Dennys -->
+                    <button onclick="abrirModal('modal-dennys')" class="border border-rustic-border bg-white/70 backdrop-blur-sm hover:-translate-y-1 hover:border-dustyBlue hover:shadow-lg hover:shadow-dustyBlue/10 transition-all duration-300 text-left group relative overflow-hidden">
+                        <div class="h-48 bg-gray-100 flex items-center justify-center border-b border-rustic-border group-hover:bg-gray-200 transition-colors">
+                            <span class="text-xs text-gray-400 font-mono">[Foto de Perfil]</span>
+                        </div>
+                        <div class="p-4 relative bg-white">
+                            <h4 class="font-bold text-xl uppercase text-rustic-dark group-hover:text-dustyBlue transition-colors">Dennys</h4>
+                            <p class="text-sm text-rustic-accent font-mono mt-1 group-hover:text-sage transition-colors">Ver perfil →</p>
+                        </div>
+                    </button>
+
+                    <!-- Tarjeta Integrante 2 -->
+                    <button onclick="abrirModal('modal-int2')" class="border border-rustic-border bg-white/70 backdrop-blur-sm hover:-translate-y-1 hover:border-sage hover:shadow-lg hover:shadow-sage/10 transition-all duration-300 text-left group">
+                        <div class="h-48 bg-gray-100 flex items-center justify-center border-b border-rustic-border group-hover:bg-gray-200 transition-colors">
+                            <span class="text-xs text-gray-400 font-mono">[Foto de Perfil]</span>
+                        </div>
+                        <div class="p-4 bg-white">
+                            <h4 class="font-bold text-xl uppercase text-rustic-dark group-hover:text-sage transition-colors">Nombre 2</h4>
+                            <p class="text-sm text-rustic-accent font-mono mt-1 group-hover:text-dustyBlue transition-colors">Ver perfil →</p>
+                        </div>
+                    </button>
+
+                    <!-- Tarjeta Integrante 3 -->
+                    <button onclick="abrirModal('modal-int3')" class="border border-rustic-border bg-white/70 backdrop-blur-sm hover:-translate-y-1 hover:border-dustyBlue hover:shadow-lg hover:shadow-dustyBlue/10 transition-all duration-300 text-left group">
+                        <div class="h-48 bg-gray-100 flex items-center justify-center border-b border-rustic-border group-hover:bg-gray-200 transition-colors">
+                            <span class="text-xs text-gray-400 font-mono">[Foto de Perfil]</span>
+                        </div>
+                        <div class="p-4 bg-white">
+                            <h4 class="font-bold text-xl uppercase text-rustic-dark group-hover:text-dustyBlue transition-colors">Nombre 3</h4>
+                            <p class="text-sm text-rustic-accent font-mono mt-1 group-hover:text-sage transition-colors">Ver perfil →</p>
+                        </div>
+                    </button>
+                </div>
+            </section>
+
+            <!-- STREAMING_CHUNK:Sección Registro Semanal -->
+            <!-- Registro Semanal (Tarjetas/Galería) -->
+            <section>
+                <div class="flex items-center mb-10">
+                    <div class="w-8 h-[2px] bg-rustic-dark mr-4"></div>
+                    <h3 class="text-2xl font-mono uppercase tracking-wide">Registro Semanal</h3>
+                </div>
+                
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                    <!-- Tarjeta Semana 1 -->
+                    <button onclick="abrirModal('modal-semana1')" class="border border-rustic-border bg-white/70 backdrop-blur-sm hover:-translate-y-1 hover:border-sage hover:shadow-lg hover:shadow-sage/10 transition-all duration-300 text-left group flex flex-col h-full">
+                        <div class="h-40 w-full bg-gray-100 flex items-center justify-center border-b border-rustic-border group-hover:bg-gray-200 transition-colors relative overflow-hidden">
+                            <span class="text-xs text-gray-400 font-mono">[Foto Sensor/Plano]</span>
+                            <div class="absolute top-2 left-2 bg-sage text-white text-xs font-mono px-2 py-1 uppercase tracking-wider">S-01</div>
+                        </div>
+                        <div class="p-4 bg-white flex-grow">
+                            <h4 class="font-bold text-lg group-hover:text-sage transition-colors">Ideación y Sensores</h4>
+                            <p class="text-sm text-rustic-accent font-mono mt-2 flex items-center gap-1 group-hover:text-dustyBlue transition-colors">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg> Abrir registro
+                            </p>
+                        </div>
+                    </button>
+
+                    <!-- Tarjeta Semana 2 (Pendiente) -->
+                    <div class="border border-rustic-border bg-white/40 backdrop-blur-sm opacity-60 text-left flex flex-col h-full">
+                        <div class="h-40 flex items-center justify-center border-b border-rustic-border border-dashed relative">
+                            <span class="text-xs text-gray-400 font-mono">[Próximamente]</span>
+                            <div class="absolute top-2 left-2 bg-rustic-border text-white text-xs font-mono px-2 py-1 uppercase tracking-wider">S-02</div>
+                        </div>
+                        <div class="p-4 flex-grow">
+                            <h4 class="font-bold text-lg text-gray-500">Diseño de Carcasa</h4>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- STREAMING_CHUNK:Modales de integrantes -->
+    <!-- ============================================== -->
+    <!-- ZONA DE VENTANAS EMERGENTES (MODALES)          -->
+    <!-- ============================================== -->
+
+    <!-- Modal Dennys -->
+    <div id="modal-dennys" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 transition-opacity duration-300 opacity-0">
+        <div class="absolute inset-0 bg-rustic-dark/80 backdrop-blur-sm" onclick="cerrarModal('modal-dennys')"></div>
+        <div class="bg-rustic-bg border-l-4 border-dustyBlue p-8 max-w-2xl w-full relative z-10 shadow-2xl">
+            <button onclick="cerrarModal('modal-dennys')" class="absolute top-4 right-4 text-3xl font-mono text-rustic-accent hover:text-red-600 transition-colors leading-none">&times;</button>
+            <h3 class="text-3xl font-mono font-bold mb-1 uppercase">Dennys</h3>
+            <p class="text-dustyBlue font-mono mb-6 tracking-widest text-sm uppercase">Ingeniería Industrial / CAD</p>
+            <div class="flex flex-col md:flex-row gap-6">
+                <div class="w-full md:w-1/3 h-48 bg-gray-200 flex items-center justify-center border border-rustic-border">
+                     <span class="text-xs text-gray-500 font-mono">[Foto]</span>
+                </div>
+                <div class="w-full md:w-2/3 space-y-4 text-gray-700 font-light text-base leading-relaxed">
+                    <p>Enfoque en modelado CAD, estudio de tiempos y optimización del prototipo para el sistema de riego.</p>
+                    <p>Desarrollo de las carcasas protectoras para la electrónica asegurando resistencia a la humedad e integración estética con la maceta.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Integrante 2 -->
+    <div id="modal-int2" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 transition-opacity duration-300 opacity-0">
+        <div class="absolute inset-0 bg-rustic-dark/80 backdrop-blur-sm" onclick="cerrarModal('modal-int2')"></div>
+        <div class="bg-rustic-bg border-l-4 border-sage p-8 max-w-2xl w-full relative z-10 shadow-2xl">
+            <button onclick="cerrarModal('modal-int2')" class="absolute top-4 right-4 text-3xl font-mono text-rustic-accent hover:text-red-600 transition-colors leading-none">&times;</button>
+            <h3 class="text-3xl font-mono font-bold mb-1 uppercase">Nombre 2</h3>
+            <p class="text-sage font-mono mb-6 tracking-widest text-sm uppercase">Electrónica / IoT</p>
+            <div class="flex flex-col md:flex-row gap-6">
+                <div class="w-full md:w-1/3 h-48 bg-gray-200 flex items-center justify-center border border-rustic-border">
+                     <span class="text-xs text-gray-500 font-mono">[Foto]</span>
+                </div>
+                <div class="w-full md:w-2/3 space-y-4 text-gray-700 font-light text-base leading-relaxed">
+                    <p>Programación del microcontrolador y calibración de los sensores de humedad del suelo.</p>
+                    <p>Diseño del circuito lógico para la activación eficiente de la bomba de agua minimizando el consumo energético.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Integrante 3 -->
+    <div id="modal-int3" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 transition-opacity duration-300 opacity-0">
+        <div class="absolute inset-0 bg-rustic-dark/80 backdrop-blur-sm" onclick="cerrarModal('modal-int3')"></div>
+        <div class="bg-rustic-bg border-l-4 border-rustic-accent p-8 max-w-2xl w-full relative z-10 shadow-2xl">
+            <button onclick="cerrarModal('modal-int3')" class="absolute top-4 right-4 text-3xl font-mono text-rustic-accent hover:text-red-600 transition-colors leading-none">&times;</button>
+            <h3 class="text-3xl font-mono font-bold mb-1 uppercase">Nombre 3</h3>
+            <p class="text-rustic-accent font-mono mb-6 tracking-widest text-sm uppercase">Botánica / Diseño de Experiencia</p>
+            <div class="flex flex-col md:flex-row gap-6">
+                <div class="w-full md:w-1/3 h-48 bg-gray-200 flex items-center justify-center border border-rustic-border">
+                     <span class="text-xs text-gray-500 font-mono">[Foto]</span>
+                </div>
+                <div class="w-full md:w-2/3 space-y-4 text-gray-700 font-light text-base leading-relaxed">
+                    <p>Investigación sobre requerimientos hídricos de plantas de interior para calibrar los algoritmos de riego.</p>
+                    <p>Documentación visual y diseño de la interfaz para asegurar que el sistema sea amigable para el usuario final.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- STREAMING_CHUNK:Modal de Registro Semanal y Scripts -->
+    <!-- Modal Semana 1 -->
+    <div id="modal-semana1" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 transition-opacity duration-300 opacity-0">
+        <div class="absolute inset-0 bg-rustic-dark/90 backdrop-blur-sm" onclick="cerrarModal('modal-semana1')"></div>
+        <div class="bg-white border border-rustic-border p-8 max-w-4xl w-full relative z-10 max-h-[90vh] overflow-y-auto shadow-2xl">
+            <button onclick="cerrarModal('modal-semana1')" class="absolute top-4 right-4 text-3xl font-mono text-rustic-accent hover:text-red-600 transition-colors leading-none">&times;</button>
+            
+            <div class="mb-6 border-b border-rustic-border pb-4">
+                <span class="bg-sage text-white text-sm font-mono px-3 py-1 uppercase tracking-widest mr-3">Semana 1</span>
+                <h3 class="text-2xl md:text-3xl font-mono font-bold mt-4 text-rustic-dark">Ideación y Selección de Sensores</h3>
+            </div>
+            
+            <div class="space-y-6 text-gray-700 font-light text-lg">
+                <p>Planteamiento del problema: El exceso o falta de agua es la principal causa de muerte en plantas de interior. Comenzamos a explorar cómo los sensores capacitivos de humedad pueden darnos lecturas más estables que los resistivos.</p>
+                
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8">
+                    <div class="bg-gray-100 h-64 flex flex-col items-center justify-center border border-rustic-border p-4 relative group">
+                        <span class="text-xs text-dustyBlue font-mono mb-2">[Foto Circuito]</span>
+                        <p class="text-sm font-mono text-center text-rustic-accent">Pruebas iniciales con NodeMCU y sensor capacitivo.</p>
+                    </div>
+                    <div class="bg-gray-100 h-64 flex flex-col items-center justify-center border border-rustic-border p-4 relative group">
+                        <span class="text-xs text-sage font-mono mb-2">[Foto Boceto Maceta]</span>
+                        <p class="text-sm font-mono text-center text-rustic-accent">Trazos de integración del hardware en la base de la maceta.</p>
+                    </div>
+                </div>
+                <p class="text-base mt-4 text-rustic-accent">Próximo paso: Imprimir las primeras pruebas en 3D para evaluar tolerancias de la bomba de agua pequeña.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================== -->
+    <!-- SCRIPTS                                        -->
+    <!-- ============================================== -->
+    <script>
+        // Transición de la pantalla de bienvenida
+        function entrarBitacora() {
+            const bienvenida = document.getElementById('pantalla-bienvenida');
+            const principal = document.getElementById('contenido-principal');
+            
+            bienvenida.style.opacity = '0';
+            setTimeout(() => {
+                bienvenida.classList.add('hidden'); 
+                principal.classList.remove('hidden'); 
+                setTimeout(() => { 
+                    principal.style.opacity = '1'; 
+                    // Aseguramos que el contenido principal aparezca con un ligero retraso
+                }, 100);
+            }, 700);
+        }
+
+        // Funciones para abrir y cerrar las ventanas emergentes
+        function abrirModal(id) {
+            const modal = document.getElementById(id);
+            modal.classList.remove('hidden');
+            
+            // Forzamos un reflujo para que la transición CSS de opacidad funcione
+            void modal.offsetWidth;
+            
+            modal.classList.remove('opacity-0');
+            document.body.style.overflow = 'hidden'; // Prevenir scroll
+        }
+
+        function cerrarModal(id) {
+            const modal = document.getElementById(id);
+            modal.classList.add('opacity-0');
+            
+            setTimeout(() => { 
+                modal.classList.add('hidden'); 
+            }, 300); // Coincide con la duración de la transición en Tailwind
+            
+            document.body.style.overflow = 'auto'; // Restaurar scroll
+        }
+
+        // Permitir cerrar modal con la tecla ESC
+        document.addEventListener('keydown', function(event) {
+            if (event.key === "Escape") {
+                const modales = document.querySelectorAll('[id^="modal-"]:not(.hidden)');
+                modales.forEach(modal => {
+                    cerrarModal(modal.id);
+                });
+            }
+        });
+    </script>
+</body>
+</html>
+```eof

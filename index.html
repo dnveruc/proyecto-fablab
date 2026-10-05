@@ -413,20 +413,3 @@
     </script>
 </body>
 </html>
-```eof
-            document.body.style.overflow = 'auto'; // Restaurar scroll
-        }
-
-        // Permitir cerrar modal con la tecla ESC
-        document.addEventListener('keydown', function(event) {
-            if (event.key === "Escape") {
-                const modales = document.querySelectorAll('[id^="modal-"]:not(.hidden)');
-                modales.forEach(modal => {
-                    cerrarModal(modal.id);
-                });
-            }
-        });
-    </script>
-</body>
-</html>
-```eof

@@ -25,24 +25,25 @@
                             accent: '#8C7D70',
                             border: '#D1CCC5'
                         },
-                        sage: '#9CA38F',       // Verde apagado para representar plantas/naturaleza
-                        dustyBlue: '#8C9A9E'   // Azul grisáceo para agua y tecnología
+                        leaf: '#798C64',   // Verde salvia (Plantas)
+                        water: '#5B8291',  // Azul rústico (Agua)
+                        clay: '#D97950'    // Naranja arcilla (Tierra/Tecnología)
                     },
                     animation: {
-                        'float': 'float 6s ease-in-out infinite',
-                        'float-delayed': 'float 8s ease-in-out 2s infinite',
-                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-                        'water-rise': 'waterRise 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards',
-                        'water-rise-delayed': 'waterRise 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.3s forwards',
+                        'float-slow': 'float 6s ease-in-out infinite',
+                        'float-fast': 'float 4s ease-in-out infinite',
+                        'float-delayed': 'float 7s ease-in-out 2s infinite',
+                        'pulse-soft': 'pulseSoft 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'spin-slow': 'spin 12s linear infinite',
                     },
                     keyframes: {
                         float: {
-                            '0%, 100%': { transform: 'translateY(0)' },
-                            '50%': { transform: 'translateY(-15px)' },
+                            '0%, 100%': { transform: 'translateY(0) rotate(0deg)' },
+                            '50%': { transform: 'translateY(-15px) rotate(2deg)' },
                         },
-                        waterRise: {
-                            '0%': { transform: 'translateY(40px)', opacity: '0' },
-                            '100%': { transform: 'translateY(0)', opacity: '1' },
+                        pulseSoft: {
+                            '0%, 100%': { opacity: '1', transform: 'scale(1)' },
+                            '50%': { opacity: '0.7', transform: 'scale(0.95)' },
                         }
                     }
                 }
@@ -77,19 +78,69 @@
     </div>
 
     <!-- STREAMING_CHUNK:Pantalla de Bienvenida interactiva -->
-    <!-- PANTALLA DE BIENVENIDA -->
-    <div id="pantalla-bienvenida" class="fixed inset-0 bg-rustic-bg/95 backdrop-blur-sm flex flex-col items-center justify-center transition-all duration-700 z-40">
-        <div class="text-center opacity-0 animate-water-rise">
-            <h1 class="text-2xl md:text-4xl font-mono mb-2 tracking-widest uppercase text-rustic-accent">ECOMODULAR</h1>
-            <p class="text-sage font-mono tracking-widest mb-10 text-sm md:text-base">[ Sistema Modular Intligente para Cultivo Urbano ]</p>
-        </div>
-        <button onclick="entrarBitacora()" class="opacity-0 animate-water-rise-delayed border-2 border-rustic-dark px-10 py-3 text-lg font-semibold tracking-wider hover:bg-dustyBlue hover:border-dustyBlue hover:text-white transition-colors duration-300 relative overflow-hidden group">
-            <span class="relative z-10">BIENVENIDO</span>
-            <!-- Efecto de agua llenando el botón -->
-            <div class="absolute inset-0 bg-dustyBlue transform scale-y-0 origin-bottom group-hover:scale-y-100 transition-transform duration-500 ease-out z-0"></div>
-        </button>
-    </div>
+   <!-- PANTALLA DE BIENVENIDA -->
+    <div id="pantalla-bienvenida" class="fixed inset-0 bg-rustic-bg flex flex-col items-center justify-center transition-all duration-[1500ms] z-50 overflow-hidden">
+        
+        <!-- ELEMENTOS DE FONDO ANIMADOS -->
+        <!-- Círculos decorativos abstractos -->
+        <div class="absolute w-[30rem] h-[30rem] border border-water/20 rounded-full animate-float-slow -top-20 -left-20"></div>
+        <div class="absolute w-[40rem] h-[40rem] border border-leaf/10 rounded-full animate-float-delayed -bottom-40 -right-20"></div>
+        <div class="absolute w-64 h-64 border border-clay/20 rounded-full animate-float-fast top-1/4 right-10"></div>
 
+        <!-- Corriente de agua abstracta (Fondo) -->
+        <div class="absolute bottom-0 left-0 w-full opacity-[0.08] pointer-events-none">
+            <svg viewBox="0 0 1440 320" class="w-full text-water" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0,192L48,186.7C96,181,192,171,288,181.3C384,192,480,224,576,218.7C672,213,768,171,864,154.7C960,139,1056,149,1152,160C1248,171,1344,181,1392,186.7L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+            </svg>
+        </div>
+
+        <!-- CONTENEDOR CENTRAL (Tarjeta de cristal) -->
+        <div class="relative z-10 flex flex-col items-center p-10 md:p-16 rounded-3xl bg-white/40 backdrop-blur-md border border-white/60 shadow-2xl shadow-water/10 max-w-2xl w-[90%] text-center">
+            
+            <!-- Composición de íconos (Planta + Agua + Circuito) -->
+            <div class="relative mb-8 w-32 h-32 flex items-center justify-center">
+                <!-- Circuito/Tuerca (Naranja/Arcilla) -->
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="absolute w-24 h-24 text-clay opacity-30 animate-spin-slow">
+                    <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke-dasharray="4 4"/>
+                    <path d="M8 12H16M12 8V16"/>
+                </svg>
+                <!-- Hoja (Verde/Salvia) -->
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="absolute w-20 h-20 text-leaf animate-float-slow bg-white rounded-full p-2 shadow-inner">
+                    <path d="M12 22V12M12 12C12 12 9 7 4 5C4 5 5 10 12 12ZM12 12C12 12 16 8 20 8C20 8 19 13 12 12Z" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <!-- Gota de agua (Azul/Agua) -->
+                <div class="absolute -bottom-2 -right-4 animate-float-fast">
+                    <svg viewBox="0 0 24 24" fill="currentColor" class="w-10 h-10 text-water drop-shadow-md">
+                        <path d="M12 21.5C16.1421 21.5 19.5 18.1421 19.5 14C19.5 9 12 2.5 12 2.5C12 2.5 4.5 9 4.5 14C4.5 18.1421 7.85786 21.5 12 21.5Z"/>
+                    </svg>
+                </div>
+            </div>
+
+            <!-- Textos -->
+            <h1 class="text-3xl md:text-5xl font-mono mb-4 tracking-widest uppercase text-rustic-dark font-bold">
+                <span class="block text-xl md:text-2xl text-clay mb-2 font-light">Proyecto I+D</span>
+                Riego Inteligente
+            </h1>
+            
+            <p class="text-leaf font-mono tracking-widest mb-10 text-sm md:text-base font-semibold border-b border-water/30 pb-4 inline-block px-8">
+                FABLAB // INNOVACIÓN ORGÁNICA
+            </p>
+            
+           <!-- Botón interactivo Sobrio con colores alrededor -->
+            <div class="group relative inline-block p-[2px] cursor-pointer" onclick="entrarBitacora()">
+                <!-- Borde de color (arcilla, salvia y océano) -->
+                <div class="absolute inset-0 bg-gradient-to-r from-clay via-leaf to-water opacity-50 group-hover:opacity-100 transition-opacity duration-500"></div>
+                
+                <!-- Interior del botón: Oscuro y minimalista -->
+                <button class="relative flex items-center justify-center gap-3 w-full h-full px-8 md:px-12 py-4 font-mono font-bold tracking-widest uppercase text-rustic-bg bg-rustic-dark transition-colors duration-300 group-hover:bg-[#1a1918]">
+                    Ingresar a la Bitácora
+                    <svg class="w-5 h-5 text-leaf group-hover:translate-x-2 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
     <!-- STREAMING_CHUNK:Estructura principal y cabecera -->
     <!-- CONTENIDO PRINCIPAL -->
     <div id="contenido-principal" class="hidden min-h-screen opacity-0 transition-opacity duration-1000 pb-20 relative z-10">
@@ -347,6 +398,22 @@
                 modal.classList.add('hidden'); 
             }, 300); // Coincide con la duración de la transición en Tailwind
             
+            document.body.style.overflow = 'auto'; // Restaurar scroll
+        }
+
+        // Permitir cerrar modal con la tecla ESC
+        document.addEventListener('keydown', function(event) {
+            if (event.key === "Escape") {
+                const modales = document.querySelectorAll('[id^="modal-"]:not(.hidden)');
+                modales.forEach(modal => {
+                    cerrarModal(modal.id);
+                });
+            }
+        });
+    </script>
+</body>
+</html>
+```eof
             document.body.style.overflow = 'auto'; // Restaurar scroll
         }
 

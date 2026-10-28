@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <!-- STREAMING_CHUNK:Configurando metadatos y fuentes -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bitácora I+D | YuraFab | FabLab</title>
@@ -9,7 +8,6 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Courier+Prime&family=Inter:wght@300;400;600&display=swap');
     </style>
-    <!-- STREAMING_CHUNK:Configurando Tailwind y animaciones personalizadas -->
     <script>
         tailwind.config = {
             theme: {
@@ -25,9 +23,11 @@
                             accent: '#8C7D70',
                             border: '#D1CCC5'
                         },
-                        leaf: '#798C64',   // Verde salvia (Plantas)
-                        water: '#5B8291',  // Azul rústico (Agua)
-                        clay: '#D97950'    // Naranja arcilla (Tierra/Tecnología)
+                        leaf: '#798C64',
+                        water: '#5B8291',
+                        clay: '#D97950',
+                        sage: '#8F9E8B',
+                        dustyBlue: '#7C98AB'
                     },
                     animation: {
                         'float-slow': 'float 6s ease-in-out infinite',
@@ -53,62 +53,25 @@
 </head>
 <body class="bg-rustic-bg text-rustic-dark font-sans selection:bg-dustyBlue selection:text-white antialiased relative">
 
-    <!-- STREAMING_CHUNK:Añadiendo el fondo abstracto animado -->
-    <!-- Fondo fijo con formas abstractas (Riego / Naturaleza / Datos) -->
     <div class="fixed inset-0 z-[-1] overflow-hidden pointer-events-none bg-rustic-bg">
-        <!-- Onda de agua / Flujo de datos superior -->
         <svg class="absolute top-[10%] left-[-10%] w-[120%] h-auto text-dustyBlue opacity-10 animate-float" viewBox="0 0 1440 320" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M0 160L48 170.7C96 181 192 203 288 186.7C384 171 480 117 576 112C672 107 768 149 864 165.3C960 181 1056 171 1152 144C1248 117 1344 75 1392 53.3L1440 32" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
         </svg>
-
-        <!-- Onda de agua / Flujo de datos inferior -->
         <svg class="absolute bottom-[5%] left-[-5%] w-[110%] h-auto text-sage opacity-[0.08] animate-float-delayed" viewBox="0 0 1440 320" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M0 256L60 229.3C120 203 240 149 360 144C480 139 600 181 720 186.7C840 192 960 160 1080 149.3C1200 139 1320 149 1380 154.7L1440 160" stroke="currentColor" stroke-width="4" stroke-dasharray="10 10"/>
         </svg>
-
-        <!-- Gotas / Nodos de sensores abstractos -->
-        <div class="absolute top-1/3 left-1/4 w-3 h-3 rounded-full border border-dustyBlue opacity-20 animate-pulse-slow"></div>
-        <div class="absolute bottom-1/4 right-1/3 w-4 h-4 rounded-full bg-sage opacity-10 animate-float"></div>
-        <div class="absolute top-1/2 right-1/4 w-2 h-2 rounded-full bg-dustyBlue opacity-30 animate-pulse-slow"></div>
-
-        <!-- Forma de hoja / Raíz abstracta -->
-        <svg class="absolute bottom-20 left-10 w-40 h-40 text-sage opacity-[0.04] animate-float" viewBox="0 0 100 100" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-            <path d="M10 90 C 10 40, 50 10, 90 10 C 90 50, 50 90, 10 90 Z" />
-        </svg>
     </div>
 
-    <!-- STREAMING_CHUNK:Pantalla de Bienvenida interactiva -->
-   <!-- PANTALLA DE BIENVENIDA -->
     <div id="pantalla-bienvenida" class="fixed inset-0 bg-rustic-bg flex flex-col items-center justify-center transition-all duration-[1500ms] z-50 overflow-hidden">
-        
-        <!-- ELEMENTOS DE FONDO ANIMADOS -->
-        <!-- Círculos decorativos abstractos -->
-        <div class="absolute w-[30rem] h-[30rem] border border-water/20 rounded-full animate-float-slow -top-20 -left-20"></div>
-        <div class="absolute w-[40rem] h-[40rem] border border-leaf/10 rounded-full animate-float-delayed -bottom-40 -right-20"></div>
-        <div class="absolute w-64 h-64 border border-clay/20 rounded-full animate-float-fast top-1/4 right-10"></div>
-
-        <!-- Corriente de agua abstracta (Fondo) -->
-        <div class="absolute bottom-0 left-0 w-full opacity-[0.08] pointer-events-none">
-            <svg viewBox="0 0 1440 320" class="w-full text-water" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                <path d="M0,192L48,186.7C96,181,192,171,288,181.3C384,192,480,224,576,218.7C672,213,768,171,864,154.7C960,139,1056,149,1152,160C1248,171,1344,181,1392,186.7L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
-            </svg>
-        </div>
-
-        <!-- CONTENEDOR CENTRAL (Tarjeta de cristal) -->
         <div class="relative z-10 flex flex-col items-center p-10 md:p-16 rounded-3xl bg-white/40 backdrop-blur-md border border-white/60 shadow-2xl shadow-water/10 max-w-2xl w-[90%] text-center">
-            
-            <!-- Composición de íconos (Planta + Agua + Circuito) -->
             <div class="relative mb-8 w-32 h-32 flex items-center justify-center">
-                <!-- Circuito/Tuerca (Naranja/Arcilla) -->
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="absolute w-24 h-24 text-clay opacity-30 animate-spin-slow">
                     <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke-dasharray="4 4"/>
                     <path d="M8 12H16M12 8V16"/>
                 </svg>
-                <!-- Hoja (Verde/Salvia) -->
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="absolute w-20 h-20 text-leaf animate-float-slow bg-white rounded-full p-2 shadow-inner">
                     <path d="M12 22V12M12 12C12 12 9 7 4 5C4 5 5 10 12 12ZM12 12C12 12 16 8 20 8C20 8 19 13 12 12Z" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
-                <!-- Gota de agua (Azul/Agua) -->
                 <div class="absolute -bottom-2 -right-4 animate-float-fast">
                     <svg viewBox="0 0 24 24" fill="currentColor" class="w-10 h-10 text-water drop-shadow-md">
                         <path d="M12 21.5C16.1421 21.5 19.5 18.1421 19.5 14C19.5 9 12 2.5 12 2.5C12 2.5 4.5 9 4.5 14C4.5 18.1421 7.85786 21.5 12 21.5Z"/>
@@ -116,22 +79,16 @@
                 </div>
             </div>
 
-            <!-- Textos -->
             <h1 class="text-3xl md:text-5xl font-mono mb-4 tracking-widest uppercase text-rustic-dark font-bold">
                 <span class="block text-xl md:text-2xl text-clay mb-2 font-light">Proyecto I+D</span>
                 YuraFab
             </h1>
-            
             <p class="text-leaf font-mono tracking-widest mb-10 text-sm md:text-base font-semibold border-b border-water/30 pb-4 inline-block px-8">
                 FABLAB // INNOVACIÓN ORGÁNICA
             </p>
             
-           <!-- Botón interactivo Sobrio con colores alrededor -->
             <div class="group relative inline-block p-[2px] cursor-pointer" onclick="entrarBitacora()">
-                <!-- Borde de color (arcilla, salvia y océano) -->
                 <div class="absolute inset-0 bg-gradient-to-r from-clay via-leaf to-water opacity-50 group-hover:opacity-100 transition-opacity duration-500"></div>
-                
-                <!-- Interior del botón: Oscuro y minimalista -->
                 <button class="relative flex items-center justify-center gap-3 w-full h-full px-8 md:px-12 py-4 font-mono font-bold tracking-widest uppercase text-rustic-bg bg-rustic-dark transition-colors duration-300 group-hover:bg-[#1a1918]">
                     BIENVENIDO
                     <svg class="w-5 h-5 text-leaf group-hover:translate-x-2 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -141,24 +98,46 @@
             </div>
         </div>
     </div>
-    <!-- STREAMING_CHUNK:Estructura principal y cabecera -->
-    <!-- CONTENIDO PRINCIPAL -->
+
     <div id="contenido-principal" class="hidden min-h-screen opacity-0 transition-opacity duration-1000 pb-20 relative z-10">
         
-        <header class="border-b border-rustic-border/50 backdrop-blur-md bg-rustic-bg/80 sticky top-0 py-6 px-8 md:px-16 flex flex-col md:flex-row justify-between items-baseline z-20">
-            <h2 class="text-3xl font-mono font-bold tracking-tight">Bitácora Visual</h2>
-            <div class="flex space-x-4 mt-2 md:mt-0">
-                <span class="text-sm font-mono tracking-widest text-dustyBlue uppercase flex items-center gap-2">
-                    <span class="w-2 h-2 rounded-full bg-dustyBlue animate-pulse-slow"></span> YuraFab.
-                </span>
-                <span class="text-sm font-mono tracking-widest text-rustic-accent uppercase">| FabLab</span>
+        <header class="border-b border-rustic-border/50 backdrop-blur-md bg-rustic-bg/80 sticky top-0 z-20">
+            <div class="py-6 px-8 md:px-16 flex flex-col md:flex-row justify-between items-baseline">
+                <h2 class="text-3xl font-mono font-bold tracking-tight text-rustic-dark">Bitácora Visual</h2>
+                <div class="flex space-x-4 mt-2 md:mt-0">
+                    <span class="text-sm font-mono tracking-widest text-dustyBlue uppercase flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-dustyBlue animate-pulse-slow"></span> YuraFab.
+                    </span>
+                    <span class="text-sm font-mono tracking-widest text-rustic-accent uppercase">| FabLab</span>
+                </div>
+            </div>
+            
+            <div class="bg-white/50 py-3 px-8 md:px-16 flex flex-wrap gap-x-8 gap-y-3 text-xs font-mono uppercase tracking-wider text-rustic-accent border-t border-rustic-border/30">
+                <div class="flex items-center gap-2 hover:text-clay transition-colors">
+                    <svg class="w-4 h-4 text-clay" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"></path>
+                    </svg>
+                    Universidad de Cuenca
+                </div>
+                <div class="flex items-center gap-2 hover:text-dustyBlue transition-colors">
+                    <svg class="w-4 h-4 text-dustyBlue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                    </svg>
+                    Ingeniería Industrial
+                </div>
+                <div class="flex items-center gap-2 hover:text-leaf transition-colors">
+                    <svg class="w-4 h-4 text-leaf" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.243-4.243a8 8 0 1111.314 0z"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                    </svg>
+                    Cuenca, Ecuador
+                </div>
             </div>
         </header>
 
         <main class="max-w-5xl mx-auto px-6 mt-16 space-y-24">
             
-            <!-- STREAMING_CHUNK:Sección El Origen -->
-            <!-- Origen del Proyecto -->
             <section>
                 <div class="flex items-center mb-6">
                     <div class="w-8 h-[2px] bg-sage mr-4"></div>
@@ -166,59 +145,47 @@
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
                     <div class="space-y-4 text-lg leading-relaxed text-gray-700 font-light">
-                        <p>
-                            Documentación del proceso de investigación y desarrollo (I+D) en el FabLab. Buscamos crear soluciones tangibles mediante la fabricación digital y optimización de procesos.
-                        </p>
+                        <p>Documentación del proceso de investigación y desarrollo (I+D) en el FabLab. Buscamos crear soluciones tangibles mediante la fabricación digital y optimización de procesos.</p>
                         <p class="text-base text-rustic-accent border-l-2 border-dustyBlue pl-4 py-1 italic bg-white/40">
                             Nuestro enfoque actual: Un ecosistema de riego inteligente que lee su entorno y dosifica el agua con precisión, uniendo hardware, software y naturaleza.
                         </p>
                     </div>
-                   <!-- Contenedor de la foto del equipo -->
-<div class="flex items-center justify-center w-full mt-2 md:mt-0 relative group">
-    <div class="absolute inset-0 bg-sage/20 translate-x-3 translate-y-3 rounded-xl transition-transform group-hover:translate-x-1 group-hover:translate-y-1"></div>
-    <div class="w-full h-64 bg-gray-200 rounded-xl border border-rustic-border flex items-center justify-center relative z-10 overflow-hidden">
-        <!-- Imagen integrada -->
-        <img src="grupoo.jpg" alt="Foto del equipo FabLab" class="w-full h-full object-cover">
-    </div>
-</div>
+                    <div class="flex items-center justify-center w-full mt-2 md:mt-0 relative group">
+                        <div class="absolute inset-0 bg-sage/20 translate-x-3 translate-y-3 rounded-xl transition-transform group-hover:translate-x-1 group-hover:translate-y-1"></div>
+                        <div class="w-full h-64 bg-gray-200 rounded-xl border border-rustic-border flex items-center justify-center relative z-10 overflow-hidden">
+                            <img src="https://github.com/user-attachments/assets/6266174d-715e-480a-94a4-2c3d8fa7365a" alt="Grupoo" class="w-full h-full object-cover object-top">
+                        </div>
+                    </div>
                 </div>
             </section>
 
-<!-- STREAMING_CHUNK:Sección El Equipo -->
-            <!-- El Equipo (Tarjetas) -->
             <section>
                 <div class="flex items-center mb-8">
                     <div class="w-8 h-[2px] bg-dustyBlue mr-4"></div>
                     <h3 class="text-2xl font-mono uppercase tracking-wide">El Equipo</h3>
                 </div>
-                
                 <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
-                    <!-- Tarjeta Dennys -->
                     <button onclick="abrirModal('modal-dennys')" class="border border-rustic-border bg-white/70 backdrop-blur-sm hover:-translate-y-1 hover:border-dustyBlue hover:shadow-lg hover:shadow-dustyBlue/10 transition-all duration-300 text-left group relative overflow-hidden">
                         <div class="h-48 bg-gray-100 flex items-center justify-center border-b border-rustic-border group-hover:bg-gray-200 transition-colors overflow-hidden">
-                            <img src="https://github.com/user-attachments/assets/69f3b389-de15-42cd-8aa6-88e2a67513ce" alt="Dennysperfil" class="w-full h-full object-cover">
+                            <img src="https://github.com/user-attachments/assets/69f3b389-de15-42cd-8aa6-88e2a67513ce" alt="Dennysperfil" class="w-full h-full object-cover object-top">
                         </div>
                         <div class="p-4 relative bg-white">
                             <h4 class="font-bold text-xl uppercase text-rustic-dark group-hover:text-dustyBlue transition-colors">Dennys Vera</h4>
                             <p class="text-sm text-rustic-accent font-mono mt-1 group-hover:text-sage transition-colors">Ver perfil →</p>
                         </div>
                     </button>
-
-                    <!-- Tarjeta Integrante 2 (Paul) -->
                      <button onclick="abrirModal('modal-paul')" class="border border-rustic-border bg-white/70 backdrop-blur-sm hover:-translate-y-1 hover:border-dustyBlue hover:shadow-lg hover:shadow-dustyBlue/10 transition-all duration-300 text-left group relative overflow-hidden">
                         <div class="h-48 bg-gray-100 flex items-center justify-center border-b border-rustic-border group-hover:bg-gray-200 transition-colors overflow-hidden">
-                            <img src="https://github.com/user-attachments/assets/fd06973e-a2a0-47b2-95ba-a652ff202856" alt="Paulperfil" class="w-full h-full object-cover">
+                            <img src="https://github.com/user-attachments/assets/fd06973e-a2a0-47b2-95ba-a652ff202856" alt="Paulperfil" class="w-full h-full object-cover object-top">
                         </div>
                         <div class="p-4 relative bg-white">
                             <h4 class="font-bold text-xl uppercase text-rustic-dark group-hover:text-dustyBlue transition-colors">Paul Coro</h4>
                             <p class="text-sm text-rustic-accent font-mono mt-1 group-hover:text-sage transition-colors">Ver perfil →</p>
                         </div>
                     </button>
-
-                    <!-- Tarjeta Integrante 3 (Dereck) -->
                      <button onclick="abrirModal('modal-dereck')" class="border border-rustic-border bg-white/70 backdrop-blur-sm hover:-translate-y-1 hover:border-dustyBlue hover:shadow-lg hover:shadow-dustyBlue/10 transition-all duration-300 text-left group relative overflow-hidden">
                         <div class="h-48 bg-gray-100 flex items-center justify-center border-b border-rustic-border group-hover:bg-gray-200 transition-colors overflow-hidden">
-                            <img src="https://github.com/user-attachments/assets/9051a2b0-4a13-4e63-8c1f-b043dc86dddf" alt="Dereckperfil" class="w-full h-full object-cover">
+                            <img src="https://github.com/user-attachments/assets/9051a2b0-4a13-4e63-8c1f-b043dc86dddf" alt="Dereckperfil" class="w-full h-full object-cover object-top">
                         </div>
                         <div class="p-4 relative bg-white">
                             <h4 class="font-bold text-xl uppercase text-rustic-dark group-hover:text-dustyBlue transition-colors">Dereck Capa</h4>
@@ -228,8 +195,6 @@
                 </div>
             </section>
             
-            <!-- STREAMING_CHUNK:Sección Registro Semanal -->
-            <!-- Registro Semanal (Tarjetas/Galería) -->
             <section>
                 <div class="flex items-center mb-10">
                     <div class="w-8 h-[2px] bg-rustic-dark mr-4"></div>
@@ -237,41 +202,42 @@
                 </div>
                 
                 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-                    <!-- Tarjeta Semana 1 -->
-                    <button onclick="abrirModal('modal-semana1')" class="border border-rustic-border bg-white/70 backdrop-blur-sm hover:-translate-y-1 hover:border-sage hover:shadow-lg hover:shadow-sage/10 transition-all duration-300 text-left group flex flex-col h-full">
-                        <div class="h-40 w-full bg-gray-100 flex items-center justify-center border-b border-rustic-border group-hover:bg-gray-200 transition-colors relative overflow-hidden">
-                            <span class="text-xs text-gray-400 font-mono">[Foto Sensor/Plano]</span>
-                            <div class="absolute top-2 left-2 bg-sage text-white text-xs font-mono px-2 py-1 uppercase tracking-wider">S-01</div>
-                        </div>
-                        <div class="p-4 bg-white flex-grow">
-                            <h4 class="font-bold text-lg group-hover:text-sage transition-colors">Ideación y Sensores</h4>
-                            <p class="text-sm text-rustic-accent font-mono mt-2 flex items-center gap-1 group-hover:text-dustyBlue transition-colors">
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg> Abrir registro
-                            </p>
-                        </div>
-                    </button>
+                    <script>
+                        const semanas = [
+                            { num: 1, titulo: "Configuración del Entorno y Primeros Pasos" },
+                            { num: 2, titulo: "Diseño de Carcasa" },
+                            { num: 3, titulo: "Prototipado 3D" },
+                            { num: 4, titulo: "Inducción al Corte Láser, MDF y Encastres" },
+                            { num: 5, titulo: "Pruebas de Humedad" },
+                            { num: 6, titulo: "Calibración de Bomba" },
+                            { num: 7, titulo: "Integración de Energía" },
+                            { num: 8, titulo: "Prueba Piloto Planta" },
+                            { num: 9, titulo: "Ajustes de Código" },
+                            { num: 10, titulo: "Documentación Final" }
+                        ];
 
-                    <!-- Tarjeta Semana 2 (Pendiente) -->
-                    <div class="border border-rustic-border bg-white/40 backdrop-blur-sm opacity-60 text-left flex flex-col h-full">
-                        <div class="h-40 flex items-center justify-center border-b border-rustic-border border-dashed relative">
-                            <span class="text-xs text-gray-400 font-mono">[Próximamente]</span>
-                            <div class="absolute top-2 left-2 bg-rustic-border text-white text-xs font-mono px-2 py-1 uppercase tracking-wider">S-02</div>
-                        </div>
-                        <div class="p-4 flex-grow">
-                            <h4 class="font-bold text-lg text-gray-500">Diseño de Carcasa</h4>
-                        </div>
-                    </div>
+                        semanas.forEach(s => {
+                            document.write(`
+                                <button onclick="abrirModal('modal-semana${s.num}')" class="border border-rustic-border bg-white/70 backdrop-blur-sm hover:-translate-y-1 hover:border-sage hover:shadow-lg hover:shadow-sage/10 transition-all duration-300 text-left group flex flex-col h-full rounded-md overflow-hidden">
+                                    <div class="h-40 w-full bg-gray-100 flex items-center justify-center border-b border-rustic-border group-hover:bg-gray-200 transition-colors relative overflow-hidden">
+                                        <span class="text-xs text-gray-400 font-mono">[FOTO S-0${s.num}]</span>
+                                        <div class="absolute top-2 left-2 bg-sage text-white text-xs font-mono px-2 py-1 uppercase tracking-wider">S-0${s.num}</div>
+                                    </div>
+                                    <div class="p-4 bg-white flex-grow">
+                                        <h4 class="font-bold text-lg group-hover:text-sage transition-colors">Semana ${s.num}</h4>
+                                        <p class="text-sm text-rustic-accent font-mono mt-2 flex items-center gap-1 group-hover:text-dustyBlue transition-colors">
+                                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg> Abrir registro
+                                        </p>
+                                    </div>
+                                </button>
+                            `);
+                        });
+                    </script>
                 </div>
             </section>
         </main>
     </div>
 
-   <!-- STREAMING_CHUNK:Modales de integrantes -->
-    <!-- ============================================== -->
-    <!-- ZONA DE VENTANAS EMERGENTES (MODALES)          -->
-    <!-- ============================================== -->
-
-    <!-- Modal Dennys -->
     <div id="modal-dennys" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 transition-opacity duration-300 opacity-0">
         <div class="absolute inset-0 bg-rustic-dark/80 backdrop-blur-sm" onclick="cerrarModal('modal-dennys')"></div>
         <div class="bg-rustic-bg border-l-4 border-dustyBlue p-8 max-w-2xl w-full relative z-10 shadow-2xl">
@@ -279,7 +245,6 @@
             <h3 class="text-3xl font-mono font-bold mb-1 uppercase">Dennys Vera</h3>
             <p class="text-dustyBlue font-mono mb-6 tracking-widest text-sm uppercase">Ingeniería Industrial / CAD</p>
             <div class="flex flex-col md:flex-row gap-6">
-                <!-- Foto de Dennys agregada -->
                 <div class="w-full md:w-1/3 h-48 bg-gray-200 flex items-center justify-center border border-rustic-border overflow-hidden">
                      <img src="https://github.com/user-attachments/assets/69f3b389-de15-42cd-8aa6-88e2a67513ce" alt="Perfil Dennys" class="w-full h-full object-cover">
                 </div>
@@ -290,8 +255,6 @@
             </div>
         </div>
     </div>
-
-    <!-- Modal Paul -->
     <div id="modal-paul" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 transition-opacity duration-300 opacity-0">
         <div class="absolute inset-0 bg-rustic-dark/80 backdrop-blur-sm" onclick="cerrarModal('modal-paul')"></div>
         <div class="bg-rustic-bg border-l-4 border-sage p-8 max-w-2xl w-full relative z-10 shadow-2xl">
@@ -299,7 +262,6 @@
             <h3 class="text-3xl font-mono font-bold mb-1 uppercase">Paul Coro</h3>
             <p class="text-sage font-mono mb-6 tracking-widest text-sm uppercase">Electrónica / IoT</p>
             <div class="flex flex-col md:flex-row gap-6">
-                <!-- Foto de Paul agregada -->
                 <div class="w-full md:w-1/3 h-48 bg-gray-200 flex items-center justify-center border border-rustic-border overflow-hidden">
                      <img src="https://github.com/user-attachments/assets/fd06973e-a2a0-47b2-95ba-a652ff202856" alt="Perfil Paul" class="w-full h-full object-cover">
                 </div>
@@ -310,8 +272,6 @@
             </div>
         </div>
     </div>
-
-    <!-- Modal Dereck -->
     <div id="modal-dereck" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 transition-opacity duration-300 opacity-0">
         <div class="absolute inset-0 bg-rustic-dark/80 backdrop-blur-sm" onclick="cerrarModal('modal-dereck')"></div>
         <div class="bg-rustic-bg border-l-4 border-rustic-accent p-8 max-w-2xl w-full relative z-10 shadow-2xl">
@@ -319,7 +279,6 @@
             <h3 class="text-3xl font-mono font-bold mb-1 uppercase">Dereck Capa</h3>
             <p class="text-rustic-accent font-mono mb-6 tracking-widest text-sm uppercase">Botánica / Diseño de Experiencia</p>
             <div class="flex flex-col md:flex-row gap-6">
-                <!-- Foto de Dereck agregada -->
                 <div class="w-full md:w-1/3 h-48 bg-gray-200 flex items-center justify-center border border-rustic-border overflow-hidden">
                      <img src="https://github.com/user-attachments/assets/9051a2b0-4a13-4e63-8c1f-b043dc86dddf" alt="Perfil Dereck" class="w-full h-full object-cover">
                 </div>
@@ -330,41 +289,142 @@
             </div>
         </div>
     </div>
-    <!-- STREAMING_CHUNK:Modal de Registro Semanal y Scripts -->
-    <!-- Modal Semana 1 -->
-    <div id="modal-semana1" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 transition-opacity duration-300 opacity-0">
-        <div class="absolute inset-0 bg-rustic-dark/90 backdrop-blur-sm" onclick="cerrarModal('modal-semana1')"></div>
-        <div class="bg-white border border-rustic-border p-8 max-w-4xl w-full relative z-10 max-h-[90vh] overflow-y-auto shadow-2xl">
-            <button onclick="cerrarModal('modal-semana1')" class="absolute top-4 right-4 text-3xl font-mono text-rustic-accent hover:text-red-600 transition-colors leading-none">&times;</button>
-            
-            <div class="mb-6 border-b border-rustic-border pb-4">
-                <span class="bg-sage text-white text-sm font-mono px-3 py-1 uppercase tracking-widest mr-3">Semana 1</span>
-                <h3 class="text-2xl md:text-3xl font-mono font-bold mt-4 text-rustic-dark">Ideación y Selección de Sensores</h3>
-            </div>
-            
-            <div class="space-y-6 text-gray-700 font-light text-lg">
-                <p>Planteamiento del problema: El exceso o falta de agua es la principal causa de muerte en plantas de interior. Comenzamos a explorar cómo los sensores capacitivos de humedad pueden darnos lecturas más estables que los resistivos.</p>
-                
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8">
-                    <div class="bg-gray-100 h-64 flex flex-col items-center justify-center border border-rustic-border p-4 relative group">
-                        <span class="text-xs text-dustyBlue font-mono mb-2">[Foto Circuito]</span>
-                        <p class="text-sm font-mono text-center text-rustic-accent">Pruebas iniciales con NodeMCU y sensor capacitivo.</p>
+
+    <script>
+        semanas.forEach(s => {
+            let contenidoEspecifico = '';
+            if (s.num === 1) {
+                contenidoEspecifico = `
+                    <p class="text-lg font-medium text-dustyBlue mb-8 border-l-4 border-sage pl-4">El objetivo de esta primera semana fue establecer las bases técnicas y el flujo de trabajo que utilizaremos durante todo el programa. Antes de empezar a construir soluciones físicas, necesitábamos preparar nuestro entorno digital para documentar cada avance. A continuación, detallo el proceso paso a paso de nuestra introducción al desarrollo web.</p>
+                    <div class="space-y-12">
+                        <div>
+                            <h4 class="text-xl font-bold text-rustic-dark font-mono uppercase mb-3"><span class="text-sage">01.</span> Preparación del Entorno Local y VS Code</h4>
+                            <p class="mb-4">Todo proyecto ordenado necesita una buena base. Comenzamos creando una estructura de carpetas específica en el ordenador local para almacenar todos los recursos, códigos y fotografías del programa. Posteriormente, nos introdujimos al uso de Visual Studio Code, el editor de código donde daremos forma a nuestra documentación.</p>
+                            <div class="bg-gray-100 h-64 md:h-80 flex flex-col items-center justify-center border border-rustic-border relative overflow-hidden rounded-lg group">
+                                <img src="" class="absolute inset-0 w-full h-full object-cover">
+                                <span class="text-sm text-dustyBlue font-mono z-10 bg-white/90 px-4 py-2 rounded-md shadow-sm border border-rustic-border/50">[Foto: Captura de VS Code o carpetas]</span>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold text-rustic-dark font-mono uppercase mb-3"><span class="text-sage">02.</span> Control de Versiones con GitHub</h4>
+                            <p class="mb-4">Para asegurar que nuestro progreso no se pierda y mantener un registro histórico de los cambios, integramos GitHub a nuestro flujo de trabajo. Entender cómo subir nuestros archivos a un repositorio en la nube es fundamental no solo para respaldar la información, sino para cumplir con los estándares de documentación continua que exige el proyecto.</p>
+                            <div class="bg-gray-100 h-64 md:h-80 flex flex-col items-center justify-center border border-rustic-border relative overflow-hidden rounded-lg group">
+                                <img src="" class="absolute inset-0 w-full h-full object-cover">
+                                <span class="text-sm text-dustyBlue font-mono z-10 bg-white/90 px-4 py-2 rounded-md shadow-sm border border-rustic-border/50">[Foto: Repositorio en GitHub o terminal]</span>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold text-rustic-dark font-mono uppercase mb-3"><span class="text-sage">03.</span> Estructuración Básica con HTML</h4>
+                            <p class="mb-4">Una vez con el entorno listo, dimos nuestros primeros pasos en la escritura de código utilizando HTML. Comprendimos cómo funcionan las etiquetas básicas para estructurar la información, crear títulos, párrafos y divisiones en nuestra página web, dándole un esqueleto lógico a lo que más adelante será nuestro portafolio.</p>
+                            <div class="bg-gray-100 h-64 md:h-80 flex flex-col items-center justify-center border border-rustic-border relative overflow-hidden rounded-lg group">
+                                <img src="" class="absolute inset-0 w-full h-full object-cover">
+                                <span class="text-sm text-dustyBlue font-mono z-10 bg-white/90 px-4 py-2 rounded-md shadow-sm border border-rustic-border/50">[Foto: Escribiendo código o primeras líneas HTML]</span>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold text-rustic-dark font-mono uppercase mb-3"><span class="text-sage">04.</span> Integración de Datos y Apoyo de IA</h4>
+                            <p class="mb-4">Para poner a prueba lo aprendido de forma práctica, realizamos un ejercicio introductorio. Descargamos una base de datos pública de internet y, con el apoyo de herramientas de Inteligencia Artificial, construimos una página web capaz de visualizar esas estadísticas. Aunque el resultado fue un prototipo sencillo, este ejercicio fue fundamental para entender cómo se conectan los datos externos con la estructura web.</p>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+                                <div class="bg-gray-100 h-64 flex flex-col items-center justify-center border border-rustic-border relative overflow-hidden rounded-lg group">
+                                    <img src="" class="absolute inset-0 w-full h-full object-cover">
+                                    <span class="text-xs md:text-sm text-dustyBlue font-mono z-10 bg-white/90 px-3 py-1 rounded-md shadow-sm border border-rustic-border/50 text-center">[Foto: Base de Datos Pública]</span>
+                                </div>
+                                <div class="bg-gray-100 h-64 flex flex-col items-center justify-center border border-rustic-border relative overflow-hidden rounded-lg group">
+                                    <img src="" class="absolute inset-0 w-full h-full object-cover">
+                                    <span class="text-xs md:text-sm text-dustyBlue font-mono z-10 bg-white/90 px-3 py-1 rounded-md shadow-sm border border-rustic-border/50 text-center">[Foto: Página Web Finalizada]</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="bg-gray-100 h-64 flex flex-col items-center justify-center border border-rustic-border p-4 relative group">
-                        <span class="text-xs text-sage font-mono mb-2">[Foto Boceto Maceta]</span>
-                        <p class="text-sm font-mono text-center text-rustic-accent">Trazos de integración del hardware en la base de la maceta.</p>
+                `;
+            } else if (s.num === 4) {
+                contenidoEspecifico = `
+                    <div class="space-y-12">
+                        <div>
+                            <h4 class="text-xl font-bold text-rustic-dark font-mono uppercase mb-3"><span class="text-sage">01.</span> Introducción Teórica y Caso IKEA</h4>
+                            <p class="mb-4">La sesión inició con una inducción a la fabricación digital con MDF mediante corte láser, tomando como referente el modelo <em>flat-pack</em> (paquete plano) de IKEA. El principio fundamental es el diseño para un ensamblaje fácil e intuitivo, donde las piezas se acoplan exclusivamente mediante uniones mecánicas (encastres). Esta metodología elimina el uso de pegamentos o tornillos; la firmeza de la estructura depende enteramente de la precisión con la que las piezas encajan entre sí.</p>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold text-rustic-dark font-mono uppercase mb-3"><span class="text-sage">02.</span> Concepto de Kerf y Práctica Inicial</h4>
+                            <p class="mb-4">Antes de iniciar el proyecto principal, realizamos un ejercicio en Autodesk Fusion 360 para comprender el concepto de <strong>Kerf</strong> (el ancho de material que el láser consume al cortar). Dibujamos dos siluetas complementarias: una pieza en forma de "F" y su respectivo acople. Aprendimos que para lograr un encastre perfecto se debe compensar esta pérdida ajustando una tolerancia de aproximadamente 0.05 mm por lado.</p>
+                            <div class="flex flex-col md:flex-row items-center gap-6 bg-gray-50 p-6 rounded-lg border border-rustic-border">
+                                <img src="efecortada1.jpeg" alt="Encastre tipo F" class="w-full md:w-1/2 rounded-lg shadow-md border border-gray-300">
+                                <a href="dennysefexy.dxf" download="dennysefexy.dxf" class="inline-flex items-center px-6 py-3 bg-dustyBlue hover:bg-water text-white font-bold rounded-lg shadow-md transition-all duration-300 w-full md:w-auto justify-center">
+                                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                                    Descargar Corte (.dxf)
+                                </a>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold text-rustic-dark font-mono uppercase mb-3"><span class="text-sage">03.</span> Operación Láser y Seguridad</h4>
+                            <p class="mb-4">Recibimos instrucción práctica sobre el manejo de la cortadora láser. Aprendimos a configurar el equipo dependiendo de si el trabajo requiere corte pasante o solo detallado (grabado), ajustando variables clave como la velocidad y el porcentaje de potencia de intensidad del láser. Asimismo, se establecieron normativas de seguridad estrictas: mantener siempre encendido el sistema de ventilación y asegurar que la tapa de la máquina permanezca cerrada durante todo el funcionamiento.</p>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold text-rustic-dark font-mono uppercase mb-3"><span class="text-sage">04.</span> Bocetaje y Diseño Conceptual</h4>
+                            <p class="mb-4">En el momento de ponernos a diseñar la silla, iniciamos con una fase de bocetaje en equipo para definir la forma y el concepto. Exploramos varias ideas hasta llegar a un diseño inicial. Este proceso creativo fue fundamental para visualizar cómo se estructurarían las piezas antes de pasar al modelado digital.</p>
+                            
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+                                <div class="bg-gray-100 h-[28rem] md:h-[32rem] flex flex-col items-center justify-center border border-rustic-border relative overflow-hidden rounded-lg group">
+                                    <img src="equi.dise.silla.dino.jpeg" class="absolute inset-0 w-full h-full object-cover" alt="Equipo diseñando">
+                                </div>
+                                <div class="bg-gray-100 h-[28rem] md:h-[32rem] flex flex-col items-center justify-center border border-rustic-border relative overflow-hidden rounded-lg group">
+                                    <img src="boseto.silla.dino_2.jpeg" class="absolute inset-0 w-full h-full object-cover" alt="Boceto diseño">
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold text-rustic-dark font-mono uppercase mb-3"><span class="text-sage">05.</span> Inducción a Slicer for Fusion 360</h4>
+                            <p class="mb-4">Para entender cómo transformar modelos 3D en planos 2D cortables, recibimos una inducción utilizando <strong>Slicer for Fusion 360</strong>. Practicamos con un archivo 3D de un oso descargado de la web, aprendiendo a dividir la volumetría en la mayor cantidad de partes posibles (seccionamiento). Esta herramienta nos permitió comprender cómo encajarían las capas y exportar los vectores directamente para la cortadora láser.</p>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold text-rustic-dark font-mono uppercase mb-3"><span class="text-sage">06.</span> Preparación para Corte (Slicer y DXF)</h4>
+                            <p class="mb-4">Aplicamos estos conocimientos para nuestra actividad: parametrizamos el modelo vinculando el grosor del material y el kerf para asegurar encastres exactos, y luego lo preparamos digitalmente utilizando Slicer. Esto generó el despiece final listo para enviarlo a la cortadora láser cuando sea el momento de fabricarlo físicamente.</p>
+                            
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+                                <div class="bg-gray-100 h-64 md:h-[28rem] flex flex-col items-center justify-center border border-rustic-border relative overflow-hidden rounded-lg group">
+                                    <img src="oso.slice.fotos.png" class="absolute inset-0 w-full h-full object-cover" alt="Vista en Slicer">
+                                </div>
+                                <div class="bg-gray-100 h-64 md:h-[28rem] flex flex-col items-center justify-center border border-rustic-border relative overflow-hidden rounded-lg group text-center p-8">
+                                    <h5 class="font-bold text-lg text-dustyBlue mb-4">Archivo listo para corte</h5>
+                                    <p class="text-gray-500 mb-6">El diseño fue seccionado y exportado exitosamente a curvas 2D.</p>
+                                    <a href="silla-infantil.dxf" download="silla-infantil.dxf" class="inline-flex items-center px-6 py-3 bg-leaf hover:bg-sage text-white font-bold rounded-lg shadow-md transition-all duration-300 w-full md:w-auto justify-center">
+                                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                                        Descargar Despiece (.dxf)
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            } else {
+                contenidoEspecifico = `
+                    <p>Contenido en desarrollo para la semana ${s.num}.</p>
+                    <div class="bg-gray-100 h-64 flex flex-col items-center justify-center border border-rustic-border border-dashed relative mt-4">
+                        <img src="" class="absolute inset-0 w-full h-full object-cover opacity-0">
+                        <span class="text-xs text-gray-400 font-mono z-10">[Espacio para imagen]</span>
+                    </div>
+                `;
+            }
+
+            document.write(`
+                <div id="modal-semana${s.num}" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 transition-opacity duration-300 opacity-0">
+                    <div class="absolute inset-0 bg-rustic-dark/90 backdrop-blur-sm" onclick="cerrarModal('modal-semana${s.num}')"></div>
+                    <div class="bg-white border border-rustic-border p-8 max-w-7xl w-full relative z-10 max-h-[90vh] overflow-y-auto shadow-2xl rounded-md">
+                        <button onclick="cerrarModal('modal-semana${s.num}')" class="absolute top-4 right-4 text-3xl font-mono text-rustic-accent hover:text-red-600 transition-colors leading-none">&times;</button>
+                        <div class="mb-6 border-b border-rustic-border pb-4">
+                            <span class="bg-sage text-white text-sm font-mono px-3 py-1 uppercase tracking-widest mr-3">Semana ${s.num}</span>
+                            <h3 class="text-2xl md:text-3xl font-mono font-bold mt-4 text-rustic-dark">${s.titulo}</h3>
+                        </div>
+                        <div class="space-y-6 text-gray-700 font-light text-lg">
+                            ${contenidoEspecifico}
+                        </div>
                     </div>
                 </div>
-                <p class="text-base mt-4 text-rustic-accent">Próximo paso: Imprimir las primeras pruebas en 3D para evaluar tolerancias de la bomba de agua pequeña.</p>
-            </div>
-        </div>
-    </div>
+            `);
+        });
+    </script>
 
-    <!-- ============================================== -->
-    <!-- SCRIPTS                                        -->
-    <!-- ============================================== -->
     <script>
-        // Transición de la pantalla de bienvenida
         function entrarBitacora() {
             const bienvenida = document.getElementById('pantalla-bienvenida');
             const principal = document.getElementById('contenido-principal');
@@ -375,35 +435,27 @@
                 principal.classList.remove('hidden'); 
                 setTimeout(() => { 
                     principal.style.opacity = '1'; 
-                    // Aseguramos que el contenido principal aparezca con un ligero retraso
                 }, 100);
             }, 700);
         }
 
-        // Funciones para abrir y cerrar las ventanas emergentes
         function abrirModal(id) {
             const modal = document.getElementById(id);
             modal.classList.remove('hidden');
-            
-            // Forzamos un reflujo para que la transición CSS de opacidad funcione
-            void modal.offsetWidth;
-            
+            void modal.offsetWidth; 
             modal.classList.remove('opacity-0');
-            document.body.style.overflow = 'hidden'; // Prevenir scroll
+            document.body.style.overflow = 'hidden'; 
         }
 
         function cerrarModal(id) {
             const modal = document.getElementById(id);
             modal.classList.add('opacity-0');
-            
             setTimeout(() => { 
                 modal.classList.add('hidden'); 
-            }, 300); // Coincide con la duración de la transición en Tailwind
-            
-            document.body.style.overflow = 'auto'; // Restaurar scroll
+            }, 300);
+            document.body.style.overflow = 'auto'; 
         }
 
-        // Permitir cerrar modal con la tecla ESC
         document.addEventListener('keydown', function(event) {
             if (event.key === "Escape") {
                 const modales = document.querySelectorAll('[id^="modal-"]:not(.hidden)');

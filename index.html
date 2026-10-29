@@ -337,59 +337,100 @@
                         </div>
                     </div>
                 `;
-            } else if (s.num === 4) {
+      } else if (s.num === 4) {
                 contenidoEspecifico = `
                     <div class="space-y-12">
+                        <!-- BLOQUE 1 -->
                         <div>
-                            <h4 class="text-xl font-bold text-rustic-dark font-mono uppercase mb-3"><span class="text-sage">01.</span> Introducción Teórica y Caso IKEA</h4>
-                            <p class="mb-4">La sesión inició con una inducción a la fabricación digital con MDF mediante corte láser, tomando como referente el modelo <em>flat-pack</em> (paquete plano) de IKEA. El principio fundamental es el diseño para un ensamblaje fácil e intuitivo, donde las piezas se acoplan exclusivamente mediante uniones mecánicas (encastres). Esta metodología elimina el uso de pegamentos o tornillos; la firmeza de la estructura depende enteramente de la precisión con la que las piezas encajan entre sí.</p>
-                        </div>
-                        <div>
-                            <h4 class="text-xl font-bold text-rustic-dark font-mono uppercase mb-3"><span class="text-sage">02.</span> Concepto de Kerf y Práctica Inicial</h4>
-                            <p class="mb-4">Antes de iniciar el proyecto principal, realizamos un ejercicio en Autodesk Fusion 360 para comprender el concepto de <strong>Kerf</strong> (el ancho de material que el láser consume al cortar). Dibujamos dos siluetas complementarias: una pieza en forma de "F" y su respectivo acople. Aprendimos que para lograr un encastre perfecto se debe compensar esta pérdida ajustando una tolerancia de aproximadamente 0.05 mm por lado.</p>
-                            <div class="flex flex-col md:flex-row items-center gap-6 bg-gray-50 p-6 rounded-lg border border-rustic-border">
-                                <img src="efecortada1.jpeg" alt="Encastre tipo F" class="w-full md:w-1/2 rounded-lg shadow-md border border-gray-300">
-                                <a href="dennysefexy.dxf" download="dennysefexy.dxf" class="inline-flex items-center px-6 py-3 bg-dustyBlue hover:bg-water text-white font-bold rounded-lg shadow-md transition-all duration-300 w-full md:w-auto justify-center">
-                                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
-                                    Descargar Corte (.dxf)
-                                </a>
+                            <p class="mb-4">Diseño y parametrización de una figura dada por el docente como inducción para poder realizar las prácticas posteriores.</p>
+                            
+                            <div class="bg-gray-100 h-64 md:h-[28rem] flex flex-col items-center justify-center border border-rustic-border relative overflow-hidden rounded-lg mb-6 group">
+                                <!-- (FOTO DE LA PANTALLA) -->
+                                <img src="foto-pantalla.jpg" alt="Pantalla de diseño" class="absolute inset-0 w-full h-full object-cover">
+                                <span class="text-xs text-dustyBlue font-mono z-10 bg-white/90 px-3 py-1 rounded-md transition-opacity duration-300 group-hover:opacity-0">(FOTO DE LA PANTALLA)</span>
                             </div>
-                        </div>
-                        <div>
-                            <h4 class="text-xl font-bold text-rustic-dark font-mono uppercase mb-3"><span class="text-sage">03.</span> Operación Láser y Seguridad</h4>
-                            <p class="mb-4">Recibimos instrucción práctica sobre el manejo de la cortadora láser. Aprendimos a configurar el equipo dependiendo de si el trabajo requiere corte pasante o solo detallado (grabado), ajustando variables clave como la velocidad y el porcentaje de potencia de intensidad del láser. Asimismo, se establecieron normativas de seguridad estrictas: mantener siempre encendido el sistema de ventilación y asegurar que la tapa de la máquina permanezca cerrada durante todo el funcionamiento.</p>
-                        </div>
-                        <div>
-                            <h4 class="text-xl font-bold text-rustic-dark font-mono uppercase mb-3"><span class="text-sage">04.</span> Bocetaje y Diseño Conceptual</h4>
-                            <p class="mb-4">En el momento de ponernos a diseñar la silla, iniciamos con una fase de bocetaje en equipo para definir la forma y el concepto. Exploramos varias ideas hasta llegar a un diseño inicial. Este proceso creativo fue fundamental para visualizar cómo se estructurarían las piezas antes de pasar al modelado digital.</p>
+
+                            <p class="mb-4">Se introdujo el concepto clave de KERF, en este caso de 0.05 en una tabla de MDF de 4 mm de grosor ya que la cortadora láser aumenta un poco el margen al cortar y cómo queremos que quede justo sin usar ningún tipo de adhesivo implementamos KERF. Ahora con el concepto de parametrizar, creamos la figura denominada “F” en fusión 360, y parametrizamos dando nombre a las cotas con valores determinados para que toda la figura vaya cambiando de tamaño según se requiera próximamente.</p>
                             
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
-                                <div class="bg-gray-100 h-[28rem] md:h-[32rem] flex flex-col items-center justify-center border border-rustic-border relative overflow-hidden rounded-lg group">
-                                    <img src="equi.dise.silla.dino.jpeg" class="absolute inset-0 w-full h-full object-cover" alt="Equipo diseñando">
+                                <div class="bg-gray-100 h-[28rem] flex flex-col items-center justify-center border border-rustic-border relative overflow-hidden rounded-lg group">
+                                    <!-- (FOTO DE LA “F” PARAMETRIZADA) -->
+                                    <img src="foto-f-parametrizada.jpg" alt="F Parametrizada" class="absolute inset-0 w-full h-full object-cover">
+                                    <span class="text-xs text-dustyBlue font-mono z-10 bg-white/90 px-3 py-1 rounded-md transition-opacity duration-300 group-hover:opacity-0">(FOTO DE LA “F” PARAMETRIZADA)</span>
                                 </div>
-                                <div class="bg-gray-100 h-[28rem] md:h-[32rem] flex flex-col items-center justify-center border border-rustic-border relative overflow-hidden rounded-lg group">
-                                    <img src="boseto.silla.dino_2.jpeg" class="absolute inset-0 w-full h-full object-cover" alt="Boceto diseño">
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <h4 class="text-xl font-bold text-rustic-dark font-mono uppercase mb-3"><span class="text-sage">05.</span> Inducción a Slicer for Fusion 360</h4>
-                            <p class="mb-4">Para entender cómo transformar modelos 3D en planos 2D cortables, recibimos una inducción utilizando <strong>Slicer for Fusion 360</strong>. Practicamos con un archivo 3D de un oso descargado de la web, aprendiendo a dividir la volumetría en la mayor cantidad de partes posibles (seccionamiento). Esta herramienta nos permitió comprender cómo encajarían las capas y exportar los vectores directamente para la cortadora láser.</p>
-                        </div>
-                        <div>
-                            <h4 class="text-xl font-bold text-rustic-dark font-mono uppercase mb-3"><span class="text-sage">06.</span> Preparación para Corte (Slicer y DXF)</h4>
-                            <p class="mb-4">Aplicamos estos conocimientos para nuestra actividad: parametrizamos el modelo vinculando el grosor del material y el kerf para asegurar encastres exactos, y luego lo preparamos digitalmente utilizando Slicer. Esto generó el despiece final listo para enviarlo a la cortadora láser cuando sea el momento de fabricarlo físicamente.</p>
-                            
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
-                                <div class="bg-gray-100 h-64 md:h-[28rem] flex flex-col items-center justify-center border border-rustic-border relative overflow-hidden rounded-lg group">
-                                    <img src="oso.slice.fotos.png" class="absolute inset-0 w-full h-full object-cover" alt="Vista en Slicer">
-                                </div>
-                                <div class="bg-gray-100 h-64 md:h-[28rem] flex flex-col items-center justify-center border border-rustic-border relative overflow-hidden rounded-lg group text-center p-8">
-                                    <h5 class="font-bold text-lg text-dustyBlue mb-4">Archivo listo para corte</h5>
-                                    <p class="text-gray-500 mb-6">El diseño fue seccionado y exportado exitosamente a curvas 2D.</p>
-                                    <a href="silla-infantil.dxf" download="silla-infantil.dxf" class="inline-flex items-center px-6 py-3 bg-leaf hover:bg-sage text-white font-bold rounded-lg shadow-md transition-all duration-300 w-full md:w-auto justify-center">
+                                <div class="bg-gray-100 h-[28rem] flex flex-col items-center justify-center border border-rustic-border relative overflow-hidden rounded-lg p-8 text-center">
+                                    <!-- (ARCHIVO DESCARGABLE DE LA “F”) -->
+                                    <h5 class="font-bold text-lg text-dustyBlue mb-4">Archivo F Parametrizada</h5>
+                                    <a href="figura-f.dxf" download="figura-f.dxf" class="inline-flex items-center px-6 py-3 bg-dustyBlue hover:bg-water text-white font-bold rounded-lg shadow-md transition-all duration-300">
                                         <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
-                                        Descargar Despiece (.dxf)
+                                        Descargar (.dxf)
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- BLOQUE 2 -->
+                        <div>
+                            <p class="mb-4">Al tener la figura ya exportada en .dxf, es momento de usar la cortadora láser, por lo que el docente nos dio las indicaciones de su uso, las cuales son;</p>
+                            <ul class="list-disc pl-6 mb-6 text-gray-700 space-y-2 font-light">
+                                <li>cargar el archivo en el aplicativo de la máquina y ver que todo el archivo esté bien.</li>
+                                <li>chequear los parámetros de corte, ver la intensidad y velocidad del láser, ya que de estas depende el resultado.</li>
+                                <li>Revisar la parte donde va a estar puesto el MDF, Cuadrado y calibrando de la mejor manera posible y así evitar complicaciones.</li>
+                                <li>recalcar que se deben tener en cuenta ciertas medidas de seguridad, como cerrar la tapa de la cortadora o evitar manipularla mientras está cortando.</li>
+                            </ul>
+                            <p class="mb-4">Después de lo anterior mencionado tenemos la “F” ya cortada y que encaja de manera correcta.</p>
+                            
+                            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-6">
+                                <div class="bg-gray-100 h-40 flex flex-col items-center justify-center border border-rustic-border relative overflow-hidden rounded-lg group">
+                                    <!-- (FOTO DE LA PANTALLA DEL APLICATIVO) -->
+                                    <img src="foto-aplicativo.jpg" alt="Aplicativo" class="absolute inset-0 w-full h-full object-cover">
+                                    <span class="text-[10px] text-dustyBlue font-mono z-10 bg-white/90 px-1 py-1 rounded text-center transition-opacity duration-300 group-hover:opacity-0">(PANTALLA APLICATIVO)</span>
+                                </div>
+                                <div class="bg-gray-100 h-40 flex flex-col items-center justify-center border border-rustic-border relative overflow-hidden rounded-lg group">
+                                    <!-- (VIDEO DE LA “F” CORTANDOSE) -->
+                                    <video src="video-corte.mp4" class="absolute inset-0 w-full h-full object-cover" controls muted loop></video>
+                                    <span class="text-[10px] text-dustyBlue font-mono z-10 bg-white/90 px-1 py-1 rounded text-center transition-opacity duration-300 group-hover:opacity-0">(VIDEO CORTÁNDOSE)</span>
+                                </div>
+                                <div class="bg-gray-100 h-40 flex flex-col items-center justify-center border border-rustic-border relative overflow-hidden rounded-lg group">
+                                    <!-- (FOTO DE LA “F” EN PROCESO) -->
+                                    <img src="foto-proceso.jpg" alt="En proceso" class="absolute inset-0 w-full h-full object-cover">
+                                    <span class="text-[10px] text-dustyBlue font-mono z-10 bg-white/90 px-1 py-1 rounded text-center transition-opacity duration-300 group-hover:opacity-0">(FOTO EN PROCESO)</span>
+                                </div>
+                                <div class="bg-gray-100 h-40 flex flex-col items-center justify-center border border-rustic-border relative overflow-hidden rounded-lg group">
+                                    <!-- (FOTO DE LA “F” YA CORTADA) -->
+                                    <img src="efecortada1.jpeg" alt="F cortada" class="absolute inset-0 w-full h-full object-cover">
+                                    <span class="text-[10px] text-dustyBlue font-mono z-10 bg-white/90 px-1 py-1 rounded text-center transition-opacity duration-300 group-hover:opacity-0">(FOTO YA CORTADA)</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- BLOQUE 3: CASO IKEA -->
+                        <div>
+                            <h4 class="text-xl font-bold text-rustic-dark font-mono uppercase mb-3"><span class="text-sage">Caso IKEA</span></h4>
+                            <p class="mb-4">El docente introduce como referente el modelo flat-pack de IKEA. El principio fundamental es el diseño para un ensamblaje fácil e intuitivo, donde las piezas se acoplan exclusivamente mediante uniones mecánicas (encastres). Esta metodología elimina el uso de pegamentos o tornillos; la firmeza de la estructura depende enteramente de la precisión con la que las piezas encajan entre sí.</p>
+                            <p class="mb-4">Con lo antes mencionado, el propósito de esto es poder crear una silla infantil utilizando este principio. Por lo que se hizo un “boceto” de como posiblemente a grandes rasgos podría ser el diseño de la silla con la metodología de ikea.</p>
+                            
+                            <div class="bg-gray-100 h-[28rem] md:h-[32rem] flex flex-col items-center justify-center border border-rustic-border relative overflow-hidden rounded-lg group mt-6">
+                                <!-- (FOTO DEL BOCETO DE LA SILLA) -->
+                                <img src="boseto.silla.dino.jpeg" alt="Boceto Silla" class="absolute inset-0 w-full h-full object-cover">
+                            </div>
+                        </div>
+
+                        <!-- BLOQUE 4: SLICER -->
+                        <div>
+                            <p class="mb-4">Para tener cierta noción de lo que se realizará a posterior, se nos indujo la herramienta slicer for fusion 360, en la cual dimencionamos una figura en slices para tener referencias de cómo podría quedar el diseño que haríamos.</p>
+                            
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+                                <div class="bg-gray-100 h-[28rem] flex flex-col items-center justify-center border border-rustic-border relative overflow-hidden rounded-lg group">
+                                    <!-- (FOTOS DEL OSO EN SLICER) -->
+                                    <img src="oso.slice.fotos.png" alt="Oso Slicer" class="absolute inset-0 w-full h-full object-cover">
+                                </div>
+                                <div class="bg-gray-100 h-[28rem] flex flex-col items-center justify-center border border-rustic-border relative overflow-hidden rounded-lg p-8 text-center">
+                                    <!-- (ARCHIVO DEL OSO EN .DXF) -->
+                                    <h5 class="font-bold text-lg text-dustyBlue mb-4">Archivo del Oso</h5>
+                                    <a href="osetofin.dxf" download="osetofin.dxf" class="inline-flex items-center px-6 py-3 bg-leaf hover:bg-sage text-white font-bold rounded-lg shadow-md transition-all duration-300">
+                                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                                        Descargar (.dxf)
                                     </a>
                                 </div>
                             </div>

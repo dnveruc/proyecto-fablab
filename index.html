@@ -314,6 +314,151 @@
                         </div>
                     </div>
                 `;
+                } else if (s.num === 2) {
+                contenidoEspecifico = `
+                    <div class="space-y-12">
+                        <!-- BLOQUE 1: Ideación -->
+                        <div>
+                            <h4 class="text-xl font-bold text-rustic-dark font-mono uppercase mb-3"><span class="text-sage">01.</span> Lluvia de Ideas y Selección del Problema</h4>
+                            <p class="mb-4">Para definir el rumbo de nuestro proyecto, realizamos una sesión de ideación colaborativa utilizando post-its. Anotamos múltiples problemáticas que podríamos resolver y las agrupamos en categorías como Movilidad, Mascotas, Sonido, Instalación y Medio Ambiente.</p>
+                            <p class="mb-4">Posteriormente, sometimos estas ideas a una evaluación en equipo. La categoría ganadora fue <strong>Medio Ambiente</strong> (con la puntuación máxima de 15 puntos). A partir de esto, delimitamos nuestra problemática central: <em>Optimizar recursos hídricos</em>, lo que sentó las bases para el concepto de YuraFab.</p>
+                            
+                            <div class="bg-gray-100 h-64 md:h-[28rem] flex flex-col items-center justify-center border border-rustic-border relative overflow-hidden rounded-lg mb-6 group">
+                                <img src="foto-postits.jpg" alt="Post-its ideación" class="absolute inset-0 w-full h-full object-contain p-2 md:p-4">
+                                <span class="text-xs text-dustyBlue font-mono z-10 bg-white/90 px-3 py-1 rounded-md transition-opacity duration-300 group-hover:opacity-0">(FOTO DE LOS POST-ITS)</span>
+                            </div>
+                        </div>
+
+                        <!-- BLOQUE 2: Estado del Arte -->
+                        <div>
+                            <h4 class="text-xl font-bold text-rustic-dark font-mono uppercase mb-3"><span class="text-sage">02.</span> Matriz Guía y Proyectos Existentes</h4>
+                            <p class="mb-4">Antes de proponer una solución a ciegas, elaboramos una Matriz Guía del Proyecto. Investigamos artículos académicos (en bases de datos como Scielo, Redalyc y FAO) sobre sistemas de riego y control de recursos hídricos que ya se habían realizado. Esto nos permitió analizar el estado del arte y encontrar nuestro diferenciador.</p>
+                            
+                            <div class="mt-6 flex flex-col gap-4">
+                                <div class="bg-white p-4 md:p-6 flex flex-col sm:flex-row items-center justify-between border border-rustic-border rounded-lg shadow-sm">
+                                    <h5 class="font-bold text-lg text-dustyBlue mb-3 sm:mb-0">Matriz de Ideación (.xlsx)</h5>
+                                    <a href="semana-2.xlsx" download="semana-2.xlsx" class="inline-flex items-center px-6 py-3 bg-dustyBlue hover:bg-water text-white font-bold rounded-lg shadow-md transition-all duration-300">
+                                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                                        Descargar Excel
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            } else if (s.num === 3) {
+                contenidoEspecifico = `
+                    <div class="space-y-12">
+                        <!-- BLOQUE 1: JTBD -->
+                        <div>
+                            <h4 class="text-xl font-bold text-rustic-dark font-mono uppercase mb-3"><span class="text-sage">01.</span> Metodología JTBD (Jobs to be Done)</h4>
+                            <p class="mb-4">Para enfocar el desarrollo en el usuario, aplicamos la metodología <strong>JTBD</strong>. El primer paso fue identificar claramente a nuestro cliente (estudiantes, particulares, aficionados a las plantas). Luego, describimos sus requerimientos enfocándonos en dos preguntas clave: <em>¿Qué necesita satisfacer?</em> y <em>¿En qué contexto?</em></p>
+                            
+                            <div class="overflow-x-auto mt-6 border border-rustic-border rounded-lg shadow-sm">
+                                <table class="w-full text-sm text-left">
+                                    <thead class="bg-gray-100 font-mono text-dustyBlue">
+                                        <tr>
+                                            <th class="px-4 py-3 border-b border-rustic-border">Cliente Objetivo</th>
+                                            <th class="px-4 py-3 border-b border-rustic-border">¿Qué necesita? (El "Job")</th>
+                                            <th class="px-4 py-3 border-b border-rustic-border">Contexto de Uso</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="divide-y divide-rustic-border bg-white text-gray-700 font-light">
+                                        <tr>
+                                            <td class="px-4 py-3 font-semibold text-rustic-dark">Estudiantes / Oficinistas</td>
+                                            <td class="px-4 py-3">Mantener sus plantas hidratadas sin requerir supervisión diaria.</td>
+                                            <td class="px-4 py-3">Durante jornadas largas de estudio/trabajo o viajes cortos.</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-4 py-3 font-semibold text-rustic-dark">Aficionados principiantes</td>
+                                            <td class="px-4 py-3">Evitar ahogar la planta o secarla por falta de conocimiento.</td>
+                                            <td class="px-4 py-3">En interiores, con macetas decorativas donde no se ve la humedad del fondo.</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-4 py-3 font-semibold text-rustic-dark">Entusiastas del diseño</td>
+                                            <td class="px-4 py-3">Un sistema que no se vea como un cableado desordenado.</td>
+                                            <td class="px-4 py-3">Espacios de trabajo, escritorios o salas de estar minimalistas.</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <!-- BLOQUE 2: KANO -->
+                        <div>
+                            <h4 class="text-xl font-bold text-rustic-dark font-mono uppercase mb-3"><span class="text-sage">02.</span> Evaluación Modelo Kano</h4>
+                            <p class="mb-4">Las necesidades identificadas debían ser evaluadas. Según el <strong>Modelo Kano</strong>, los clientes a veces responden "por responder". Para evitar sesgos, planteamos las funciones por dos frentes: uno funcional (positivo) y uno disfuncional (negativo), calificando del 1 al 5.</p>
+                            
+                            <div class="overflow-x-auto mt-6 border border-rustic-border rounded-lg shadow-sm">
+                                <table class="w-full text-sm text-left">
+                                    <thead class="bg-gray-100 font-mono text-dustyBlue">
+                                        <tr>
+                                            <th class="px-4 py-3 border-b border-rustic-border">Característica Propuesta</th>
+                                            <th class="px-4 py-3 border-b border-rustic-border text-center">F. Positiva (1-5)</th>
+                                            <th class="px-4 py-3 border-b border-rustic-border text-center">F. Negativa (1-5)</th>
+                                            <th class="px-4 py-3 border-b border-rustic-border">Clasificación Kano</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="divide-y divide-rustic-border bg-white text-gray-700 font-light">
+                                        <tr>
+                                            <td class="px-4 py-3">Riego automatizado por lectura de humedad</td>
+                                            <td class="px-4 py-3 text-center font-bold text-leaf">5</td>
+                                            <td class="px-4 py-3 text-center font-bold text-clay">1</td>
+                                            <td class="px-4 py-3"><span class="bg-sage/20 text-sage px-2 py-1 rounded font-bold text-xs">Obligatoria (Must-be)</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-4 py-3">Diseño estético modular en MDF (Flat-pack)</td>
+                                            <td class="px-4 py-3 text-center font-bold text-leaf">4</td>
+                                            <td class="px-4 py-3 text-center font-bold text-clay">3</td>
+                                            <td class="px-4 py-3"><span class="bg-dustyBlue/20 text-dustyBlue px-2 py-1 rounded font-bold text-xs">Atractiva (Delighter)</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-4 py-3">Alertas visuales de bajo nivel de agua</td>
+                                            <td class="px-4 py-3 text-center font-bold text-leaf">4</td>
+                                            <td class="px-4 py-3 text-center font-bold text-clay">2</td>
+                                            <td class="px-4 py-3"><span class="bg-water/20 text-water px-2 py-1 rounded font-bold text-xs">Unidimensional (Performance)</span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <!-- BLOQUE 3: QFD -->
+                        <div>
+                            <h4 class="text-xl font-bold text-rustic-dark font-mono uppercase mb-3"><span class="text-sage">03.</span> Matriz QFD (Quality Function Deployment)</h4>
+                            <p class="mb-4">Finalmente, aplicamos el <strong>QFD</strong>, una herramienta de gestión de calidad que utilizamos para transformar las necesidades validadas (Los QUÉ) en especificaciones técnicas reales para fabricar el prototipo de YuraFab (Los CÓMO).</p>
+                            
+                            <div class="overflow-x-auto mt-6 border border-rustic-border rounded-lg shadow-sm">
+                                <table class="w-full text-sm text-left">
+                                    <thead class="bg-gray-100 font-mono text-dustyBlue">
+                                        <tr>
+                                            <th class="px-4 py-3 border-b border-rustic-border">Necesidad del Cliente (QUÉ)</th>
+                                            <th class="px-4 py-3 border-b border-rustic-border">Req. Técnico (CÓMO)</th>
+                                            <th class="px-4 py-3 border-b border-rustic-border">Método de Fabricación / Software</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="divide-y divide-rustic-border bg-white text-gray-700 font-light">
+                                        <tr>
+                                            <td class="px-4 py-3">"No quiero ahogar mi planta"</td>
+                                            <td class="px-4 py-3 font-medium">Calibración de umbrales del sensor</td>
+                                            <td class="px-4 py-3 text-sm font-mono text-dustyBlue">Programación Arduino (C++)</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-4 py-3">"Debe ser fácil de armar en casa"</td>
+                                            <td class="px-4 py-3 font-medium">Diseño de encastres sin pegamento</td>
+                                            <td class="px-4 py-3 text-sm font-mono text-dustyBlue">Corte Láser MDF + Cálculo de Kerf</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-4 py-3">"Optimización de recursos"</td>
+                                            <td class="px-4 py-3 font-medium">Dosificación precisa (ml/segundo)</td>
+                                            <td class="px-4 py-3 text-sm font-mono text-dustyBlue">Control de actuadores (Bomba de agua)</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                `;
             } else if (s.num === 4) {
                 contenidoEspecifico = `
                     <div class="space-y-12">

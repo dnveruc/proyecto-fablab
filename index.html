@@ -216,21 +216,41 @@
                             { num: 10, titulo: "Documentación Final" }
                         ];
 
-                        semanas.forEach(s => {
-                            document.write(`
-                                <button onclick="abrirModal('modal-semana${s.num}')" class="border border-rustic-border bg-white/70 backdrop-blur-sm hover:-translate-y-1 hover:border-sage hover:shadow-lg hover:shadow-sage/10 transition-all duration-300 text-left group flex flex-col h-full rounded-md overflow-hidden">
-                                    <div class="h-40 w-full bg-gray-100 flex items-center justify-center border-b border-rustic-border group-hover:bg-gray-200 transition-colors relative overflow-hidden">
-                                        <span class="text-xs text-gray-400 font-mono">[FOTO S-0${s.num}]</span>
-                                        <div class="absolute top-2 left-2 bg-sage text-white text-xs font-mono px-2 py-1 uppercase tracking-wider">S-0${s.num}</div>
-                                    </div>
-                                    <div class="p-4 bg-white flex-grow">
-                                        <h4 class="font-bold text-lg group-hover:text-sage transition-colors">Semana ${s.num}</h4>
-                                        <p class="text-sm text-rustic-accent font-mono mt-2 flex items-center gap-1 group-hover:text-dustyBlue transition-colors">
-                                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg> Abrir registro
-                                        </p>
-                                    </div>
+                 semanas.forEach(s => {
+                           document.write(`
+                <div id="modal-semana${s.num}" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 transition-opacity duration-300 opacity-0">
+                    <div class="absolute inset-0 bg-rustic-dark/90 backdrop-blur-sm" onclick="cerrarModal('modal-semana${s.num}')"></div>
+                    <div class="bg-white border border-rustic-border p-8 max-w-7xl w-full relative z-10 max-h-[90vh] overflow-y-auto shadow-2xl rounded-md flex flex-col">
+                        <button onclick="cerrarModal('modal-semana${s.num}')" class="absolute top-4 right-4 text-3xl font-mono text-rustic-accent hover:text-red-600 transition-colors leading-none">&times;</button>
+                        
+                        <div class="mb-6 border-b border-rustic-border pb-4">
+                            <span class="bg-sage text-white text-sm font-mono px-3 py-1 uppercase tracking-widest mr-3">Semana ${s.num}</span>
+                            <h3 class="text-2xl md:text-3xl font-mono font-bold mt-4 text-rustic-dark">${s.titulo}</h3>
+                        </div>
+                        
+                        <div class="space-y-6 text-gray-700 font-light text-lg flex-grow">
+                            ${contenidoEspecifico}
+                        </div>
+
+                        <!-- Botones de Navegación -->
+                        <div class="mt-12 pt-6 border-t border-rustic-border flex items-center justify-between">
+                            ${s.num > 1 ? `
+                                <button onclick="cambiarSemana(${s.num}, -1)" class="flex items-center gap-2 text-dustyBlue hover:text-water font-mono font-bold transition-colors">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"></path></svg>
+                                    Semana Anterior
                                 </button>
-                            `);
+                            ` : '<div></div>'}
+                            
+                            ${s.num < 10 ? `
+                                <button onclick="cambiarSemana(${s.num}, 1)" class="flex items-center gap-2 text-leaf hover:text-sage font-mono font-bold transition-colors">
+                                    Siguiente Semana
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path></svg>
+                                </button>
+                            ` : '<div></div>'}
+                        </div>
+                    </div>
+                </div>
+            `);
                         });
                     </script>
                 </div>
@@ -471,6 +491,17 @@
                 modal.classList.add('hidden'); 
             }, 300);
             document.body.style.overflow = 'auto'; 
+        }
+        function cambiarSemana(actual, direccion) {
+            // Cierra la semana actual
+            const modalActual = document.getElementById(`modal-semana${actual}`);
+            modalActual.classList.add('opacity-0');
+            
+            // Espera a que termine la transición y abre la nueva
+            setTimeout(() => {
+                modalActual.classList.add('hidden');
+                abrirModal(`modal-semana${actual + direccion}`);
+            }, 300);
         }
 
         document.addEventListener('keydown', function(event) {

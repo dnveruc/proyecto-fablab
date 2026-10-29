@@ -337,30 +337,25 @@
                         </div>
                     </div>
                 `;
-      } else if (s.num === 4) {
+     } else if (s.num === 4) {
                 contenidoEspecifico = `
                     <div class="space-y-12">
                         <!-- BLOQUE 1 -->
                         <div>
                             <p class="mb-4">Diseño y parametrización de una figura dada por el docente como inducción para poder realizar las prácticas posteriores.</p>
                             
-                            <div class="bg-gray-100 h-64 md:h-[28rem] flex flex-col items-center justify-center border border-rustic-border relative overflow-hidden rounded-lg mb-6 group">
-                                <!-- (FOTO DE LA PANTALLA) -->
+                            <div class="bg-gray-100 h-64 md:h-[28rem] flex flex-col items-center justify-center border border-rustic-border relative overflow-hidden rounded-lg mb-6">
                                 <img src="foto-pantalla.jpg" alt="Pantalla de diseño" class="absolute inset-0 w-full h-full object-cover">
-                                <span class="text-xs text-dustyBlue font-mono z-10 bg-white/90 px-3 py-1 rounded-md transition-opacity duration-300 group-hover:opacity-0">(FOTO DE LA PANTALLA)</span>
                             </div>
 
                             <p class="mb-4">Se introdujo el concepto clave de KERF, en este caso de 0.05 en una tabla de MDF de 4 mm de grosor ya que la cortadora láser aumenta un poco el margen al cortar y cómo queremos que quede justo sin usar ningún tipo de adhesivo implementamos KERF. Ahora con el concepto de parametrizar, creamos la figura denominada “F” en fusión 360, y parametrizamos dando nombre a las cotas con valores determinados para que toda la figura vaya cambiando de tamaño según se requiera próximamente.</p>
                             
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
-                                <div class="bg-gray-100 h-[28rem] flex flex-col items-center justify-center border border-rustic-border relative overflow-hidden rounded-lg group">
-                                    <!-- (FOTO DE LA “F” PARAMETRIZADA) -->
+                            <div class="mt-6 flex flex-col gap-4">
+                                <div class="bg-gray-100 h-[28rem] flex flex-col items-center justify-center border border-rustic-border relative overflow-hidden rounded-lg">
                                     <img src="foto-f-parametrizada.jpg" alt="F Parametrizada" class="absolute inset-0 w-full h-full object-cover">
-                                    <span class="text-xs text-dustyBlue font-mono z-10 bg-white/90 px-3 py-1 rounded-md transition-opacity duration-300 group-hover:opacity-0">(FOTO DE LA “F” PARAMETRIZADA)</span>
                                 </div>
-                                <div class="bg-gray-100 h-[28rem] flex flex-col items-center justify-center border border-rustic-border relative overflow-hidden rounded-lg p-8 text-center">
-                                    <!-- (ARCHIVO DESCARGABLE DE LA “F”) -->
-                                    <h5 class="font-bold text-lg text-dustyBlue mb-4">Archivo F Parametrizada</h5>
+                                <div class="bg-white p-4 md:p-6 flex flex-col sm:flex-row items-center justify-between border border-rustic-border rounded-lg shadow-sm">
+                                    <h5 class="font-bold text-lg text-dustyBlue mb-3 sm:mb-0">Archivo F Parametrizada</h5>
                                     <a href="figura-f.dxf" download="figura-f.dxf" class="inline-flex items-center px-6 py-3 bg-dustyBlue hover:bg-water text-white font-bold rounded-lg shadow-md transition-all duration-300">
                                         <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
                                         Descargar (.dxf)
@@ -381,25 +376,17 @@
                             <p class="mb-4">Después de lo anterior mencionado tenemos la “F” ya cortada y que encaja de manera correcta.</p>
                             
                             <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-6">
-                                <div class="bg-gray-100 h-40 flex flex-col items-center justify-center border border-rustic-border relative overflow-hidden rounded-lg group">
-                                    <!-- (FOTO DE LA PANTALLA DEL APLICATIVO) -->
+                                <div class="bg-gray-100 h-40 flex flex-col items-center justify-center border border-rustic-border relative overflow-hidden rounded-lg">
                                     <img src="foto-aplicativo.jpg" alt="Aplicativo" class="absolute inset-0 w-full h-full object-cover">
-                                    <span class="text-[10px] text-dustyBlue font-mono z-10 bg-white/90 px-1 py-1 rounded text-center transition-opacity duration-300 group-hover:opacity-0">(PANTALLA APLICATIVO)</span>
                                 </div>
-                                <div class="bg-gray-100 h-40 flex flex-col items-center justify-center border border-rustic-border relative overflow-hidden rounded-lg group">
-                                    <!-- (VIDEO DE LA “F” CORTANDOSE) -->
+                                <div class="bg-gray-100 h-40 flex flex-col items-center justify-center border border-rustic-border relative overflow-hidden rounded-lg">
                                     <video src="video-corte.mp4" class="absolute inset-0 w-full h-full object-cover" controls muted loop></video>
-                                    <span class="text-[10px] text-dustyBlue font-mono z-10 bg-white/90 px-1 py-1 rounded text-center transition-opacity duration-300 group-hover:opacity-0">(VIDEO CORTÁNDOSE)</span>
                                 </div>
-                                <div class="bg-gray-100 h-40 flex flex-col items-center justify-center border border-rustic-border relative overflow-hidden rounded-lg group">
-                                    <!-- (FOTO DE LA “F” EN PROCESO) -->
+                                <div class="bg-gray-100 h-40 flex flex-col items-center justify-center border border-rustic-border relative overflow-hidden rounded-lg">
                                     <img src="foto-proceso.jpg" alt="En proceso" class="absolute inset-0 w-full h-full object-cover">
-                                    <span class="text-[10px] text-dustyBlue font-mono z-10 bg-white/90 px-1 py-1 rounded text-center transition-opacity duration-300 group-hover:opacity-0">(FOTO EN PROCESO)</span>
                                 </div>
-                                <div class="bg-gray-100 h-40 flex flex-col items-center justify-center border border-rustic-border relative overflow-hidden rounded-lg group">
-                                    <!-- (FOTO DE LA “F” YA CORTADA) -->
+                                <div class="bg-gray-100 h-40 flex flex-col items-center justify-center border border-rustic-border relative overflow-hidden rounded-lg">
                                     <img src="efecortada1.jpg" alt="F cortada" class="absolute inset-0 w-full h-full object-cover">
-                                    <span class="text-[10px] text-dustyBlue font-mono z-10 bg-white/90 px-1 py-1 rounded text-center transition-opacity duration-300 group-hover:opacity-0">(FOTO YA CORTADA)</span>
                                 </div>
                             </div>
                         </div>
@@ -410,8 +397,7 @@
                             <p class="mb-4">El docente introduce como referente el modelo flat-pack de IKEA. El principio fundamental es el diseño para un ensamblaje fácil e intuitivo, donde las piezas se acoplan exclusivamente mediante uniones mecánicas (encastres). Esta metodología elimina el uso de pegamentos o tornillos; la firmeza de la estructura depende enteramente de la precisión con la que las piezas encajan entre sí.</p>
                             <p class="mb-4">Con lo antes mencionado, el propósito de esto es poder crear una silla infantil utilizando este principio. Por lo que se hizo un “boceto” de como posiblemente a grandes rasgos podría ser el diseño de la silla con la metodología de ikea.</p>
                             
-                            <div class="bg-gray-100 h-[28rem] md:h-[32rem] flex flex-col items-center justify-center border border-rustic-border relative overflow-hidden rounded-lg group mt-6">
-                                <!-- (FOTO DEL BOCETO DE LA SILLA) -->
+                            <div class="bg-gray-100 h-[28rem] md:h-[32rem] flex flex-col items-center justify-center border border-rustic-border relative overflow-hidden rounded-lg mt-6">
                                 <img src="boseto.silla.dino.jpeg" alt="Boceto Silla" class="absolute inset-0 w-full h-full object-cover">
                             </div>
                         </div>
@@ -420,14 +406,12 @@
                         <div>
                             <p class="mb-4">Para tener cierta noción de lo que se realizará a posterior, se nos indujo la herramienta slicer for fusion 360, en la cual dimencionamos una figura en slices para tener referencias de cómo podría quedar el diseño que haríamos.</p>
                             
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
-                                <div class="bg-gray-100 h-[28rem] flex flex-col items-center justify-center border border-rustic-border relative overflow-hidden rounded-lg group">
-                                    <!-- (FOTOS DEL OSO EN SLICER) -->
+                            <div class="mt-6 flex flex-col gap-4">
+                                <div class="bg-gray-100 h-[28rem] flex flex-col items-center justify-center border border-rustic-border relative overflow-hidden rounded-lg">
                                     <img src="oso.slice.fotos.png" alt="Oso Slicer" class="absolute inset-0 w-full h-full object-cover">
                                 </div>
-                                <div class="bg-gray-100 h-[28rem] flex flex-col items-center justify-center border border-rustic-border relative overflow-hidden rounded-lg p-8 text-center">
-                                    <!-- (ARCHIVO DEL OSO EN .DXF) -->
-                                    <h5 class="font-bold text-lg text-dustyBlue mb-4">Archivo del Oso</h5>
+                                <div class="bg-white p-4 md:p-6 flex flex-col sm:flex-row items-center justify-between border border-rustic-border rounded-lg shadow-sm">
+                                    <h5 class="font-bold text-lg text-dustyBlue mb-3 sm:mb-0">Archivo del Oso</h5>
                                     <a href="osetofin.dxf" download="osetofin.dxf" class="inline-flex items-center px-6 py-3 bg-leaf hover:bg-sage text-white font-bold rounded-lg shadow-md transition-all duration-300">
                                         <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
                                         Descargar (.dxf)

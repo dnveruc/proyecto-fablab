@@ -207,7 +207,7 @@
                             { num: 1, titulo: "Configuración del Entorno y Primeros Pasos" },
                             { num: 2, titulo: "Diseño de Carcasa" },
                             { num: 3, titulo: "Prototipado 3D" },
-                            { num: 4, titulo: "Parametrización, Inducción al corte láser y caso IKEA." },
+                            { num: 4, titulo: "Inducción al Corte Láser, MDF y Encastres" },
                             { num: 5, titulo: "Pruebas de Humedad" },
                             { num: 6, titulo: "Calibración de Bomba" },
                             { num: 7, titulo: "Integración de Energía" },
@@ -216,41 +216,20 @@
                             { num: 10, titulo: "Documentación Final" }
                         ];
 
-                 semanas.forEach(s => {
-                           document.write(`
-                <div id="modal-semana${s.num}" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 transition-opacity duration-300 opacity-0">
-                    <div class="absolute inset-0 bg-rustic-dark/90 backdrop-blur-sm" onclick="cerrarModal('modal-semana${s.num}')"></div>
-                    <div class="bg-white border border-rustic-border p-8 max-w-7xl w-full relative z-10 max-h-[90vh] overflow-y-auto shadow-2xl rounded-md flex flex-col">
-                        <button onclick="cerrarModal('modal-semana${s.num}')" class="absolute top-4 right-4 text-3xl font-mono text-rustic-accent hover:text-red-600 transition-colors leading-none">&times;</button>
-                        
-                        <div class="mb-6 border-b border-rustic-border pb-4">
-                            <span class="bg-sage text-white text-sm font-mono px-3 py-1 uppercase tracking-widest mr-3">Semana ${s.num}</span>
-                            <h3 class="text-2xl md:text-3xl font-mono font-bold mt-4 text-rustic-dark">${s.titulo}</h3>
-                        </div>
-                        
-                        <div class="space-y-6 text-gray-700 font-light text-lg flex-grow">
-                            ${contenidoEspecifico}
-                        </div>
-
-                        <!-- Botones de Navegación -->
-                        <div class="mt-12 pt-6 border-t border-rustic-border flex items-center justify-between">
-                            ${s.num > 1 ? `
-                                <button onclick="cambiarSemana(${s.num}, -1)" class="flex items-center gap-2 text-dustyBlue hover:text-water font-mono font-bold transition-colors">
-                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"></path></svg>
-                                    Semana Anterior
+                        semanas.forEach(s => {
+                            document.write(`
+                                <button onclick="abrirModal('modal-semana${s.num}')" class="w-full border border-rustic-border bg-white/80 backdrop-blur-sm hover:-translate-y-1 hover:border-dustyBlue hover:shadow-xl hover:shadow-dustyBlue/20 transition-all duration-300 text-left group flex flex-col rounded-xl overflow-hidden relative p-6 h-36 justify-center">
+                                    <div class="absolute -right-2 -bottom-4 opacity-5 text-8xl font-black font-mono group-hover:text-dustyBlue group-hover:opacity-10 transition-all duration-500 pointer-events-none">0${s.num}</div>
+                                    <div class="relative z-10">
+                                        <div class="text-xs font-mono text-sage font-bold tracking-widest mb-2 uppercase">Fase 0${s.num}</div>
+                                        <h4 class="font-bold text-2xl text-rustic-dark group-hover:text-dustyBlue transition-colors">Semana ${s.num}</h4>
+                                        <p class="text-sm text-rustic-accent font-mono mt-3 flex items-center gap-2 group-hover:text-sage transition-colors">
+                                            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"></path></svg> 
+                                            Abrir registro
+                                        </p>
+                                    </div>
                                 </button>
-                            ` : '<div></div>'}
-                            
-                            ${s.num < 10 ? `
-                                <button onclick="cambiarSemana(${s.num}, 1)" class="flex items-center gap-2 text-leaf hover:text-sage font-mono font-bold transition-colors">
-                                    Siguiente Semana
-                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path></svg>
-                                </button>
-                            ` : '<div></div>'}
-                        </div>
-                    </div>
-                </div>
-            `);
+                            `);
                         });
                     </script>
                 </div>
@@ -320,44 +299,22 @@
                         <div>
                             <h4 class="text-xl font-bold text-rustic-dark font-mono uppercase mb-3"><span class="text-sage">01.</span> Preparación del Entorno Local y VS Code</h4>
                             <p class="mb-4">Todo proyecto ordenado necesita una buena base. Comenzamos creando una estructura de carpetas específica en el ordenador local para almacenar todos los recursos, códigos y fotografías del programa. Posteriormente, nos introdujimos al uso de Visual Studio Code, el editor de código donde daremos forma a nuestra documentación.</p>
-                            <div class="bg-gray-100 h-64 md:h-80 flex flex-col items-center justify-center border border-rustic-border relative overflow-hidden rounded-lg group">
-                                <img src="" class="absolute inset-0 w-full h-full object-cover">
-                                <span class="text-sm text-dustyBlue font-mono z-10 bg-white/90 px-4 py-2 rounded-md shadow-sm border border-rustic-border/50">[Foto: Captura de VS Code o carpetas]</span>
-                            </div>
                         </div>
                         <div>
                             <h4 class="text-xl font-bold text-rustic-dark font-mono uppercase mb-3"><span class="text-sage">02.</span> Control de Versiones con GitHub</h4>
                             <p class="mb-4">Para asegurar que nuestro progreso no se pierda y mantener un registro histórico de los cambios, integramos GitHub a nuestro flujo de trabajo. Entender cómo subir nuestros archivos a un repositorio en la nube es fundamental no solo para respaldar la información, sino para cumplir con los estándares de documentación continua que exige el proyecto.</p>
-                            <div class="bg-gray-100 h-64 md:h-80 flex flex-col items-center justify-center border border-rustic-border relative overflow-hidden rounded-lg group">
-                                <img src="" class="absolute inset-0 w-full h-full object-cover">
-                                <span class="text-sm text-dustyBlue font-mono z-10 bg-white/90 px-4 py-2 rounded-md shadow-sm border border-rustic-border/50">[Foto: Repositorio en GitHub o terminal]</span>
-                            </div>
                         </div>
                         <div>
                             <h4 class="text-xl font-bold text-rustic-dark font-mono uppercase mb-3"><span class="text-sage">03.</span> Estructuración Básica con HTML</h4>
                             <p class="mb-4">Una vez con el entorno listo, dimos nuestros primeros pasos en la escritura de código utilizando HTML. Comprendimos cómo funcionan las etiquetas básicas para estructurar la información, crear títulos, párrafos y divisiones en nuestra página web, dándole un esqueleto lógico a lo que más adelante será nuestro portafolio.</p>
-                            <div class="bg-gray-100 h-64 md:h-80 flex flex-col items-center justify-center border border-rustic-border relative overflow-hidden rounded-lg group">
-                                <img src="" class="absolute inset-0 w-full h-full object-cover">
-                                <span class="text-sm text-dustyBlue font-mono z-10 bg-white/90 px-4 py-2 rounded-md shadow-sm border border-rustic-border/50">[Foto: Escribiendo código o primeras líneas HTML]</span>
-                            </div>
                         </div>
                         <div>
                             <h4 class="text-xl font-bold text-rustic-dark font-mono uppercase mb-3"><span class="text-sage">04.</span> Integración de Datos y Apoyo de IA</h4>
                             <p class="mb-4">Para poner a prueba lo aprendido de forma práctica, realizamos un ejercicio introductorio. Descargamos una base de datos pública de internet y, con el apoyo de herramientas de Inteligencia Artificial, construimos una página web capaz de visualizar esas estadísticas. Aunque el resultado fue un prototipo sencillo, este ejercicio fue fundamental para entender cómo se conectan los datos externos con la estructura web.</p>
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
-                                <div class="bg-gray-100 h-64 flex flex-col items-center justify-center border border-rustic-border relative overflow-hidden rounded-lg group">
-                                    <img src="" class="absolute inset-0 w-full h-full object-cover">
-                                    <span class="text-xs md:text-sm text-dustyBlue font-mono z-10 bg-white/90 px-3 py-1 rounded-md shadow-sm border border-rustic-border/50 text-center">[Foto: Base de Datos Pública]</span>
-                                </div>
-                                <div class="bg-gray-100 h-64 flex flex-col items-center justify-center border border-rustic-border relative overflow-hidden rounded-lg group">
-                                    <img src="" class="absolute inset-0 w-full h-full object-cover">
-                                    <span class="text-xs md:text-sm text-dustyBlue font-mono z-10 bg-white/90 px-3 py-1 rounded-md shadow-sm border border-rustic-border/50 text-center">[Foto: Página Web Finalizada]</span>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 `;
-} else if (s.num === 4) {
+            } else if (s.num === 4) {
                 contenidoEspecifico = `
                     <div class="space-y-12">
                         <!-- BLOQUE 1 -->
@@ -436,24 +393,39 @@
             } else {
                 contenidoEspecifico = `
                     <p>Contenido en desarrollo para la semana ${s.num}.</p>
-                    <div class="bg-gray-100 h-64 flex flex-col items-center justify-center border border-rustic-border border-dashed relative mt-4">
-                        <img src="" class="absolute inset-0 w-full h-full object-cover opacity-0">
-                        <span class="text-xs text-gray-400 font-mono z-10">[Espacio para imagen]</span>
-                    </div>
                 `;
             }
 
             document.write(`
                 <div id="modal-semana${s.num}" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 transition-opacity duration-300 opacity-0">
                     <div class="absolute inset-0 bg-rustic-dark/90 backdrop-blur-sm" onclick="cerrarModal('modal-semana${s.num}')"></div>
-                    <div class="bg-white border border-rustic-border p-8 max-w-7xl w-full relative z-10 max-h-[90vh] overflow-y-auto shadow-2xl rounded-md">
+                    <div class="bg-white border border-rustic-border p-8 max-w-7xl w-full relative z-10 max-h-[90vh] overflow-y-auto shadow-2xl rounded-md flex flex-col">
                         <button onclick="cerrarModal('modal-semana${s.num}')" class="absolute top-4 right-4 text-3xl font-mono text-rustic-accent hover:text-red-600 transition-colors leading-none">&times;</button>
+                        
                         <div class="mb-6 border-b border-rustic-border pb-4">
                             <span class="bg-sage text-white text-sm font-mono px-3 py-1 uppercase tracking-widest mr-3">Semana ${s.num}</span>
                             <h3 class="text-2xl md:text-3xl font-mono font-bold mt-4 text-rustic-dark">${s.titulo}</h3>
                         </div>
-                        <div class="space-y-6 text-gray-700 font-light text-lg">
+                        
+                        <div class="space-y-6 text-gray-700 font-light text-lg flex-grow">
                             ${contenidoEspecifico}
+                        </div>
+
+                        <!-- Botones de Navegación -->
+                        <div class="mt-12 pt-6 border-t border-rustic-border flex items-center justify-between">
+                            ${s.num > 1 ? `
+                                <button onclick="cambiarSemana(${s.num}, -1)" class="flex items-center gap-2 text-dustyBlue hover:text-water font-mono font-bold transition-colors">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"></path></svg>
+                                    Semana Anterior
+                                </button>
+                            ` : '<div></div>'}
+                            
+                            ${s.num < 10 ? `
+                                <button onclick="cambiarSemana(${s.num}, 1)" class="flex items-center gap-2 text-leaf hover:text-sage font-mono font-bold transition-colors">
+                                    Siguiente Semana
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path></svg>
+                                </button>
+                            ` : '<div></div>'}
                         </div>
                     </div>
                 </div>
@@ -492,12 +464,11 @@
             }, 300);
             document.body.style.overflow = 'auto'; 
         }
+
         function cambiarSemana(actual, direccion) {
-            // Cierra la semana actual
             const modalActual = document.getElementById(`modal-semana${actual}`);
             modalActual.classList.add('opacity-0');
             
-            // Espera a que termine la transición y abre la nueva
             setTimeout(() => {
                 modalActual.classList.add('hidden');
                 abrirModal(`modal-semana${actual + direccion}`);

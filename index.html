@@ -346,7 +346,7 @@
                         </div>
                     </div>
                 `;
-            } else if (s.num === 3) {
+         } else if (s.num === 3) {
                 contenidoEspecifico = `
                     <div class="space-y-12">
                         <!-- BLOQUE 1: JTBD -->
@@ -455,6 +455,108 @@
                                         </tr>
                                     </tbody>
                                 </table>
+                            </div>
+                        </div>
+
+                        <!-- BLOQUE 4: Escaneo 3D -->
+                        <div>
+                            <h4 class="text-xl font-bold text-rustic-dark font-mono uppercase mb-3"><span class="text-sage">04.</span> Escaneo 3D de Rostro</h4>
+                            <p class="mb-4">Continuando con la semana, el objetivo ahora es imprimir en 3D la cabeza de un miembro del grupo (Dereck), por lo tanto, registraremos el procedimiento hasta lograrlo.</p>
+                            <p class="mb-4">Primero procedimos a escanear el rostro utilizando el escáner 3D portátil <strong>Creality CR-SCAN 01</strong>, tomando en cuenta sus especificaciones técnicas:</p>
+                            <ul class="list-disc pl-6 mb-6 text-gray-700 space-y-1 font-light">
+                                <li><strong>Tecnología:</strong> Luz estructurada (luz blanca)</li>
+                                <li><strong>Precisión de escaneo:</strong> ±0,1 mm</li>
+                                <li><strong>Rango de escaneo:</strong> 400–600 mm</li>
+                                <li><strong>Velocidad de captura:</strong> hasta 10 fps</li>
+                                <li><strong>Formatos de salida:</strong> OBJ, STL, PLY</li>
+                                <li><strong>Software:</strong> CR Studio (nativo)</li>
+                                <li><strong>Modos de funcionamiento:</strong> Escaneo manual / Escaneo con plataforma giratoria</li>
+                            </ul>
+                            
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
+                                <div class="bg-gray-100 h-[24rem] flex flex-col items-center justify-center border border-rustic-border relative overflow-hidden rounded-lg">
+                                    <img src="escanerperfil.jpg" alt="Perfil escaner" class="absolute inset-0 w-full h-full object-contain p-2">
+                                </div>
+                                <div class="bg-gray-100 h-[24rem] flex flex-col items-center justify-center border border-rustic-border relative overflow-hidden rounded-lg">
+                                    <img src="dereckescaner.jpg" alt="Escaneo de Dereck" class="absolute inset-0 w-full h-full object-contain p-2">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- BLOQUE 5: Chitubox -->
+                        <div>
+                            <h4 class="text-xl font-bold text-rustic-dark font-mono uppercase mb-3"><span class="text-sage">05.</span> Slicing y Preparación en Chitubox</h4>
+                            <p class="mb-4">Una vez terminado el escaneo, utilizamos la aplicación <strong>Chitubox</strong> para detallar y dar acabados correctamente al modelo. Realizamos tres procesos fundamentales antes de laminar:</p>
+                            <ul class="list-disc pl-6 mb-6 text-gray-700 space-y-1 font-light">
+                                <li>Vaciar el interior de la pieza para ahorrar resina.</li>
+                                <li>Realizar un agujero de diámetro 5 mm en la superficie.</li>
+                                <li>Aplicar soportes teniendo en cuenta que la pieza no supere los 5 cm de alto.</li>
+                            </ul>
+                            
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+                                <div class="bg-gray-100 h-[24rem] flex flex-col items-center justify-center border border-rustic-border relative overflow-hidden rounded-lg">
+                                    <img src="aplicacionescaner.jpg" alt="Aplicación de escáner" class="absolute inset-0 w-full h-full object-contain p-2">
+                                </div>
+                                <div class="bg-gray-100 h-[24rem] flex flex-col items-center justify-center border border-rustic-border relative overflow-hidden rounded-lg">
+                                    <img src="dereckchitu.jpg" alt="Pieza en Chitubox" class="absolute inset-0 w-full h-full object-contain p-2">
+                                </div>
+                            </div>
+                            
+                            <div class="bg-white p-4 md:p-6 flex flex-col sm:flex-row items-center justify-between border border-rustic-border rounded-lg shadow-sm">
+                                <h5 class="font-bold text-lg text-dustyBlue mb-3 sm:mb-0">Archivo Listo (.ctp)</h5>
+                                <a href="anydereck.ctp" download="anydereck.ctp" class="inline-flex items-center px-6 py-3 bg-dustyBlue hover:bg-water text-white font-bold rounded-lg shadow-md transition-all duration-300">
+                                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                                    Descargar (anydereck.ctp)
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- BLOQUE 6: Impresión -->
+                        <div>
+                            <h4 class="text-xl font-bold text-rustic-dark font-mono uppercase mb-3"><span class="text-sage">06.</span> Impresión en Resina (AnyCubic)</h4>
+                            <p class="mb-4">Continuando con la impresión, la cual se realizará en la Impresora 3D <strong>AnyCubic Photon M3 Plus</strong> de Resina.</p>
+                            
+                            <div class="bg-gray-100 h-64 md:h-[28rem] flex flex-col items-center justify-center border border-rustic-border relative overflow-hidden rounded-lg mb-6">
+                                <img src="impresora.jpg" alt="Impresora 3D AnyCubic" class="absolute inset-0 w-full h-full object-contain p-2 md:p-4">
+                            </div>
+
+                            <p class="mb-4">Para poder realizar la impresión se deben tener en cuenta lo siguiente:</p>
+                            <ul class="list-disc pl-6 mb-6 text-gray-700 space-y-1 font-light">
+                                <li>Medidas mínimas de seguridad tales como guantes, gafas y mascarilla KN 95. Por el hecho de que la resina empleada es tóxica y se debe tener el debido manejo y cuidado.</li>
+                                <li>Constatar que la impresora se encuentre en óptimas condiciones, que no contenga restos de resinas pasadas y que la parte transparente de la base no esté rota o hueca, y que el plato superior no haya restos pegados, así mismo con el espejo de base.</li>
+                            </ul>
+                            
+                            <p class="mb-4 font-light text-gray-700">Para empezar la impresión vertemos la resina en el plato inferior a una medida tal de que sea suficiente para nuestro proyecto, y luego lo ajustamos a la impresora. Se tapa, se comprueba que el archivo funcione y se manda a imprimir, el tiempo de espera ronda las 3 horas.</p>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+                                <div class="bg-gray-100 h-[24rem] flex flex-col items-center justify-center border border-rustic-border relative overflow-hidden rounded-lg">
+                                    <img src="dennysany.jpg" alt="Preparando impresora" class="absolute inset-0 w-full h-full object-contain p-2">
+                                </div>
+                                <div class="bg-gray-100 h-[24rem] flex flex-col items-center justify-center border border-rustic-border relative overflow-hidden rounded-lg">
+                                    <img src="anyvista.jpg" alt="Vista del proceso" class="absolute inset-0 w-full h-full object-contain p-2">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- BLOQUE 7: Post-procesado -->
+                        <div>
+                            <h4 class="text-xl font-bold text-rustic-dark font-mono uppercase mb-3"><span class="text-sage">07.</span> Post-procesado y Resultado Final</h4>
+                            <p class="mb-4">Una vez la pieza esté lista, con cuidado la sacamos, limpiamos restos de resina, quitamos soporte y lavamos únicamente con agua.</p>
+                            <p class="mb-6">Se procede a lavar nuevamente en la máquina y se seca con luz uv por aproximadamente 6 minutos.</p>
+                            
+                            <div class="bg-gray-100 h-64 md:h-[28rem] flex flex-col items-center justify-center border border-rustic-border relative overflow-hidden rounded-lg mb-6">
+                                <img src="luzuvcabeza.jpg" alt="Curado UV" class="absolute inset-0 w-full h-full object-contain p-2 md:p-4">
+                            </div>
+
+                            <p class="mb-4">Con esto tendríamos el resultado final de la impresión en resina; una figura hueca, liviana y resistente.</p>
+                            
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div class="bg-gray-100 h-[24rem] flex flex-col items-center justify-center border border-rustic-border relative overflow-hidden rounded-lg">
+                                    <img src="resi1.jpg" alt="Resultado Final 1" class="absolute inset-0 w-full h-full object-contain p-2">
+                                </div>
+                                <div class="bg-gray-100 h-[24rem] flex flex-col items-center justify-center border border-rustic-border relative overflow-hidden rounded-lg">
+                                    <img src="resi2.jpg" alt="Resultado Final 2" class="absolute inset-0 w-full h-full object-contain p-2">
+                                </div>
                             </div>
                         </div>
                     </div>

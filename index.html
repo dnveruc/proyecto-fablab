@@ -3,145 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bitácora I+D | YuraFab | FabLab</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Courier+Prime&family=Inter:wght@300;400;600&display=swap');
-    </style>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        mono: ['Courier Prime', 'monospace'],
-                    },
-                    colors: {
-                        rustic: {
-                            bg: '#F5F4F0',
-                            dark: '#2D2B2A',
-                            accent: '#8C7D70',
-                            border: '#D1CCC5'
-                        },
-                        leaf: '#798C64',
-                        water: '#5B8291',
-                        clay: '#D97950',
-                        sage: '#8F9E8B',
-                        dustyBlue: '#7C98AB'
-                    },
-                    animation: {
-                        'float-slow': 'float 6s ease-in-out infinite',
-                        'float-fast': 'float 4s ease-in-out infinite',
-                        'float-delayed': 'float 7s ease-in-out 2s infinite',
-                        'pulse-soft': 'pulseSoft 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-                        'spin-slow': 'spin 12s linear infinite',
-                    },
-                    keyframes: {
-                        float: {
-                            '0%, 100%': { transform: 'translateY(0) rotate(0deg)' },
-                            '50%': { transform: 'translateY(-15px) rotate(2deg)' },
-                        },
-                        pulseSoft: {
-                            '0%, 100%': { opacity: '1', transform: 'scale(1)' },
-                            '50%': { opacity: '0.7', transform: 'scale(0.95)' },
-                        }
-                    }
-                }
-            }
-        }
-    </script>
+    <meta name="theme-color" content="#f6f4ec">
+    <meta name="description" content="YuraFab: diseño, naturaleza y fabricación digital. Conoce nuestro proyecto de riego inteligente y su proceso en el FabLab.">
+    <title>YuraFab — Diseño que crece contigo</title>
+    <link rel="preload" href="assets/fonts/dm-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="assets/styles.css">
 </head>
-<body class="bg-rustic-bg text-rustic-dark font-sans selection:bg-dustyBlue selection:text-white antialiased relative">
-
-    <div class="fixed inset-0 z-[-1] overflow-hidden pointer-events-none bg-rustic-bg">
-        <svg class="absolute top-[10%] left-[-10%] w-[120%] h-auto text-dustyBlue opacity-10 animate-float" viewBox="0 0 1440 320" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M0 160L48 170.7C96 181 192 203 288 186.7C384 171 480 117 576 112C672 107 768 149 864 165.3C960 181 1056 171 1152 144C1248 117 1344 75 1392 53.3L1440 32" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
-        </svg>
-        <svg class="absolute bottom-[5%] left-[-5%] w-[110%] h-auto text-sage opacity-[0.08] animate-float-delayed" viewBox="0 0 1440 320" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M0 256L60 229.3C120 203 240 149 360 144C480 139 600 181 720 186.7C840 192 960 160 1080 149.3C1200 139 1320 149 1380 154.7L1440 160" stroke="currentColor" stroke-width="4" stroke-dasharray="10 10"/>
-        </svg>
-    </div>
-
-    <div id="pantalla-bienvenida" class="fixed inset-0 bg-rustic-bg flex flex-col items-center justify-center transition-all duration-[1500ms] z-50 overflow-hidden">
-        <div class="relative z-10 flex flex-col items-center p-10 md:p-16 rounded-3xl bg-white/40 backdrop-blur-md border border-white/60 shadow-2xl shadow-water/10 max-w-2xl w-[90%] text-center">
-            <div class="relative mb-8 w-32 h-32 flex items-center justify-center">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="absolute w-24 h-24 text-clay opacity-30 animate-spin-slow">
-                    <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke-dasharray="4 4"/>
-                    <path d="M8 12H16M12 8V16"/>
-                </svg>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="absolute w-20 h-20 text-leaf animate-float-slow bg-white rounded-full p-2 shadow-inner">
-                    <path d="M12 22V12M12 12C12 12 9 7 4 5C4 5 5 10 12 12ZM12 12C12 12 16 8 20 8C20 8 19 13 12 12Z" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-                <div class="absolute -bottom-2 -right-4 animate-float-fast">
-                    <svg viewBox="0 0 24 24" fill="currentColor" class="w-10 h-10 text-water drop-shadow-md">
-                        <path d="M12 21.5C16.1421 21.5 19.5 18.1421 19.5 14C19.5 9 12 2.5 12 2.5C12 2.5 4.5 9 4.5 14C4.5 18.1421 7.85786 21.5 12 21.5Z"/>
-                    </svg>
-                </div>
-            </div>
-
-            <h1 class="text-3xl md:text-5xl font-mono mb-4 tracking-widest uppercase text-rustic-dark font-bold">
-                <span class="block text-xl md:text-2xl text-clay mb-2 font-light">Proyecto I+D</span>
-                YuraFab
-            </h1>
-            <p class="text-leaf font-mono tracking-widest mb-10 text-sm md:text-base font-semibold border-b border-water/30 pb-4 inline-block px-8">
-                FABLAB // INNOVACIÓN ORGÁNICA
-            </p>
-            
-            <div class="group relative inline-block p-[2px] cursor-pointer" onclick="entrarBitacora()">
-                <div class="absolute inset-0 bg-gradient-to-r from-clay via-leaf to-water opacity-50 group-hover:opacity-100 transition-opacity duration-500"></div>
-                <button class="relative flex items-center justify-center gap-3 w-full h-full px-8 md:px-12 py-4 font-mono font-bold tracking-widest uppercase text-rustic-bg bg-rustic-dark transition-colors duration-300 group-hover:bg-[#1a1918]">
-                    BIENVENIDO
-                    <svg class="w-5 h-5 text-leaf group-hover:translate-x-2 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-                    </svg>
-                </button>
-            </div>
-        </div>
-    </div>
-
-    <div id="contenido-principal" class="hidden min-h-screen opacity-0 transition-opacity duration-1000 pb-20 relative z-10">
-        
-        <header class="border-b border-rustic-border/50 backdrop-blur-md bg-rustic-bg/80 sticky top-0 z-20">
-            <div class="py-6 px-8 md:px-16 flex flex-col md:flex-row justify-between items-baseline">
-                <h2 class="text-3xl font-mono font-bold tracking-tight text-rustic-dark">Bitácora Visual</h2>
-                <div class="flex space-x-4 mt-2 md:mt-0">
-                    <span class="text-sm font-mono tracking-widest text-dustyBlue uppercase flex items-center gap-2">
-                        <span class="w-2 h-2 rounded-full bg-dustyBlue animate-pulse-slow"></span> YuraFab.
-                    </span>
-                    <span class="text-sm font-mono tracking-widest text-rustic-accent uppercase">| FabLab</span>
-                </div>
-            </div>
-            
-            <div class="bg-white/50 py-3 px-8 md:px-16 flex flex-wrap gap-x-8 gap-y-3 text-xs font-mono uppercase tracking-wider text-rustic-accent border-t border-rustic-border/30">
-                <div class="flex items-center gap-2 hover:text-clay transition-colors">
-                    <svg class="w-4 h-4 text-clay" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z"></path>
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"></path>
-                    </svg>
-                    Universidad de Cuenca
-                </div>
-                <div class="flex items-center gap-2 hover:text-dustyBlue transition-colors">
-                    <svg class="w-4 h-4 text-dustyBlue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
-                    </svg>
-                    Ingeniería Industrial
-                </div>
-                <div class="flex items-center gap-2 hover:text-leaf transition-colors">
-                    <svg class="w-4 h-4 text-leaf" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.243-4.243a8 8 0 1111.314 0z"></path>
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                    </svg>
-                    Cuenca, Ecuador
-                </div>
-            </div>
+<body class="bg-rustic-bg text-rustic-dark font-sans antialiased">
+    <div id="contenido-principal">
+        <header class="site-header">
+            <a class="wordmark" href="#inicio" aria-label="YuraFab, inicio"><span class="brand-symbol" aria-hidden="true"><svg class="sun-icon" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 2v28M2 16h28M6 6l20 20M6 26 26 6"/></svg></span> yura<span>fab</span></a>
+            <nav aria-label="Navegación principal">
+                <a href="#proyecto">El proyecto</a>
+                <a href="#equipo">El equipo</a>
+                <a href="#bitacora" class="nav-cta">Nuestra bitácora <span aria-hidden="true"><svg class="arrow-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></span></a>
+            </nav>
         </header>
-
-        <main class="max-w-5xl mx-auto px-6 mt-16 space-y-24">
-            
-            <section>
-                <div class="flex items-center mb-6">
+        <main id="inicio" class="site-main">
+            <section class="hero" aria-labelledby="hero-title">
+                <div class="hero-copy">
+                    <p class="eyebrow"><span class="status-dot"></span> Naturaleza × fabricación digital</p>
+                    <h1 id="hero-title">Diseño que<br>crece <span>contigo.</span></h1>
+                    <p class="hero-description">Un encuentro entre naturaleza, tecnología y las cosas bien hechas. Creamos nuevas formas de cuidar lo que nos rodea.</p>
+                    <a href="#proyecto" class="primary-link">Descubre YuraFab <span aria-hidden="true"><svg class="arrow-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></span></a>
+                    <div class="hero-note"><span class="tiny-sun" aria-hidden="true"><svg class="sun-icon" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 2v28M2 16h28M6 6l20 20M6 26 26 6"/></svg></span> De una idea a algo vivo.<br><span>Diseñado en Cuenca, Ecuador.</span></div>
+                </div>
+                <div class="hero-art">
+                    <div class="art-label"><span>YF — ESTUDIO 001</span><span>DISEÑO VIVO</span></div>
+                    <svg class="sunset-art" viewBox="0 0 600 670" role="img" aria-labelledby="art-title art-desc">
+                        <title id="art-title">Un pequeño paisaje de posibilidades</title>
+                        <desc id="art-desc">Una planta verde en una maceta terracota, frente a un sol naranja y un cielo celeste de atardecer.</desc>
+                        <defs>
+                            <linearGradient id="sky" x2="0" y2="1"><stop stop-color="#bcd7df"/><stop offset=".62" stop-color="#ead9c2"/><stop offset="1" stop-color="#e5b597"/></linearGradient>
+                            <linearGradient id="sun" x2="0" y2="1"><stop stop-color="#efad72"/><stop offset="1" stop-color="#da704c"/></linearGradient>
+                            <linearGradient id="pot" x2="1" y2="0"><stop stop-color="#9e4c32"/><stop offset=".45" stop-color="#cb7752"/><stop offset="1" stop-color="#e5a37b"/></linearGradient>
+                            <linearGradient id="leaf" x2="1" y2="1"><stop stop-color="#7e9364"/><stop offset="1" stop-color="#284c3b"/></linearGradient>
+                            <clipPath id="arch"><path d="M72 570V260a228 228 0 0 1 456 0v310Z"/></clipPath>
+                            <filter id="blur"><feGaussianBlur stdDeviation="9"/></filter>
+                        </defs>
+                        <g clip-path="url(#arch)">
+                            <path fill="url(#sky)" d="M0 0h600v600H0z"/>
+                            <circle cx="380" cy="265" r="111" fill="url(#sun)"/>
+                            <path d="M0 446Q160 359 325 435T600 419V600H0Z" fill="#a0af9a"/>
+                            <path d="M0 493Q174 405 342 484T600 465V600H0Z" fill="#6f8b77"/>
+                            <path d="M0 549Q220 473 600 548V600H0Z" fill="#365b46"/>
+                            <path d="M-20 460Q160 373 325 449T620 433M-20 472Q160 385 325 461T620 445" fill="none" stroke="#f5ecda" stroke-opacity=".3"/>
+                        </g>
+                        <ellipse cx="300" cy="592" rx="165" ry="17" fill="#6c5841" opacity=".15" filter="url(#blur)"/>
+                        <path d="M298 449Q320 333 291 235M302 372Q248 326 227 282M305 333Q356 299 378 250" fill="none" stroke="#36543b" stroke-width="7" stroke-linecap="round"/>
+                        <path d="M294 298Q226 286 232 207Q309 219 294 298Z" fill="url(#leaf)"/>
+                        <path d="M301 351Q322 255 402 263Q382 350 301 351Z" fill="url(#leaf)"/>
+                        <path d="M280 337Q206 347 184 274Q255 259 280 337Z" fill="#527554"/>
+                        <path d="M289 252Q277 189 332 157Q366 225 289 252Z" fill="#6a865b"/>
+                        <path d="M296 405Q350 329 406 366Q376 425 296 405Z" fill="#416947"/>
+                        <path d="M299 401Q219 423 201 354Q265 326 299 401Z" fill="#7f9463"/>
+                        <path d="M292 290L242 224M310 339L386 278M290 248L326 174M278 332L199 284" stroke="#c2c8a1" stroke-opacity=".4" fill="none" stroke-width="1.5"/>
+                        <path d="M221 437h158l-18 129q-60 33-122 0Z" fill="url(#pot)"/>
+                        <ellipse cx="300" cy="437" rx="79" ry="17" fill="#e1a17a"/>
+                        <ellipse cx="300" cy="437" rx="67" ry="10" fill="#554a36"/>
+                        <path d="M298 440l3-28" stroke="#3c5a3c" stroke-width="7"/>
+                        <path d="M244 467l11 88M256 470l10 89M268 472l7 90M280 474l4 91M292 474l1 92M304 474l-2 92M316 473l-4 92M328 472l-7 90M340 470l-9 88M352 466l-11 88" stroke="#f4c59b" opacity=".3" fill="none"/>
+                        <circle cx="460" cy="124" r="24" fill="#f6f4ec"/>
+                        <path d="M460 111v26m-13-13h26m-22-9 18 18m-18 0 18-18" stroke="#b55d3e" stroke-width="1.5"/>
+                    </svg>
+                    <div class="art-caption"><span>La naturaleza inspira.<br>El diseño lo hace posible.</span><span class="art-number">01 / ∞</span></div>
+                </div>
+            </section>
+            <div class="values-strip" aria-label="Nuestros principios"><span>Menos ruido. Más propósito.</span><span>Diseño consciente <i><svg class="sun-icon" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 2v28M2 16h28M6 6l20 20M6 26 26 6"/></svg></i> Tecnología sensible <i><svg class="sun-icon" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 2v28M2 16h28M6 6l20 20M6 26 26 6"/></svg></i> Naturaleza primero</span></div>
+            <section id="proyecto" class="origin-section">
+                <div class="section-heading"><p class="eyebrow">01 — El proyecto</p>
                     <div class="w-8 h-[2px] bg-sage mr-4"></div>
-                    <h3 class="text-2xl font-mono uppercase tracking-wide">El Origen</h3>
+                    <h3 class="text-2xl font-mono uppercase tracking-wide">Todo empieza<br>con una idea.</h3>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
                     <div class="space-y-4 text-lg leading-relaxed text-gray-700 font-light">
@@ -152,22 +84,22 @@
                     </div>
                     <div class="flex items-center justify-center w-full mt-2 md:mt-0 relative group">
                         <div class="absolute inset-0 bg-sage/20 translate-x-3 translate-y-3 rounded-xl transition-transform group-hover:translate-x-1 group-hover:translate-y-1"></div>
-                        <div class="w-full h-64 bg-gray-200 rounded-xl border border-rustic-border flex items-center justify-center relative z-10 overflow-hidden">
-                            <img src="https://github.com/user-attachments/assets/6266174d-715e-480a-94a4-2c3d8fa7365a" alt="Grupoo" class="w-full h-full object-cover object-top">
+                        <div class="photo-frame w-full aspect-[3/2] bg-gray-200 rounded-xl border border-rustic-border flex items-center justify-center relative z-10 overflow-hidden">
+                            <img src="https://github.com/user-attachments/assets/6266174d-715e-480a-94a4-2c3d8fa7365a" alt="Equipo YuraFab" class="w-full h-full object-contain object-center">
                         </div>
                     </div>
                 </div>
             </section>
 
-            <section>
-                <div class="flex items-center mb-8">
+            <section id="equipo" class="team-section">
+                <div class="section-heading"><p class="eyebrow">02 — Nuestro equipo</p>
                     <div class="w-8 h-[2px] bg-dustyBlue mr-4"></div>
-                    <h3 class="text-2xl font-mono uppercase tracking-wide">El Equipo</h3>
+                    <h3 class="text-2xl font-mono uppercase tracking-wide">Las mentes detrás<br>de lo que crece.</h3>
                 </div>
-                <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                <div class="team-grid grid grid-cols-1 sm:grid-cols-3 gap-6">
                     <button onclick="abrirModal('modal-dennys')" class="border border-rustic-border bg-white/70 backdrop-blur-sm hover:-translate-y-1 hover:border-dustyBlue hover:shadow-lg hover:shadow-dustyBlue/10 transition-all duration-300 text-left group relative overflow-hidden">
-                        <div class="h-48 bg-gray-100 flex items-center justify-center border-b border-rustic-border group-hover:bg-gray-200 transition-colors overflow-hidden">
-                            <img src="https://github.com/user-attachments/assets/69f3b389-de15-42cd-8aa6-88e2a67513ce" alt="Dennysperfil" class="w-full h-full object-cover object-top">
+                        <div class="photo-frame w-full aspect-square bg-gray-100 flex items-center justify-center border-b border-rustic-border group-hover:bg-gray-200 transition-colors overflow-hidden">
+                            <img src="https://github.com/user-attachments/assets/69f3b389-de15-42cd-8aa6-88e2a67513ce" alt="Dennys Vera" class="w-full h-full object-contain object-center">
                         </div>
                         <div class="p-4 relative bg-white">
                             <h4 class="font-bold text-xl uppercase text-rustic-dark group-hover:text-dustyBlue transition-colors">Dennys Vera</h4>
@@ -175,8 +107,8 @@
                         </div>
                     </button>
                      <button onclick="abrirModal('modal-paul')" class="border border-rustic-border bg-white/70 backdrop-blur-sm hover:-translate-y-1 hover:border-dustyBlue hover:shadow-lg hover:shadow-dustyBlue/10 transition-all duration-300 text-left group relative overflow-hidden">
-                        <div class="h-48 bg-gray-100 flex items-center justify-center border-b border-rustic-border group-hover:bg-gray-200 transition-colors overflow-hidden">
-                            <img src="https://github.com/user-attachments/assets/fd06973e-a2a0-47b2-95ba-a652ff202856" alt="Paulperfil" class="w-full h-full object-cover object-top">
+                        <div class="photo-frame w-full aspect-square bg-gray-100 flex items-center justify-center border-b border-rustic-border group-hover:bg-gray-200 transition-colors overflow-hidden">
+                            <img src="https://github.com/user-attachments/assets/fd06973e-a2a0-47b2-95ba-a652ff202856" alt="Paul Coro" class="w-full h-full object-contain object-center">
                         </div>
                         <div class="p-4 relative bg-white">
                             <h4 class="font-bold text-xl uppercase text-rustic-dark group-hover:text-dustyBlue transition-colors">Paul Coro</h4>
@@ -184,8 +116,8 @@
                         </div>
                     </button>
                      <button onclick="abrirModal('modal-dereck')" class="border border-rustic-border bg-white/70 backdrop-blur-sm hover:-translate-y-1 hover:border-dustyBlue hover:shadow-lg hover:shadow-dustyBlue/10 transition-all duration-300 text-left group relative overflow-hidden">
-                        <div class="h-48 bg-gray-100 flex items-center justify-center border-b border-rustic-border group-hover:bg-gray-200 transition-colors overflow-hidden">
-                            <img src="https://github.com/user-attachments/assets/9051a2b0-4a13-4e63-8c1f-b043dc86dddf" alt="Dereckperfil" class="w-full h-full object-cover object-top">
+                        <div class="photo-frame w-full aspect-square bg-gray-100 flex items-center justify-center border-b border-rustic-border group-hover:bg-gray-200 transition-colors overflow-hidden">
+                            <img src="https://github.com/user-attachments/assets/9051a2b0-4a13-4e63-8c1f-b043dc86dddf" alt="Dereck Capa" class="w-full h-full object-contain object-center">
                         </div>
                         <div class="p-4 relative bg-white">
                             <h4 class="font-bold text-xl uppercase text-rustic-dark group-hover:text-dustyBlue transition-colors">Dereck Capa</h4>
@@ -195,13 +127,13 @@
                 </div>
             </section>
             
-            <section>
-                <div class="flex items-center mb-10">
+            <section id="bitacora" class="journal-section">
+                <div class="section-heading"><p class="eyebrow">03 — Bitácora de proceso</p>
                     <div class="w-8 h-[2px] bg-rustic-dark mr-4"></div>
-                    <h3 class="text-2xl font-mono uppercase tracking-wide">Registro Semanal</h3>
+                    <h3 class="text-2xl font-mono uppercase tracking-wide">Del primer trazo<br>a la vida real.</h3>
                 </div>
                 
-                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                <div class="journal-grid grid grid-cols-1 sm:grid-cols-2 gap-6">
                     <script>
                         const semanas = [
                             { num: 1, titulo: "Configuración del Entorno y Primeros Pasos" },
@@ -218,14 +150,14 @@
 
                         semanas.forEach(s => {
                             document.write(`
-                                <button onclick="abrirModal('modal-semana${s.num}')" class="w-full border border-rustic-border bg-white/80 backdrop-blur-sm hover:-translate-y-1 hover:border-dustyBlue hover:shadow-xl hover:shadow-dustyBlue/20 transition-all duration-300 text-left group flex flex-col rounded-xl overflow-hidden relative p-6 h-36 justify-center">
-                                    <div class="absolute -right-2 -bottom-4 opacity-5 text-8xl font-black font-mono group-hover:text-dustyBlue group-hover:opacity-10 transition-all duration-500 pointer-events-none">0${s.num}</div>
-                                    <div class="relative z-10">
-                                        <div class="text-xs font-mono text-sage font-bold tracking-widest mb-2 uppercase">Fase 0${s.num}</div>
-                                        <h4 class="font-bold text-2xl text-rustic-dark group-hover:text-dustyBlue transition-colors">Semana ${s.num}</h4>
+                                <button onclick="abrirModal('modal-semana${s.num}')" class="journal-card w-full border border-rustic-border bg-white/80 backdrop-blur-sm hover:-translate-y-1 hover:border-dustyBlue hover:shadow-xl hover:shadow-dustyBlue/20 transition-all duration-300 text-left group flex flex-col rounded-xl overflow-hidden relative p-6 h-36 justify-center">
+                                    <div class="journal-number">${String(s.num).padStart(2, '0')}</div>
+                                    <div class="journal-card-copy relative z-10">
+                                        <div class="text-xs font-mono text-sage font-bold tracking-widest mb-2 uppercase">Semana ${String(s.num).padStart(2, '0')}</div>
+                                        <h4 class="font-bold text-2xl text-rustic-dark group-hover:text-dustyBlue transition-colors">${s.titulo}</h4>
                                         <p class="text-sm text-rustic-accent font-mono mt-3 flex items-center gap-2 group-hover:text-sage transition-colors">
                                             <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"></path></svg> 
-                                            Abrir registro
+                                            Explorar semana
                                         </p>
                                     </div>
                                 </button>
@@ -234,18 +166,22 @@
                     </script>
                 </div>
             </section>
+            <footer class="site-footer">
+                <div><p class="eyebrow">Hecho de ideas. Inspirado en la vida.</p><a href="#inicio" class="footer-brand">yurafab<span><svg class="sun-icon" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 2v28M2 16h28M6 6l20 20M6 26 26 6"/></svg></span></a></div>
+                <div class="footer-meta"><span>Diseño & fabricación digital</span><span>Universidad de Cuenca · FabLab</span><span>Cuenca, Ecuador</span><a href="#inicio">Volver al inicio ↑</a></div>
+            </footer>
         </main>
     </div>
 
     <div id="modal-dennys" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 transition-opacity duration-300 opacity-0">
         <div class="absolute inset-0 bg-rustic-dark/80 backdrop-blur-sm" onclick="cerrarModal('modal-dennys')"></div>
-        <div class="bg-rustic-bg border-l-4 border-dustyBlue p-8 max-w-2xl w-full relative z-10 shadow-2xl">
-            <button onclick="cerrarModal('modal-dennys')" class="absolute top-4 right-4 text-3xl font-mono text-rustic-accent hover:text-red-600 transition-colors leading-none">&times;</button>
+        <div class="bg-rustic-bg border-l-4 border-dustyBlue p-8 max-w-2xl w-full max-h-[90dvh] overflow-y-auto relative z-10 shadow-2xl">
+            <button aria-label="Cerrar perfil de Dennys" onclick="cerrarModal('modal-dennys')" class="absolute top-4 right-4 text-3xl font-mono text-rustic-accent hover:text-red-600 transition-colors leading-none">&times;</button>
             <h3 class="text-3xl font-mono font-bold mb-1 uppercase">Dennys Vera</h3>
             <p class="text-dustyBlue font-mono mb-6 tracking-widest text-sm uppercase">Ingeniería Industrial / CAD</p>
             <div class="flex flex-col md:flex-row gap-6">
-                <div class="w-full md:w-1/3 h-48 bg-gray-200 flex items-center justify-center border border-rustic-border overflow-hidden">
-                     <img src="https://github.com/user-attachments/assets/69f3b389-de15-42cd-8aa6-88e2a67513ce" alt="Perfil Dennys" class="w-full h-full object-cover">
+                <div class="photo-frame w-full max-w-xs md:max-w-none md:w-1/3 aspect-square shrink-0 self-center md:self-start bg-gray-200 flex items-center justify-center border border-rustic-border overflow-hidden">
+                     <img src="https://github.com/user-attachments/assets/69f3b389-de15-42cd-8aa6-88e2a67513ce" alt="Perfil Dennys" class="w-full h-full object-contain object-center">
                 </div>
                 <div class="w-full md:w-2/3 space-y-4 text-gray-700 font-light text-base leading-relaxed">
                     <p>Enfoque en modelado CAD, estudio de tiempos y optimización del prototipo para el sistema de riego.</p>
@@ -256,13 +192,13 @@
     </div>
     <div id="modal-paul" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 transition-opacity duration-300 opacity-0">
         <div class="absolute inset-0 bg-rustic-dark/80 backdrop-blur-sm" onclick="cerrarModal('modal-paul')"></div>
-        <div class="bg-rustic-bg border-l-4 border-sage p-8 max-w-2xl w-full relative z-10 shadow-2xl">
-            <button onclick="cerrarModal('modal-paul')" class="absolute top-4 right-4 text-3xl font-mono text-rustic-accent hover:text-red-600 transition-colors leading-none">&times;</button>
+        <div class="bg-rustic-bg border-l-4 border-sage p-8 max-w-2xl w-full max-h-[90dvh] overflow-y-auto relative z-10 shadow-2xl">
+            <button aria-label="Cerrar perfil de Paul" onclick="cerrarModal('modal-paul')" class="absolute top-4 right-4 text-3xl font-mono text-rustic-accent hover:text-red-600 transition-colors leading-none">&times;</button>
             <h3 class="text-3xl font-mono font-bold mb-1 uppercase">Paul Coro</h3>
             <p class="text-sage font-mono mb-6 tracking-widest text-sm uppercase">Electrónica / IoT</p>
             <div class="flex flex-col md:flex-row gap-6">
-                <div class="w-full md:w-1/3 h-48 bg-gray-200 flex items-center justify-center border border-rustic-border overflow-hidden">
-                     <img src="https://github.com/user-attachments/assets/fd06973e-a2a0-47b2-95ba-a652ff202856" alt="Perfil Paul" class="w-full h-full object-cover">
+                <div class="photo-frame w-full max-w-xs md:max-w-none md:w-1/3 aspect-square shrink-0 self-center md:self-start bg-gray-200 flex items-center justify-center border border-rustic-border overflow-hidden">
+                     <img src="https://github.com/user-attachments/assets/fd06973e-a2a0-47b2-95ba-a652ff202856" alt="Perfil Paul" class="w-full h-full object-contain object-center">
                 </div>
                 <div class="w-full md:w-2/3 space-y-4 text-gray-700 font-light text-base leading-relaxed">
                     <p>Programación del microcontrolador y calibración de los sensores de humedad del suelo.</p>
@@ -273,13 +209,13 @@
     </div>
     <div id="modal-dereck" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 transition-opacity duration-300 opacity-0">
         <div class="absolute inset-0 bg-rustic-dark/80 backdrop-blur-sm" onclick="cerrarModal('modal-dereck')"></div>
-        <div class="bg-rustic-bg border-l-4 border-rustic-accent p-8 max-w-2xl w-full relative z-10 shadow-2xl">
-            <button onclick="cerrarModal('modal-dereck')" class="absolute top-4 right-4 text-3xl font-mono text-rustic-accent hover:text-red-600 transition-colors leading-none">&times;</button>
+        <div class="bg-rustic-bg border-l-4 border-rustic-accent p-8 max-w-2xl w-full max-h-[90dvh] overflow-y-auto relative z-10 shadow-2xl">
+            <button aria-label="Cerrar perfil de Dereck" onclick="cerrarModal('modal-dereck')" class="absolute top-4 right-4 text-3xl font-mono text-rustic-accent hover:text-red-600 transition-colors leading-none">&times;</button>
             <h3 class="text-3xl font-mono font-bold mb-1 uppercase">Dereck Capa</h3>
             <p class="text-rustic-accent font-mono mb-6 tracking-widest text-sm uppercase">Botánica / Diseño de Experiencia</p>
             <div class="flex flex-col md:flex-row gap-6">
-                <div class="w-full md:w-1/3 h-48 bg-gray-200 flex items-center justify-center border border-rustic-border overflow-hidden">
-                     <img src="https://github.com/user-attachments/assets/9051a2b0-4a13-4e63-8c1f-b043dc86dddf" alt="Perfil Dereck" class="w-full h-full object-cover">
+                <div class="photo-frame w-full max-w-xs md:max-w-none md:w-1/3 aspect-square shrink-0 self-center md:self-start bg-gray-200 flex items-center justify-center border border-rustic-border overflow-hidden">
+                     <img src="https://github.com/user-attachments/assets/9051a2b0-4a13-4e63-8c1f-b043dc86dddf" alt="Perfil Dereck" class="w-full h-full object-contain object-center">
                 </div>
                 <div class="w-full md:w-2/3 space-y-4 text-gray-700 font-light text-base leading-relaxed">
                     <p>Investigación sobre requerimientos hídricos de plantas de interior para calibrar los algoritmos de riego.</p>
@@ -323,7 +259,7 @@
                             <p class="mb-4">Para definir el rumbo de nuestro proyecto, realizamos una sesión de ideación colaborativa utilizando post-its. Anotamos múltiples problemáticas que podríamos resolver y las agrupamos en categorías como Movilidad, Mascotas, Sonido, Instalación y Medio Ambiente.</p>
                             <p class="mb-4">Posteriormente, sometimos estas ideas a una evaluación en equipo. La categoría ganadora fue <strong>Medio Ambiente</strong> (con la puntuación máxima de 15 puntos). A partir de esto, delimitamos nuestra problemática central: <em>Optimizar recursos hídricos</em>, lo que sentó las bases para el concepto de YuraFab.</p>
                             
-                            <div class="bg-gray-100 h-64 md:h-[28rem] flex flex-col items-center justify-center border border-rustic-border relative overflow-hidden rounded-lg mb-6 group">
+                            <div class="photo-frame bg-gray-100 h-64 md:h-[28rem] flex flex-col items-center justify-center border border-rustic-border relative overflow-hidden rounded-lg mb-6 group">
                                 <img src="foto-postits.jpg" alt="Post-its ideación" class="absolute inset-0 w-full h-full object-contain p-2 md:p-4">
                                 <span class="text-xs text-dustyBlue font-mono z-10 bg-white/90 px-3 py-1 rounded-md transition-opacity duration-300 group-hover:opacity-0">(FOTO DE LOS POST-ITS)</span>
                             </div>
@@ -474,10 +410,10 @@
                             </ul>
                             
                             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
-                                <div class="bg-gray-100 h-[24rem] flex flex-col items-center justify-center border border-rustic-border relative overflow-hidden rounded-lg">
+                                <div class="photo-frame bg-gray-100 h-[24rem] flex flex-col items-center justify-center border border-rustic-border relative overflow-hidden rounded-lg">
                                     <img src="escanerperfil.jpg" alt="Perfil escaner" class="absolute inset-0 w-full h-full object-contain p-2">
                                 </div>
-                                <div class="bg-gray-100 h-[24rem] flex flex-col items-center justify-center border border-rustic-border relative overflow-hidden rounded-lg">
+                                <div class="photo-frame bg-gray-100 h-[24rem] flex flex-col items-center justify-center border border-rustic-border relative overflow-hidden rounded-lg">
                                     <img src="dereckescaner.jpg" alt="Escaneo de Dereck" class="absolute inset-0 w-full h-full object-contain p-2">
                                 </div>
                             </div>
@@ -494,10 +430,10 @@
                             </ul>
                             
                             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
-                                <div class="bg-gray-100 h-[24rem] flex flex-col items-center justify-center border border-rustic-border relative overflow-hidden rounded-lg">
+                                <div class="photo-frame bg-gray-100 h-[24rem] flex flex-col items-center justify-center border border-rustic-border relative overflow-hidden rounded-lg">
                                     <img src="aplicacionescaner.jpg" alt="Aplicación de escáner" class="absolute inset-0 w-full h-full object-contain p-2">
                                 </div>
-                                <div class="bg-gray-100 h-[24rem] flex flex-col items-center justify-center border border-rustic-border relative overflow-hidden rounded-lg">
+                                <div class="photo-frame bg-gray-100 h-[24rem] flex flex-col items-center justify-center border border-rustic-border relative overflow-hidden rounded-lg">
                                     <img src="dereckchitu.JPG" alt="Pieza en Chitubox" class="absolute inset-0 w-full h-full object-contain p-2">
                                 </div>
                             </div>
@@ -516,7 +452,7 @@
                             <h4 class="text-xl font-bold text-rustic-dark font-mono uppercase mb-3"><span class="text-sage">06.</span> Impresión en Resina (AnyCubic)</h4>
                             <p class="mb-4">Continuando con la impresión, la cual se realizará en la Impresora 3D <strong>AnyCubic Photon M3 Plus</strong> de Resina.</p>
                             
-                            <div class="bg-gray-100 h-64 md:h-[28rem] flex flex-col items-center justify-center border border-rustic-border relative overflow-hidden rounded-lg mb-6">
+                            <div class="photo-frame bg-gray-100 h-64 md:h-[28rem] flex flex-col items-center justify-center border border-rustic-border relative overflow-hidden rounded-lg mb-6">
                                 <img src="impresora.jpg" alt="Impresora 3D AnyCubic" class="absolute inset-0 w-full h-full object-contain p-2 md:p-4">
                             </div>
 
@@ -529,10 +465,10 @@
                             <p class="mb-4 font-light text-gray-700">Para empezar la impresión vertemos la resina en el plato inferior a una medida tal de que sea suficiente para nuestro proyecto, y luego lo ajustamos a la impresora. Se tapa, se comprueba que el archivo funcione y se manda a imprimir, el tiempo de espera ronda las 3 horas.</p>
 
                             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
-                                <div class="bg-gray-100 h-[24rem] flex flex-col items-center justify-center border border-rustic-border relative overflow-hidden rounded-lg">
+                                <div class="photo-frame bg-gray-100 h-[24rem] flex flex-col items-center justify-center border border-rustic-border relative overflow-hidden rounded-lg">
                                     <img src="dennysany.jpg" alt="Preparando impresora" class="absolute inset-0 w-full h-full object-contain p-2">
                                 </div>
-                                <div class="bg-gray-100 h-[24rem] flex flex-col items-center justify-center border border-rustic-border relative overflow-hidden rounded-lg">
+                                <div class="photo-frame bg-gray-100 h-[24rem] flex flex-col items-center justify-center border border-rustic-border relative overflow-hidden rounded-lg">
                                     <img src="anyvista.jpg" alt="Vista del proceso" class="absolute inset-0 w-full h-full object-contain p-2">
                                 </div>
                             </div>
@@ -544,17 +480,17 @@
                             <p class="mb-4">Una vez la pieza esté lista, con cuidado la sacamos, limpiamos restos de resina, quitamos soporte y lavamos únicamente con agua.</p>
                             <p class="mb-6">Se procede a lavar nuevamente en la máquina y se seca con luz uv por aproximadamente 6 minutos.</p>
                             
-                            <div class="bg-gray-100 h-64 md:h-[28rem] flex flex-col items-center justify-center border border-rustic-border relative overflow-hidden rounded-lg mb-6">
+                            <div class="photo-frame bg-gray-100 h-64 md:h-[28rem] flex flex-col items-center justify-center border border-rustic-border relative overflow-hidden rounded-lg mb-6">
                                 <img src="luzuvcabeza.jpg" alt="Curado UV" class="absolute inset-0 w-full h-full object-contain p-2 md:p-4">
                             </div>
 
                             <p class="mb-4">Con esto tendríamos el resultado final de la impresión en resina; una figura hueca, liviana y resistente.</p>
                             
                             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                                <div class="bg-gray-100 h-[24rem] flex flex-col items-center justify-center border border-rustic-border relative overflow-hidden rounded-lg">
+                                <div class="photo-frame bg-gray-100 h-[24rem] flex flex-col items-center justify-center border border-rustic-border relative overflow-hidden rounded-lg">
                                     <img src="resi1.jpg" alt="Resultado Final 1" class="absolute inset-0 w-full h-full object-contain p-2">
                                 </div>
-                                <div class="bg-gray-100 h-[24rem] flex flex-col items-center justify-center border border-rustic-border relative overflow-hidden rounded-lg">
+                                <div class="photo-frame bg-gray-100 h-[24rem] flex flex-col items-center justify-center border border-rustic-border relative overflow-hidden rounded-lg">
                                     <img src="resi2.JPG" alt="Resultado Final 2" class="absolute inset-0 w-full h-full object-contain p-2">
                                 </div>
                             </div>
@@ -569,14 +505,14 @@
                             <h4 class="text-xl font-bold text-rustic-dark font-mono uppercase mb-3"><span class="text-sage">01.</span> Diseño y Parametrización</h4>
                             <p class="mb-4">Diseño y parametrización de una figura dada por el docente como inducción para poder realizar las prácticas posteriores.</p>
                             
-                            <div class="bg-gray-100 h-64 md:h-[28rem] flex flex-col items-center justify-center border border-rustic-border relative overflow-hidden rounded-lg mb-6">
+                            <div class="photo-frame bg-gray-100 h-64 md:h-[28rem] flex flex-col items-center justify-center border border-rustic-border relative overflow-hidden rounded-lg mb-6">
                                 <img src="foto-pantalla.jpg" alt="Pantalla de diseño" class="absolute inset-0 w-full h-full object-contain p-2 md:p-4">
                             </div>
 
                             <p class="mb-4">Se introdujo el concepto clave de KERF, en este caso de 0.05 en una tabla de MDF de 4 mm de grosor ya que la cortadora láser aumenta un poco el margen al cortar y cómo queremos que quede justo sin usar ningún tipo de adhesivo implementamos KERF. Ahora con el concepto de parametrizar, creamos la figura denominada “F” en fusión 360, y parametrizamos dando nombre a las cotas con valores determinados para que toda la figura vaya cambiando de tamaño según se requiera próximamente.</p>
                             
                             <div class="mt-6 flex flex-col gap-4">
-                                <div class="bg-gray-100 h-[28rem] flex flex-col items-center justify-center border border-rustic-border relative overflow-hidden rounded-lg">
+                                <div class="photo-frame bg-gray-100 h-[28rem] flex flex-col items-center justify-center border border-rustic-border relative overflow-hidden rounded-lg">
                                     <img src="foto-f-parametrizada.jpg" alt="F Parametrizada" class="absolute inset-0 w-full h-full object-contain p-2 md:p-4">
                                 </div>
                                 
@@ -602,10 +538,10 @@
                             </ul>
                             
                             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
-                                <div class="bg-gray-100 h-64 flex flex-col items-center justify-center border border-rustic-border relative overflow-hidden rounded-lg">
+                                <div class="photo-frame bg-gray-100 h-64 flex flex-col items-center justify-center border border-rustic-border relative overflow-hidden rounded-lg">
                                     <img src="calibrar.jpg" alt="Calibrando láser" class="absolute inset-0 w-full h-full object-contain p-2 md:p-4">
                                 </div>
-                                <div class="bg-gray-100 h-64 flex flex-col items-center justify-center border border-rustic-border relative overflow-hidden rounded-lg">
+                                <div class="photo-frame bg-gray-100 h-64 flex flex-col items-center justify-center border border-rustic-border relative overflow-hidden rounded-lg">
                                     <img src="maquina.jpg" alt="Máquina láser" class="absolute inset-0 w-full h-full object-contain p-2 md:p-4">
                                 </div>
                             </div>
@@ -613,16 +549,16 @@
                             <p class="mb-4">Después de lo anterior mencionado tenemos la “F” ya cortada y que encaja de manera correcta.</p>
                             
                             <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-6">
-                                <div class="bg-gray-100 h-56 flex flex-col items-center justify-center border border-rustic-border relative overflow-hidden rounded-lg">
+                                <div class="photo-frame bg-gray-100 h-56 flex flex-col items-center justify-center border border-rustic-border relative overflow-hidden rounded-lg">
                                     <img src="foto-aplicativo.jpg" alt="Aplicativo" class="absolute inset-0 w-full h-full object-contain p-2 md:p-4">
                                 </div>
                                 <div class="bg-gray-100 h-56 flex flex-col items-center justify-center border border-rustic-border relative overflow-hidden rounded-lg">
                                     <video src="video-corte.mp4" class="absolute inset-0 w-full h-full object-contain p-2 md:p-4" controls muted loop></video>
                                 </div>
-                                <div class="bg-gray-100 h-56 flex flex-col items-center justify-center border border-rustic-border relative overflow-hidden rounded-lg">
+                                <div class="photo-frame bg-gray-100 h-56 flex flex-col items-center justify-center border border-rustic-border relative overflow-hidden rounded-lg">
                                     <img src="foto-proceso.jpg" alt="En proceso" class="absolute inset-0 w-full h-full object-contain p-2 md:p-4">
                                 </div>
-                                <div class="bg-gray-100 h-56 flex flex-col items-center justify-center border border-rustic-border relative overflow-hidden rounded-lg">
+                                <div class="photo-frame bg-gray-100 h-56 flex flex-col items-center justify-center border border-rustic-border relative overflow-hidden rounded-lg">
                                     <img src="efecortada1.jpg" alt="F cortada" class="absolute inset-0 w-full h-full object-contain p-2 md:p-4">
                                 </div>
                             </div>
@@ -634,7 +570,7 @@
                             <p class="mb-4">El docente introduce como referente el modelo flat-pack de IKEA. El principio fundamental es el diseño para un ensamblaje fácil e intuitivo, donde las piezas se acoplan exclusivamente mediante uniones mecánicas (encastres). Esta metodología elimina el uso de pegamentos o tornillos; la firmeza de la estructura depende enteramente de la precisión con la que las piezas encajan entre sí.</p>
                             <p class="mb-4">Con lo antes mencionado, el propósito de esto es poder crear una silla infantil utilizando este principio. Por lo que se hizo un “boceto” de como posiblemente a grandes rasgos podría ser el diseño de la silla con la metodología de ikea.</p>
                             
-                            <div class="bg-gray-100 h-[28rem] md:h-[32rem] flex flex-col items-center justify-center border border-rustic-border relative overflow-hidden rounded-lg mt-6">
+                            <div class="photo-frame bg-gray-100 h-[28rem] md:h-[32rem] flex flex-col items-center justify-center border border-rustic-border relative overflow-hidden rounded-lg mt-6">
                                 <img src="boseto.silla.dino.jpeg" alt="Boceto Silla" class="absolute inset-0 w-full h-full object-contain p-2 md:p-4">
                             </div>
                         </div>
@@ -645,7 +581,7 @@
                             <p class="mb-4">Para tener cierta noción de lo que se realizará a posterior, se nos indujo la herramienta slicer for fusion 360, en la cual dimencionamos una figura en slices para tener referencias de cómo podría quedar el diseño que haríamos.</p>
                             
                             <div class="mt-6 flex flex-col gap-4">
-                                <div class="bg-gray-100 h-[28rem] flex flex-col items-center justify-center border border-rustic-border relative overflow-hidden rounded-lg">
+                                <div class="photo-frame bg-gray-100 h-[28rem] flex flex-col items-center justify-center border border-rustic-border relative overflow-hidden rounded-lg">
                                     <img src="oso.slice.fotos.png" alt="Oso Slicer" class="absolute inset-0 w-full h-full object-contain p-2 md:p-4">
                                 </div>
                                 
@@ -670,7 +606,7 @@
                 <div id="modal-semana${s.num}" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 transition-opacity duration-300 opacity-0">
                     <div class="absolute inset-0 bg-rustic-dark/90 backdrop-blur-sm" onclick="cerrarModal('modal-semana${s.num}')"></div>
                     <div class="bg-white border border-rustic-border p-8 max-w-7xl w-full relative z-10 max-h-[90vh] overflow-y-auto shadow-2xl rounded-md flex flex-col">
-                        <button onclick="cerrarModal('modal-semana${s.num}')" class="absolute top-4 right-4 text-3xl font-mono text-rustic-accent hover:text-red-600 transition-colors leading-none">&times;</button>
+                        <button aria-label="Cerrar semana ${s.num}" onclick="cerrarModal('modal-semana${s.num}')" class="absolute top-4 right-4 text-3xl font-mono text-rustic-accent hover:text-red-600 transition-colors leading-none">&times;</button>
                         
                         <div class="mb-6 border-b border-rustic-border pb-4">
                             <span class="bg-sage text-white text-sm font-mono px-3 py-1 uppercase tracking-widest mr-3">Semana ${s.num}</span>
@@ -704,20 +640,6 @@
     </script>
 
     <script>
-        function entrarBitacora() {
-            const bienvenida = document.getElementById('pantalla-bienvenida');
-            const principal = document.getElementById('contenido-principal');
-            
-            bienvenida.style.opacity = '0';
-            setTimeout(() => {
-                bienvenida.classList.add('hidden'); 
-                principal.classList.remove('hidden'); 
-                setTimeout(() => { 
-                    principal.style.opacity = '1'; 
-                }, 100);
-            }, 700);
-        }
-
         function abrirModal(id) {
             const modal = document.getElementById(id);
             modal.classList.remove('hidden');

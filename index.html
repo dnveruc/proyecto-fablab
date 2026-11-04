@@ -3,16 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#f6f4ec">
+    <meta name="theme-color" content="#090d13">
     <meta name="description" content="YuraFab: diseño, naturaleza y fabricación digital. Conoce nuestro proyecto de riego inteligente y su proceso en el FabLab.">
-    <title>YuraFab — Diseño que crece contigo</title>
+    <title>YuraFab — Instinto natural. Diseño real.</title>
     <link rel="preload" href="assets/fonts/dm-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="stylesheet" href="assets/styles.css">
+    <link rel="preload" href="assets/fonts/oswald-semibold.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="assets/images/desert-landscape.jpg" as="image" fetchpriority="high">
+    <link rel="stylesheet" href="assets/styles.css?v=night-01">
 </head>
 <body class="bg-rustic-bg text-rustic-dark font-sans antialiased">
     <div id="contenido-principal">
         <header class="site-header">
-            <a class="wordmark" href="#inicio" aria-label="YuraFab, inicio"><span class="brand-symbol" aria-hidden="true"><svg class="sun-icon" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 2v28M2 16h28M6 6l20 20M6 26 26 6"/></svg></span> yura<span>fab</span></a>
+            <a class="wordmark" href="#inicio" aria-label="YuraFab, inicio"><span class="brand-symbol" aria-hidden="true"><svg class="sun-icon" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 2v28M2 16h28M6 6l20 20M6 26 26 6"/></svg></span> YURA<span>FAB</span></a>
             <nav aria-label="Navegación principal">
                 <a href="#proyecto">El proyecto</a>
                 <a href="#equipo">El equipo</a>
@@ -21,55 +23,18 @@
         </header>
         <main id="inicio" class="site-main">
             <section class="hero" aria-labelledby="hero-title">
+                <div class="hero-scene" aria-hidden="true"></div>
                 <div class="hero-copy">
-                    <p class="eyebrow"><span class="status-dot"></span> Naturaleza × fabricación digital</p>
-                    <h1 id="hero-title">Diseño que<br>crece <span>contigo.</span></h1>
-                    <p class="hero-description">Un encuentro entre naturaleza, tecnología y las cosas bien hechas. Creamos nuevas formas de cuidar lo que nos rodea.</p>
-                    <a href="#proyecto" class="primary-link">Descubre YuraFab <span aria-hidden="true"><svg class="arrow-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></span></a>
-                    <div class="hero-note"><span class="tiny-sun" aria-hidden="true"><svg class="sun-icon" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 2v28M2 16h28M6 6l20 20M6 26 26 6"/></svg></span> De una idea a algo vivo.<br><span>Diseñado en Cuenca, Ecuador.</span></div>
+                    <p class="eyebrow"><span class="status-dot"></span> Cuenca, Ecuador — Fabricación digital</p>
+                    <h1 id="hero-title">INSTINTO<br>NATURAL.<br><span>DISEÑO REAL.</span></h1>
+                    <p class="hero-description">La fuerza de la naturaleza. La precisión de la tecnología. Exploramos nuevas formas de diseñar, fabricar y cuidar lo que nos rodea.</p>
+                    <a href="#proyecto" class="primary-link">Explora el proyecto <span aria-hidden="true"><svg class="arrow-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></span></a>
+                    <p class="hero-note">Investigación. Materia. Territorio.<br><span>Un proyecto nacido en el FabLab.</span></p>
                 </div>
-                <div class="hero-art">
-                    <div class="art-label"><span>YF — ESTUDIO 001</span><span>DISEÑO VIVO</span></div>
-                    <svg class="sunset-art" viewBox="0 0 600 670" role="img" aria-labelledby="art-title art-desc">
-                        <title id="art-title">Un pequeño paisaje de posibilidades</title>
-                        <desc id="art-desc">Una planta verde en una maceta terracota, frente a un sol naranja y un cielo celeste de atardecer.</desc>
-                        <defs>
-                            <linearGradient id="sky" x2="0" y2="1"><stop stop-color="#bcd7df"/><stop offset=".62" stop-color="#ead9c2"/><stop offset="1" stop-color="#e5b597"/></linearGradient>
-                            <linearGradient id="sun" x2="0" y2="1"><stop stop-color="#efad72"/><stop offset="1" stop-color="#da704c"/></linearGradient>
-                            <linearGradient id="pot" x2="1" y2="0"><stop stop-color="#9e4c32"/><stop offset=".45" stop-color="#cb7752"/><stop offset="1" stop-color="#e5a37b"/></linearGradient>
-                            <linearGradient id="leaf" x2="1" y2="1"><stop stop-color="#7e9364"/><stop offset="1" stop-color="#284c3b"/></linearGradient>
-                            <clipPath id="arch"><path d="M72 570V260a228 228 0 0 1 456 0v310Z"/></clipPath>
-                            <filter id="blur"><feGaussianBlur stdDeviation="9"/></filter>
-                        </defs>
-                        <g clip-path="url(#arch)">
-                            <path fill="url(#sky)" d="M0 0h600v600H0z"/>
-                            <circle cx="380" cy="265" r="111" fill="url(#sun)"/>
-                            <path d="M0 446Q160 359 325 435T600 419V600H0Z" fill="#a0af9a"/>
-                            <path d="M0 493Q174 405 342 484T600 465V600H0Z" fill="#6f8b77"/>
-                            <path d="M0 549Q220 473 600 548V600H0Z" fill="#365b46"/>
-                            <path d="M-20 460Q160 373 325 449T620 433M-20 472Q160 385 325 461T620 445" fill="none" stroke="#f5ecda" stroke-opacity=".3"/>
-                        </g>
-                        <ellipse cx="300" cy="592" rx="165" ry="17" fill="#6c5841" opacity=".15" filter="url(#blur)"/>
-                        <path d="M298 449Q320 333 291 235M302 372Q248 326 227 282M305 333Q356 299 378 250" fill="none" stroke="#36543b" stroke-width="7" stroke-linecap="round"/>
-                        <path d="M294 298Q226 286 232 207Q309 219 294 298Z" fill="url(#leaf)"/>
-                        <path d="M301 351Q322 255 402 263Q382 350 301 351Z" fill="url(#leaf)"/>
-                        <path d="M280 337Q206 347 184 274Q255 259 280 337Z" fill="#527554"/>
-                        <path d="M289 252Q277 189 332 157Q366 225 289 252Z" fill="#6a865b"/>
-                        <path d="M296 405Q350 329 406 366Q376 425 296 405Z" fill="#416947"/>
-                        <path d="M299 401Q219 423 201 354Q265 326 299 401Z" fill="#7f9463"/>
-                        <path d="M292 290L242 224M310 339L386 278M290 248L326 174M278 332L199 284" stroke="#c2c8a1" stroke-opacity=".4" fill="none" stroke-width="1.5"/>
-                        <path d="M221 437h158l-18 129q-60 33-122 0Z" fill="url(#pot)"/>
-                        <ellipse cx="300" cy="437" rx="79" ry="17" fill="#e1a17a"/>
-                        <ellipse cx="300" cy="437" rx="67" ry="10" fill="#554a36"/>
-                        <path d="M298 440l3-28" stroke="#3c5a3c" stroke-width="7"/>
-                        <path d="M244 467l11 88M256 470l10 89M268 472l7 90M280 474l4 91M292 474l1 92M304 474l-2 92M316 473l-4 92M328 472l-7 90M340 470l-9 88M352 466l-11 88" stroke="#f4c59b" opacity=".3" fill="none"/>
-                        <circle cx="460" cy="124" r="24" fill="#f6f4ec"/>
-                        <path d="M460 111v26m-13-13h26m-22-9 18 18m-18 0 18-18" stroke="#b55d3e" stroke-width="1.5"/>
-                    </svg>
-                    <div class="art-caption"><span>La naturaleza inspira.<br>El diseño lo hace posible.</span><span class="art-number">01 / ∞</span></div>
-                </div>
+                <div class="hero-caption"><span class="hero-caption-line"></span><p>Inspirados por lo indomable.<br><strong>Diseñados para lo real.</strong></p></div>
+                <div class="hero-bottom"><span>YURAFAB — ESTUDIO I+D</span><a href="#proyecto">Descubre nuestro territorio <span aria-hidden="true">↓</span></a><span>NATURALEZA × TECNOLOGÍA</span></div>
             </section>
-            <div class="values-strip" aria-label="Nuestros principios"><span>Menos ruido. Más propósito.</span><span>Diseño consciente <i><svg class="sun-icon" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 2v28M2 16h28M6 6l20 20M6 26 26 6"/></svg></i> Tecnología sensible <i><svg class="sun-icon" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 2v28M2 16h28M6 6l20 20M6 26 26 6"/></svg></i> Naturaleza primero</span></div>
+            <div class="values-strip" aria-label="Nuestros principios"><span>Naturaleza. Carácter. Precisión.</span><span>Diseño consciente <i><svg class="sun-icon" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 2v28M2 16h28M6 6l20 20M6 26 26 6"/></svg></i> Tecnología sensible <i><svg class="sun-icon" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 2v28M2 16h28M6 6l20 20M6 26 26 6"/></svg></i> Naturaleza primero</span></div>
             <section id="proyecto" class="origin-section">
                 <div class="section-heading"><p class="eyebrow">01 — El proyecto</p>
                     <div class="w-8 h-[2px] bg-sage mr-4"></div>
@@ -94,11 +59,11 @@
             <section id="equipo" class="team-section">
                 <div class="section-heading"><p class="eyebrow">02 — Nuestro equipo</p>
                     <div class="w-8 h-[2px] bg-dustyBlue mr-4"></div>
-                    <h3 class="text-2xl font-mono uppercase tracking-wide">Las mentes detrás<br>de lo que crece.</h3>
+                    <h3 class="text-2xl font-mono uppercase tracking-wide">El equipo detrás<br>de cada desafío.</h3>
                 </div>
                 <div class="team-grid grid grid-cols-1 sm:grid-cols-3 gap-6">
                     <button onclick="abrirModal('modal-dennys')" class="border border-rustic-border bg-white/70 backdrop-blur-sm hover:-translate-y-1 hover:border-dustyBlue hover:shadow-lg hover:shadow-dustyBlue/10 transition-all duration-300 text-left group relative overflow-hidden">
-                        <div class="photo-frame w-full aspect-square bg-gray-100 flex items-center justify-center border-b border-rustic-border group-hover:bg-gray-200 transition-colors overflow-hidden">
+                        <div class="photo-frame w-full aspect-square bg-gray-100 flex items-center justify-center border-b border-rustic-border transition-colors overflow-hidden">
                             <img src="https://github.com/user-attachments/assets/69f3b389-de15-42cd-8aa6-88e2a67513ce" alt="Dennys Vera" class="w-full h-full object-contain object-center">
                         </div>
                         <div class="p-4 relative bg-white">
@@ -107,7 +72,7 @@
                         </div>
                     </button>
                      <button onclick="abrirModal('modal-paul')" class="border border-rustic-border bg-white/70 backdrop-blur-sm hover:-translate-y-1 hover:border-dustyBlue hover:shadow-lg hover:shadow-dustyBlue/10 transition-all duration-300 text-left group relative overflow-hidden">
-                        <div class="photo-frame w-full aspect-square bg-gray-100 flex items-center justify-center border-b border-rustic-border group-hover:bg-gray-200 transition-colors overflow-hidden">
+                        <div class="photo-frame w-full aspect-square bg-gray-100 flex items-center justify-center border-b border-rustic-border transition-colors overflow-hidden">
                             <img src="https://github.com/user-attachments/assets/fd06973e-a2a0-47b2-95ba-a652ff202856" alt="Paul Coro" class="w-full h-full object-contain object-center">
                         </div>
                         <div class="p-4 relative bg-white">
@@ -116,7 +81,7 @@
                         </div>
                     </button>
                      <button onclick="abrirModal('modal-dereck')" class="border border-rustic-border bg-white/70 backdrop-blur-sm hover:-translate-y-1 hover:border-dustyBlue hover:shadow-lg hover:shadow-dustyBlue/10 transition-all duration-300 text-left group relative overflow-hidden">
-                        <div class="photo-frame w-full aspect-square bg-gray-100 flex items-center justify-center border-b border-rustic-border group-hover:bg-gray-200 transition-colors overflow-hidden">
+                        <div class="photo-frame w-full aspect-square bg-gray-100 flex items-center justify-center border-b border-rustic-border transition-colors overflow-hidden">
                             <img src="https://github.com/user-attachments/assets/9051a2b0-4a13-4e63-8c1f-b043dc86dddf" alt="Dereck Capa" class="w-full h-full object-contain object-center">
                         </div>
                         <div class="p-4 relative bg-white">

@@ -9,7 +9,7 @@
     <link rel="preload" href="assets/fonts/dm-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="assets/fonts/oswald-semibold.ttf" as="font" type="font/ttf" crossorigin>
     <link rel="preload" href="assets/images/desert-landscape.jpg" as="image" fetchpriority="high">
-    <link rel="stylesheet" href="assets/styles.css?v=night-01">
+    <link rel="stylesheet" href="assets/styles.css?v=bitacora-125-01">
 </head>
 <body class="bg-rustic-bg text-rustic-dark font-sans antialiased">
     <div id="contenido-principal">
@@ -101,11 +101,11 @@
                 <div class="journal-grid grid grid-cols-1 sm:grid-cols-2 gap-6">
                     <script>
                         const semanas = [
-                            { num: 1, titulo: "Configuración del Entorno y Primeros Pasos" },
-                            { num: 2, titulo: "Diseño de Carcasa" },
+                            { num: 1, titulo: "Elección del Proyecto y Diseño de la Página Web" },
+                            { num: 2, titulo: "Ideación, Diseño 2D/3D e Impresión PLA" },
                             { num: 3, titulo: "Prototipado 3D" },
                             { num: 4, titulo: "Parametrización, Inducción al Corte Láser y caso IKEA" },
-                            { num: 5, titulo: "Pruebas de Humedad" },
+                            { num: 5, titulo: "Impresión UV sobre MDF o Acrílico" },
                             { num: 6, titulo: "Calibración de Bomba" },
                             { num: 7, titulo: "Integración de Energía" },
                             { num: 8, titulo: "Prueba Piloto Planta" },
@@ -195,59 +195,291 @@
             let contenidoEspecifico = '';
             if (s.num === 1) {
                 contenidoEspecifico = `
-                    <p class="text-lg font-medium text-dustyBlue mb-8 border-l-4 border-sage pl-4">El objetivo de esta primera semana fue establecer las bases técnicas y el flujo de trabajo que utilizaremos durante todo el programa. Antes de empezar a construir soluciones físicas, necesitábamos preparar nuestro entorno digital para documentar cada avance. A continuación, detallo el proceso paso a paso de nuestra introducción al desarrollo web.</p>
+                    <p class="text-lg font-medium text-dustyBlue mb-8 border-l-4 border-sage pl-4">Durante la primera semana analizamos alternativas tecnológicas para el Fab Lab y planteamos la estructura de una página web para documentar el proyecto. La maceta inteligente se destacó como una propuesta que integra naturaleza, sensores, programación y fabricación digital.</p>
                     <div class="space-y-12">
-                        <div>
-                            <h4 class="text-xl font-bold text-rustic-dark font-mono uppercase mb-3"><span class="text-sage">01.</span> Preparación del Entorno Local y VS Code</h4>
-                            <p class="mb-4">Todo proyecto ordenado necesita una buena base. Comenzamos creando una estructura de carpetas específica en el ordenador local para almacenar todos los recursos, códigos y fotografías del programa. Posteriormente, nos introdujimos al uso de Visual Studio Code, el editor de código donde daremos forma a nuestra documentación.</p>
-                        </div>
-                        <div>
-                            <h4 class="text-xl font-bold text-rustic-dark font-mono uppercase mb-3"><span class="text-sage">02.</span> Control de Versiones con GitHub</h4>
-                            <p class="mb-4">Para asegurar que nuestro progreso no se pierda y mantener un registro histórico de los cambios, integramos GitHub a nuestro flujo de trabajo. Entender cómo subir nuestros archivos a un repositorio en la nube es fundamental no solo para respaldar la información, sino para cumplir con los estándares de documentación continua que exige el proyecto.</p>
-                        </div>
-                        <div>
-                            <h4 class="text-xl font-bold text-rustic-dark font-mono uppercase mb-3"><span class="text-sage">03.</span> Estructuración Básica con HTML</h4>
-                            <p class="mb-4">Una vez con el entorno listo, dimos nuestros primeros pasos en la escritura de código utilizando HTML. Comprendimos cómo funcionan las etiquetas básicas para estructurar la información, crear títulos, párrafos y divisiones en nuestra página web, dándole un esqueleto lógico a lo que más adelante será nuestro portafolio.</p>
-                        </div>
-                        <div>
-                            <h4 class="text-xl font-bold text-rustic-dark font-mono uppercase mb-3"><span class="text-sage">04.</span> Integración de Datos y Apoyo de IA</h4>
-                            <p class="mb-4">Para poner a prueba lo aprendido de forma práctica, realizamos un ejercicio introductorio. Descargamos una base de datos pública de internet y, con el apoyo de herramientas de Inteligencia Artificial, construimos una página web capaz de visualizar esas estadísticas. Aunque el resultado fue un prototipo sencillo, este ejercicio fue fundamental para entender cómo se conectan los datos externos con la estructura web.</p>
-                        </div>
-                    </div>
+                    <div>
+                    <h4 class="text-xl font-bold text-rustic-dark font-mono uppercase mb-3"><span class="text-sage">01.</span> Objetivo y visión general</h4>
+                    <p class="mb-4">Identificar una necesidad real y proponer soluciones tecnológicas que puedan desarrollarse mediante diseño, fabricación de prototipos, sensores y programación. También se definió una estructura inicial para documentar los avances semanales y, como parte del alcance propuesto, almacenar información en una base de datos.</p>
+                    <figure class="journal-evidence evidence-infographic"><a class="photo-frame evidence-link" href="assets/bitacora/semana-01/infografia-proyecto.jpg" target="_blank" rel="noopener" aria-label="Ampliar: Infografía de alternativas de proyecto, arquitectura web y base de datos"><img src="assets/bitacora/semana-01/infografia-proyecto.jpg" alt="Infografía de alternativas de proyecto, arquitectura web y base de datos" width="815" height="856" loading="lazy" decoding="async" class="w-full h-full object-contain p-2 md:p-4"></a><figcaption>Infografía de alternativas de proyecto, arquitectura web y base de datos. <a href="assets/bitacora/semana-01/infografia-proyecto.jpg" target="_blank" rel="noopener" aria-label="Ver imagen completa: Infografía de alternativas de proyecto, arquitectura web y base de datos">Ver imagen completa <svg class="arrow-icon evidence-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></figcaption></figure></div>
+                    <div>
+                    <h4 class="text-xl font-bold text-rustic-dark font-mono uppercase mb-3"><span class="text-sage">02.</span> Alternativas de proyecto</h4>
+                    <p class="mb-4">Comparamos cinco ideas considerando su utilidad, los materiales disponibles, el costo y la posibilidad de construir un prototipo funcional.</p>
+                    <p class="table-scroll-hint">Desliza la tabla para ver todas las columnas.</p>
+                    <div class="journal-data-table overflow-x-auto mt-6 border border-rustic-border rounded-lg shadow-sm" tabindex="0" role="region" aria-label="Comparación de las alternativas de proyecto">
+                    <table class="w-full text-sm text-left"><caption class="sr-only">Comparación de las alternativas de proyecto</caption>
+                    <thead class="bg-gray-100 font-mono text-dustyBlue">
+                    <tr>
+                    <th scope="col" class="px-4 py-3 border-b border-rustic-border">Idea de proyecto</th>
+                    <th scope="col" class="px-4 py-3 border-b border-rustic-border">Funcionamiento principal</th>
+                    <th scope="col" class="px-4 py-3 border-b border-rustic-border">Beneficio o aplicación</th></tr></thead>
+                    <tbody class="divide-y divide-rustic-border bg-white text-gray-700 font-light">
+                    <tr>
+                    <th scope="row" class="px-4 py-3 font-medium text-rustic-dark">Maceta inteligente</th>
+                    <td class="px-4 py-3">Sensores de humedad del suelo y, opcionalmente, temperatura y luz. Activa o recomienda el riego según las necesidades configuradas para cada planta.</td>
+                    <td class="px-4 py-3">Evita el riego excesivo o insuficiente y facilita el cuidado de plantas.</td></tr>
+                    <tr>
+                    <th scope="row" class="px-4 py-3 font-medium text-rustic-dark">Dispensador automático para mascotas</th>
+                    <td class="px-4 py-3">Entrega alimento en horarios programados y permite ajustar las porciones.</td>
+                    <td class="px-4 py-3">Apoya a las personas que necesitan organizar la alimentación de sus mascotas.</td></tr>
+                    <tr>
+                    <th scope="row" class="px-4 py-3 font-medium text-rustic-dark">Estación meteorológica de bajo costo</th>
+                    <td class="px-4 py-3">Mide variables como temperatura y humedad ambiental; envía lecturas a una página web.</td>
+                    <td class="px-4 py-3">Permite observar las condiciones ambientales y guardar un historial.</td></tr>
+                    <tr>
+                    <th scope="row" class="px-4 py-3 font-medium text-rustic-dark">Sistema de riego para huertos urbanos</th>
+                    <td class="px-4 py-3">Controla el riego por sectores a partir de sensores o de horarios establecidos.</td>
+                    <td class="px-4 py-3">Optimiza el uso del agua en jardines y huertos pequeños.</td></tr>
+                    <tr>
+                    <th scope="row" class="px-4 py-3 font-medium text-rustic-dark">Lámpara solar inteligente</th>
+                    <td class="px-4 py-3">Utiliza energía solar y puede incorporar sensores de movimiento o control de intensidad.</td>
+                    <td class="px-4 py-3">Reduce el consumo eléctrico y mejora la iluminación de espacios.</td></tr></tbody></table></div></div>
+                    <div>
+                    <h4 class="text-xl font-bold text-rustic-dark font-mono uppercase mb-3"><span class="text-sage">03.</span> Propuesta destacada: maceta inteligente</h4>
+                    <p class="mb-4">La maceta inteligente combina un objeto físico con sensores, electrónica y una interfaz web. El sistema mediría la humedad del sustrato y la compararía con un umbral definido para cada planta. Si el valor fuera bajo, podría activar una pequeña bomba de agua o enviar una alerta para que el usuario decidiera regar.</p>
+                    <ul class="list-disc pl-6 mb-6 text-gray-700 space-y-2 font-light">
+                    <li>Lectura de humedad del suelo mediante un sensor.</li>
+                    <li>Registro opcional de temperatura y luz ambiental.</li>
+                    <li>Riego automático mediante una bomba y un relé o módulo de control, con medidas de seguridad.</li>
+                    <li>Configuración del tipo de planta y del nivel de humedad objetivo.</li>
+                    <li>Visualización de lecturas actuales e historial en la página web.</li>
+                    <li>Alertas de necesidad de agua y, si se incorpora el sensor correspondiente, de depósito vacío.</li></ul>
+                    <p class="mb-4">En esta etapa, la propuesta quedó sujeta a la evaluación de viabilidad, presupuesto y disponibilidad de materiales. Estas funciones describen el alcance considerado para el prototipo.</p></div>
+                    <div>
+                    <h4 class="text-xl font-bold text-rustic-dark font-mono uppercase mb-3"><span class="text-sage">04.</span> Estructura de la página web</h4>
+                    <p class="mb-4">Se planteó una bitácora digital para presentar la idea, explicar sus objetivos, publicar los avances y mostrar fotografías del prototipo. La consulta de datos de sensores y la administración de registros forman parte de la propuesta de desarrollo.</p>
+                    <p class="table-scroll-hint">Desliza la tabla para ver todas las columnas.</p>
+                    <div class="journal-data-table overflow-x-auto mt-6 border border-rustic-border rounded-lg shadow-sm" tabindex="0" role="region" aria-label="Módulos propuestos para la página web">
+                    <table class="w-full text-sm text-left"><caption class="sr-only">Módulos propuestos para la página web</caption>
+                    <thead class="bg-gray-100 font-mono text-dustyBlue">
+                    <tr>
+                    <th scope="col" class="px-4 py-3 border-b border-rustic-border">Módulo</th>
+                    <th scope="col" class="px-4 py-3 border-b border-rustic-border">Contenido</th>
+                    <th scope="col" class="px-4 py-3 border-b border-rustic-border">Propósito</th></tr></thead>
+                    <tbody class="divide-y divide-rustic-border bg-white text-gray-700 font-light">
+                    <tr>
+                    <th scope="row" class="px-4 py-3 font-medium text-rustic-dark">Inicio</th>
+                    <td class="px-4 py-3">Nombre, descripción breve, objetivo y estado actual.</td>
+                    <td class="px-4 py-3">Presentar el proyecto.</td></tr>
+                    <tr>
+                    <th scope="row" class="px-4 py-3 font-medium text-rustic-dark">Proyecto</th>
+                    <td class="px-4 py-3">Problema, justificación, objetivos, materiales y funcionamiento.</td>
+                    <td class="px-4 py-3">Explicar qué se construye y por qué.</td></tr>
+                    <tr>
+                    <th scope="row" class="px-4 py-3 font-medium text-rustic-dark">Avances semanales</th>
+                    <td class="px-4 py-3">Semana, fecha, actividades, resultados, dificultades, imágenes y siguiente paso.</td>
+                    <td class="px-4 py-3">Documentar el progreso del equipo.</td></tr>
+                    <tr>
+                    <th scope="row" class="px-4 py-3 font-medium text-rustic-dark">Datos y gráficos</th>
+                    <td class="px-4 py-3">Humedad, temperatura, luz y registros por fecha, cuando existan sensores.</td>
+                    <td class="px-4 py-3">Consultar mediciones e identificar tendencias.</td></tr>
+                    <tr>
+                    <th scope="row" class="px-4 py-3 font-medium text-rustic-dark">Galería</th>
+                    <td class="px-4 py-3">Fotografías, bocetos, diagramas y versiones del prototipo.</td>
+                    <td class="px-4 py-3">Mostrar evidencias visuales.</td></tr>
+                    <tr>
+                    <th scope="row" class="px-4 py-3 font-medium text-rustic-dark">Administración</th>
+                    <td class="px-4 py-3">Formulario para agregar o editar avances y revisar registros.</td>
+                    <td class="px-4 py-3">Mantener la información actualizada.</td></tr></tbody></table></div></div>
+                    <div>
+                    <h4 class="text-xl font-bold text-rustic-dark font-mono uppercase mb-3"><span class="text-sage">05.</span> Arquitectura general del sistema</h4>
+                    <ol class="list-decimal pl-6 mb-6 text-gray-700 space-y-2 font-light">
+                    <li><strong>Usuario:</strong> acceso desde el navegador de un celular o una computadora.</li>
+                    <li><strong>Frontend:</strong> interfaz con HTML, CSS y JavaScript para presentar avances, formularios y gráficos.</li>
+                    <li><strong>Backend:</strong> recepción de solicitudes, validación de datos y reglas del sistema; se consideraron Node.js, PHP o Python.</li>
+                    <li><strong>Base de datos:</strong> almacenamiento de usuarios, proyectos, avances, sensores y mediciones.</li>
+                    <li><strong>Dispositivo físico, si se integra:</strong> un microcontrolador como ESP32 podría enviar lecturas mediante Wi-Fi.</li></ol>
+                    <p class="mb-4"><strong>Flujo de consulta:</strong> Usuario <svg class="flow-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6"/></svg> Frontend <svg class="flow-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6"/></svg> Backend/API <svg class="flow-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6"/></svg> Base de datos.</p>
+                    <p class="mb-4"><strong>Flujo de mediciones propuesto:</strong> Sensor/ESP32 <svg class="flow-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6"/></svg> API <svg class="flow-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6"/></svg> Base de datos <svg class="flow-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6"/></svg> Gráficos en la web.</p></div>
+                    <div>
+                    <h4 class="text-xl font-bold text-rustic-dark font-mono uppercase mb-3"><span class="text-sage">06.</span> Diseño preliminar de la base de datos</h4>
+                    <p class="mb-4">Se propuso una base de datos relacional; MySQL o PostgreSQL permitirían organizar los registros y vincular cada avance con su proyecto.</p>
+                    <p class="table-scroll-hint">Desliza la tabla para ver todas las columnas.</p>
+                    <div class="journal-data-table overflow-x-auto mt-6 border border-rustic-border rounded-lg shadow-sm" tabindex="0" role="region" aria-label="Tablas y relaciones propuestas para la base de datos">
+                    <table class="w-full text-sm text-left"><caption class="sr-only">Tablas y relaciones propuestas para la base de datos</caption>
+                    <thead class="bg-gray-100 font-mono text-dustyBlue">
+                    <tr>
+                    <th scope="col" class="px-4 py-3 border-b border-rustic-border">Tabla</th>
+                    <th scope="col" class="px-4 py-3 border-b border-rustic-border">Campos sugeridos</th>
+                    <th scope="col" class="px-4 py-3 border-b border-rustic-border">Relación / uso</th></tr></thead>
+                    <tbody class="divide-y divide-rustic-border bg-white text-gray-700 font-light">
+                    <tr>
+                    <th scope="row" class="px-4 py-3 font-medium text-rustic-dark">USUARIOS</th>
+                    <td class="px-4 py-3">id_usuario (PK), nombre, correo, contraseña_hash, rol</td>
+                    <td class="px-4 py-3">Identifica a quienes pueden administrar o consultar el sistema.</td></tr>
+                    <tr>
+                    <th scope="row" class="px-4 py-3 font-medium text-rustic-dark">PROYECTOS</th>
+                    <td class="px-4 py-3">id_proyecto (PK), nombre, descripción, estado, fecha_inicio</td>
+                    <td class="px-4 py-3">Guarda la información general del proyecto.</td></tr>
+                    <tr>
+                    <th scope="row" class="px-4 py-3 font-medium text-rustic-dark">AVANCES</th>
+                    <td class="px-4 py-3">id_avance (PK), id_proyecto (FK), semana, fecha, actividades, resultados, dificultades, siguiente_paso, imagen_url</td>
+                    <td class="px-4 py-3">Cada proyecto puede tener muchos avances semanales.</td></tr>
+                    <tr>
+                    <th scope="row" class="px-4 py-3 font-medium text-rustic-dark">SENSORES</th>
+                    <td class="px-4 py-3">id_sensor (PK), id_proyecto (FK), tipo, unidad, ubicación</td>
+                    <td class="px-4 py-3">Registra los sensores instalados en el prototipo.</td></tr>
+                    <tr>
+                    <th scope="row" class="px-4 py-3 font-medium text-rustic-dark">MEDICIONES</th>
+                    <td class="px-4 py-3">id_medicion (PK), id_sensor (FK), valor, fecha_hora</td>
+                    <td class="px-4 py-3">Guarda cada lectura recibida desde un sensor.</td></tr></tbody></table></div>
+                    <p class="mb-4"><strong>PK</strong> significa clave primaria y <strong>FK</strong>, clave foránea. Las contraseñas se almacenarían mediante un hash seguro. Las fotografías podrían guardarse en un servicio de archivos y registrar su dirección en la base de datos.</p></div>
+                    <div>
+                    <h4 class="text-xl font-bold text-rustic-dark font-mono uppercase mb-3"><span class="text-sage">07.</span> Ruta de desarrollo de la página</h4>
+                    <ol class="list-decimal pl-6 mb-6 text-gray-700 space-y-2 font-light">
+                    <li><strong>Planificación:</strong> definir usuarios, secciones, información y requisitos del equipo.</li>
+                    <li><strong>Diseño visual:</strong> preparar bocetos para celular y computadora.</li>
+                    <li><strong>Frontend:</strong> construir navegación y pantallas con HTML, CSS y JavaScript.</li>
+                    <li><strong>Base de datos:</strong> crear tablas y relaciones entre proyectos, avances y mediciones.</li>
+                    <li><strong>Backend y API:</strong> definir rutas de consulta, registro, actualización y eliminación según permisos.</li>
+                    <li><strong>Integración:</strong> conectar los formularios y gráficos con el backend y la base de datos.</li>
+                    <li><strong>Pruebas:</strong> verificar registros, validación de campos y funcionamiento en móvil.</li>
+                    <li><strong>Publicación:</strong> alojar el sitio y documentar su mantenimiento.</li></ol></div>
+                    <div>
+                    <h4 class="text-xl font-bold text-rustic-dark font-mono uppercase mb-3"><span class="text-sage">08.</span> Planificación inicial de los avances</h4>
+                    <p class="mb-4">Como planificación inicial se planteó una ruta de 15 avances. Este esquema registra la planificación inicial; las entradas de la bitácora documentan las actividades realizadas en cada semana.</p>
+                    <p class="table-scroll-hint">Desliza la tabla para ver todas las columnas.</p>
+                    <div class="journal-data-table overflow-x-auto mt-6 border border-rustic-border rounded-lg shadow-sm" tabindex="0" role="region" aria-label="Plan preliminar de 15 avances semanales">
+                    <table class="w-full text-sm text-left"><caption class="sr-only">Plan preliminar de 15 avances semanales</caption>
+                    <thead class="bg-gray-100 font-mono text-dustyBlue">
+                    <tr>
+                    <th scope="col" class="px-4 py-3 border-b border-rustic-border">Semana</th>
+                    <th scope="col" class="px-4 py-3 border-b border-rustic-border">Avance propuesto</th></tr></thead>
+                    <tbody class="divide-y divide-rustic-border bg-white text-gray-700 font-light">
+                    <tr>
+                    <th scope="row" class="px-4 py-3 font-medium text-rustic-dark">1</th>
+                    <td class="px-4 py-3">Elección del proyecto y comparación de alternativas.</td></tr>
+                    <tr>
+                    <th scope="row" class="px-4 py-3 font-medium text-rustic-dark">2</th>
+                    <td class="px-4 py-3">Investigación del problema, usuarios y soluciones existentes.</td></tr>
+                    <tr>
+                    <th scope="row" class="px-4 py-3 font-medium text-rustic-dark">3</th>
+                    <td class="px-4 py-3">Definición de objetivos, alcance y requisitos.</td></tr>
+                    <tr>
+                    <th scope="row" class="px-4 py-3 font-medium text-rustic-dark">4</th>
+                    <td class="px-4 py-3">Bocetos, diseño conceptual y selección de materiales.</td></tr>
+                    <tr>
+                    <th scope="row" class="px-4 py-3 font-medium text-rustic-dark">5</th>
+                    <td class="px-4 py-3">Diseño del circuito y elección de sensores o componentes.</td></tr>
+                    <tr>
+                    <th scope="row" class="px-4 py-3 font-medium text-rustic-dark">6</th>
+                    <td class="px-4 py-3">Diseño del prototipo físico y modelado de piezas.</td></tr>
+                    <tr>
+                    <th scope="row" class="px-4 py-3 font-medium text-rustic-dark">7</th>
+                    <td class="px-4 py-3">Diseño visual de la página web y navegación.</td></tr>
+                    <tr>
+                    <th scope="row" class="px-4 py-3 font-medium text-rustic-dark">8</th>
+                    <td class="px-4 py-3">Construcción del frontend.</td></tr>
+                    <tr>
+                    <th scope="row" class="px-4 py-3 font-medium text-rustic-dark">9</th>
+                    <td class="px-4 py-3">Diseño de la base de datos y sus relaciones.</td></tr>
+                    <tr>
+                    <th scope="row" class="px-4 py-3 font-medium text-rustic-dark">10</th>
+                    <td class="px-4 py-3">Desarrollo del backend y formularios para registrar avances.</td></tr>
+                    <tr>
+                    <th scope="row" class="px-4 py-3 font-medium text-rustic-dark">11</th>
+                    <td class="px-4 py-3">Montaje inicial del prototipo físico.</td></tr>
+                    <tr>
+                    <th scope="row" class="px-4 py-3 font-medium text-rustic-dark">12</th>
+                    <td class="px-4 py-3">Programación y pruebas de sensores.</td></tr>
+                    <tr>
+                    <th scope="row" class="px-4 py-3 font-medium text-rustic-dark">13</th>
+                    <td class="px-4 py-3">Integración de las lecturas con la web y visualización de datos.</td></tr>
+                    <tr>
+                    <th scope="row" class="px-4 py-3 font-medium text-rustic-dark">14</th>
+                    <td class="px-4 py-3">Pruebas generales, corrección de errores y mejoras.</td></tr>
+                    <tr>
+                    <th scope="row" class="px-4 py-3 font-medium text-rustic-dark">15</th>
+                    <td class="px-4 py-3">Validación final, conclusiones y presentación del proyecto.</td></tr></tbody></table></div></div>
+                    <div>
+                    <h4 class="text-xl font-bold text-rustic-dark font-mono uppercase mb-3"><span class="text-sage">09.</span> Resultados y siguiente paso</h4>
+                    <p class="journal-result"><strong>Resultado:</strong> se identificaron cinco alternativas de proyecto, se destacó la maceta inteligente y se definió un esquema de documentación web con una posible base de datos.</p>
+                    <p class="mb-4"><strong>Siguiente paso:</strong> evaluar las propuestas y confirmar la selección definitiva, el alcance del prototipo y los recursos necesarios.</p></div></div>
                 `;
-                } else if (s.num === 2) {
+            } else if (s.num === 2) {
                 contenidoEspecifico = `
+                    <p class="text-lg font-medium text-dustyBlue mb-8 border-l-4 border-sage pl-4">La segunda semana combinó una lluvia de ideas colaborativa, la investigación de herramientas de diseño 2D y 3D, el desarrollo de modelos preliminares y una introducción a la impresión 3D con filamento PLA.</p>
                     <div class="space-y-12">
-                        <!-- BLOQUE 1: Ideación -->
-                        <div>
-                            <h4 class="text-xl font-bold text-rustic-dark font-mono uppercase mb-3"><span class="text-sage">01.</span> Lluvia de Ideas y Selección del Problema</h4>
-                            <p class="mb-4">Para definir el rumbo de nuestro proyecto, realizamos una sesión de ideación colaborativa utilizando post-its. Anotamos múltiples problemáticas que podríamos resolver y las agrupamos en categorías como Movilidad, Mascotas, Sonido, Instalación y Medio Ambiente.</p>
-                            <p class="mb-4">Posteriormente, sometimos estas ideas a una evaluación en equipo. La categoría ganadora fue <strong>Medio Ambiente</strong> (con la puntuación máxima de 15 puntos). A partir de esto, delimitamos nuestra problemática central: <em>Optimizar recursos hídricos</em>, lo que sentó las bases para el concepto de YuraFab.</p>
-                            
-                            <div class="photo-frame bg-gray-100 h-64 md:h-[28rem] flex flex-col items-center justify-center border border-rustic-border relative overflow-hidden rounded-lg mb-6 group">
-                                <img src="foto-postits.jpg" alt="Post-its ideación" class="absolute inset-0 w-full h-full object-contain p-2 md:p-4">
-                                <span class="text-xs text-dustyBlue font-mono z-10 bg-white/90 px-3 py-1 rounded-md transition-opacity duration-300 group-hover:opacity-0">(FOTO DE LOS POST-ITS)</span>
-                            </div>
-                        </div>
-
-                        <!-- BLOQUE 2: Estado del Arte -->
-                        <div>
-                            <h4 class="text-xl font-bold text-rustic-dark font-mono uppercase mb-3"><span class="text-sage">02.</span> Matriz Guía y Proyectos Existentes</h4>
-                            <p class="mb-4">Antes de proponer una solución a ciegas, elaboramos una Matriz Guía del Proyecto. Investigamos artículos académicos (en bases de datos como Scielo, Redalyc y FAO) sobre sistemas de riego y control de recursos hídricos que ya se habían realizado. Esto nos permitió analizar el estado del arte y encontrar nuestro diferenciador.</p>
-                            
-                            <div class="mt-6 flex flex-col gap-4">
-                                <div class="bg-white p-4 md:p-6 flex flex-col sm:flex-row items-center justify-between border border-rustic-border rounded-lg shadow-sm">
-                                    <h5 class="font-bold text-lg text-dustyBlue mb-3 sm:mb-0">Matriz de Ideación (.xlsx)</h5>
-                                    <a href="semana-2.xlsx" download="semana-2.xlsx" class="inline-flex items-center px-6 py-3 bg-dustyBlue hover:bg-water text-white font-bold rounded-lg shadow-md transition-all duration-300">
-                                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
-                                        Descargar Excel
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <div>
+                    <h4 class="text-xl font-bold text-rustic-dark font-mono uppercase mb-3"><span class="text-sage">01.</span> Lluvia de ideas y selección del problema</h4>
+                    <p class="mb-4">Se trabajó de manera física y colaborativa para identificar necesidades del entorno y proponer soluciones que pudieran desarrollarse en el Fab Lab.</p>
+                    <ul class="list-disc pl-6 mb-6 text-gray-700 space-y-2 font-light">
+                    <li>Identificación de necesidades y problemas del entorno.</li>
+                    <li>Propuesta de ideas e intercambio de opiniones entre integrantes.</li>
+                    <li>Análisis inicial de utilidad, viabilidad y originalidad.</li>
+                    <li>Evaluación de alternativas como base para seleccionar el proyecto.</li></ul>
+                    <p class="mb-4">Las notas se organizaron en categorías como Movilidad, Mascotas, Sonido, Instalación y Medio Ambiente. La evaluación del equipo priorizó Medio Ambiente, con 15 puntos, y permitió delimitar el problema de <strong>optimizar recursos hídricos</strong>.</p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-6">
+                    <figure class="journal-evidence evidence-portrait"><a class="photo-frame evidence-link" href="assets/bitacora/semana-02/lluvia-ideas-postits.png" target="_blank" rel="noopener" aria-label="Ampliar: Lluvia de ideas registrada en notas adhesivas"><img src="assets/bitacora/semana-02/lluvia-ideas-postits.png" alt="Lluvia de ideas registrada en notas adhesivas" width="960" height="1280" loading="lazy" decoding="async" class="w-full h-full object-contain p-2 md:p-4"></a><figcaption>Lluvia de ideas registrada en notas adhesivas. <a href="assets/bitacora/semana-02/lluvia-ideas-postits.png" target="_blank" rel="noopener" aria-label="Ver imagen completa: Lluvia de ideas registrada en notas adhesivas">Ver imagen completa <svg class="arrow-icon evidence-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></figcaption></figure>
+                    <figure class="journal-evidence evidence-portrait"><a class="photo-frame evidence-link" href="assets/bitacora/semana-02/ideacion-equipo.png" target="_blank" rel="noopener" aria-label="Ampliar: Trabajo colaborativo del equipo durante la lluvia de ideas"><img src="assets/bitacora/semana-02/ideacion-equipo.png" alt="Trabajo colaborativo del equipo durante la lluvia de ideas" width="960" height="1280" loading="lazy" decoding="async" class="w-full h-full object-contain p-2 md:p-4"></a><figcaption>Trabajo colaborativo del equipo durante la lluvia de ideas. <a href="assets/bitacora/semana-02/ideacion-equipo.png" target="_blank" rel="noopener" aria-label="Ver imagen completa: Trabajo colaborativo del equipo durante la lluvia de ideas">Ver imagen completa <svg class="arrow-icon evidence-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></figcaption></figure></div>
+                    <p class="journal-result"><strong>Resultado:</strong> se generaron y organizaron propuestas para orientar la selección del proyecto.</p></div>
+                    <div>
+                    <h4 class="text-xl font-bold text-rustic-dark font-mono uppercase mb-3"><span class="text-sage">02.</span> Investigación de software de diseño 2D y 3D</h4>
+                    <p class="mb-4">Se investigaron herramientas de dibujo técnico, modelado tridimensional y preparación de prototipos. Se revisaron funciones, aplicaciones, facilidad de uso, herramientas disponibles y modalidades de acceso gratuitas o de pago.</p>
+                    <p class="mb-4">La investigación general contempló <strong>AutoCAD, LibreCAD e Inkscape</strong> para trabajo en 2D, y <strong>Autodesk Fusion, Blender y SketchUp</strong> para modelado 3D. Las fichas comparativas adjuntas también revisan <strong>QCAD y FreeCAD</strong>.</p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-6">
+                    <figure class="journal-evidence"><a class="photo-frame evidence-link" href="assets/bitacora/semana-02/investigacion-software.png" target="_blank" rel="noopener" aria-label="Ampliar: Presentación de la investigación de software de diseño 2D y 3D"><img src="assets/bitacora/semana-02/investigacion-software.png" alt="Presentación de la investigación de software de diseño 2D y 3D" width="1115" height="758" loading="lazy" decoding="async" class="w-full h-full object-contain p-2 md:p-4"></a><figcaption>Presentación de la investigación de software de diseño 2D y 3D. <a href="assets/bitacora/semana-02/investigacion-software.png" target="_blank" rel="noopener" aria-label="Ver imagen completa: Presentación de la investigación de software de diseño 2D y 3D">Ver imagen completa <svg class="arrow-icon evidence-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></figcaption></figure>
+                    <figure class="journal-evidence"><a class="photo-frame evidence-link" href="assets/bitacora/semana-02/introduccion-cad.png" target="_blank" rel="noopener" aria-label="Ampliar: Introducción al software CAD y diferencias entre diseño 2D y 3D"><img src="assets/bitacora/semana-02/introduccion-cad.png" alt="Introducción al software CAD y diferencias entre diseño 2D y 3D" width="1070" height="550" loading="lazy" decoding="async" class="w-full h-full object-contain p-2 md:p-4"></a><figcaption>Introducción al software CAD y diferencias entre diseño 2D y 3D. <a href="assets/bitacora/semana-02/introduccion-cad.png" target="_blank" rel="noopener" aria-label="Ver imagen completa: Introducción al software CAD y diferencias entre diseño 2D y 3D">Ver imagen completa <svg class="arrow-icon evidence-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></figcaption></figure></div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-6">
+                    <figure class="journal-evidence"><a class="photo-frame evidence-link" href="assets/bitacora/semana-02/autocad.png" target="_blank" rel="noopener" aria-label="Ampliar: Ficha de AutoCAD: funciones, ventajas y aspectos a considerar"><img src="assets/bitacora/semana-02/autocad.png" alt="Ficha de AutoCAD: funciones, ventajas y aspectos a considerar" width="1061" height="706" loading="lazy" decoding="async" class="w-full h-full object-contain p-2 md:p-4"></a><figcaption>Ficha de AutoCAD: funciones, ventajas y aspectos a considerar. <a href="assets/bitacora/semana-02/autocad.png" target="_blank" rel="noopener" aria-label="Ver imagen completa: Ficha de AutoCAD: funciones, ventajas y aspectos a considerar">Ver imagen completa <svg class="arrow-icon evidence-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></figcaption></figure>
+                    <figure class="journal-evidence"><a class="photo-frame evidence-link" href="assets/bitacora/semana-02/librecad.png" target="_blank" rel="noopener" aria-label="Ampliar: Ficha de LibreCAD: dibujo técnico bidimensional"><img src="assets/bitacora/semana-02/librecad.png" alt="Ficha de LibreCAD: dibujo técnico bidimensional" width="1065" height="670" loading="lazy" decoding="async" class="w-full h-full object-contain p-2 md:p-4"></a><figcaption>Ficha de LibreCAD: dibujo técnico bidimensional. <a href="assets/bitacora/semana-02/librecad.png" target="_blank" rel="noopener" aria-label="Ver imagen completa: Ficha de LibreCAD: dibujo técnico bidimensional">Ver imagen completa <svg class="arrow-icon evidence-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></figcaption></figure>
+                    <figure class="journal-evidence"><a class="photo-frame evidence-link" href="assets/bitacora/semana-02/qcad.png" target="_blank" rel="noopener" aria-label="Ampliar: Ficha de QCAD: herramientas de dibujo técnico en 2D"><img src="assets/bitacora/semana-02/qcad.png" alt="Ficha de QCAD: herramientas de dibujo técnico en 2D" width="1073" height="660" loading="lazy" decoding="async" class="w-full h-full object-contain p-2 md:p-4"></a><figcaption>Ficha de QCAD: herramientas de dibujo técnico en 2D. <a href="assets/bitacora/semana-02/qcad.png" target="_blank" rel="noopener" aria-label="Ver imagen completa: Ficha de QCAD: herramientas de dibujo técnico en 2D">Ver imagen completa <svg class="arrow-icon evidence-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></figcaption></figure>
+                    <figure class="journal-evidence"><a class="photo-frame evidence-link" href="assets/bitacora/semana-02/autodesk-fusion.png" target="_blank" rel="noopener" aria-label="Ampliar: Ficha de Autodesk Fusion: diseño paramétrico y fabricación digital"><img src="assets/bitacora/semana-02/autodesk-fusion.png" alt="Ficha de Autodesk Fusion: diseño paramétrico y fabricación digital" width="1072" height="667" loading="lazy" decoding="async" class="w-full h-full object-contain p-2 md:p-4"></a><figcaption>Ficha de Autodesk Fusion: diseño paramétrico y fabricación digital. <a href="assets/bitacora/semana-02/autodesk-fusion.png" target="_blank" rel="noopener" aria-label="Ver imagen completa: Ficha de Autodesk Fusion: diseño paramétrico y fabricación digital">Ver imagen completa <svg class="arrow-icon evidence-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></figcaption></figure>
+                    <figure class="journal-evidence"><a class="photo-frame evidence-link" href="assets/bitacora/semana-02/freecad.png" target="_blank" rel="noopener" aria-label="Ampliar: Ficha de FreeCAD: modelado paramétrico de código abierto"><img src="assets/bitacora/semana-02/freecad.png" alt="Ficha de FreeCAD: modelado paramétrico de código abierto" width="1075" height="683" loading="lazy" decoding="async" class="w-full h-full object-contain p-2 md:p-4"></a><figcaption>Ficha de FreeCAD: modelado paramétrico de código abierto. <a href="assets/bitacora/semana-02/freecad.png" target="_blank" rel="noopener" aria-label="Ver imagen completa: Ficha de FreeCAD: modelado paramétrico de código abierto">Ver imagen completa <svg class="arrow-icon evidence-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></figcaption></figure>
+                    <figure class="journal-evidence"><a class="photo-frame evidence-link" href="assets/bitacora/semana-02/sketchup.png" target="_blank" rel="noopener" aria-label="Ampliar: Ficha de SketchUp: modelado 3D intuitivo y visual"><img src="assets/bitacora/semana-02/sketchup.png" alt="Ficha de SketchUp: modelado 3D intuitivo y visual" width="1085" height="693" loading="lazy" decoding="async" class="w-full h-full object-contain p-2 md:p-4"></a><figcaption>Ficha de SketchUp: modelado 3D intuitivo y visual. <a href="assets/bitacora/semana-02/sketchup.png" target="_blank" rel="noopener" aria-label="Ver imagen completa: Ficha de SketchUp: modelado 3D intuitivo y visual">Ver imagen completa <svg class="arrow-icon evidence-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></figcaption></figure></div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-6">
+                    <figure class="journal-evidence"><a class="photo-frame evidence-link" href="assets/bitacora/semana-02/comparacion-software.png" target="_blank" rel="noopener" aria-label="Ampliar: Comparación general de software, acceso y usos recomendados"><img src="assets/bitacora/semana-02/comparacion-software.png" alt="Comparación general de software, acceso y usos recomendados" width="1071" height="681" loading="lazy" decoding="async" class="w-full h-full object-contain p-2 md:p-4"></a><figcaption>Comparación general de software, acceso y usos recomendados. <a href="assets/bitacora/semana-02/comparacion-software.png" target="_blank" rel="noopener" aria-label="Ver imagen completa: Comparación general de software, acceso y usos recomendados">Ver imagen completa <svg class="arrow-icon evidence-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></figcaption></figure>
+                    <figure class="journal-evidence"><a class="photo-frame evidence-link" href="assets/bitacora/semana-02/conclusiones-software.png" target="_blank" rel="noopener" aria-label="Ampliar: Conclusiones y fuentes de la investigación de herramientas CAD"><img src="assets/bitacora/semana-02/conclusiones-software.png" alt="Conclusiones y fuentes de la investigación de herramientas CAD" width="1068" height="688" loading="lazy" decoding="async" class="w-full h-full object-contain p-2 md:p-4"></a><figcaption>Conclusiones y fuentes de la investigación de herramientas CAD. <a href="assets/bitacora/semana-02/conclusiones-software.png" target="_blank" rel="noopener" aria-label="Ver imagen completa: Conclusiones y fuentes de la investigación de herramientas CAD">Ver imagen completa <svg class="arrow-icon evidence-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></figcaption></figure></div>
+                    <p class="journal-result"><strong>Resultado:</strong> se identificaron herramientas digitales para diseñar, comparar alternativas y preparar piezas destinadas a la fabricación.</p></div>
+                    <div>
+                    <h4 class="text-xl font-bold text-rustic-dark font-mono uppercase mb-3"><span class="text-sage">03.</span> Diseño preliminar en 2D y 3D</h4>
+                    <p class="mb-4">Se desarrollaron representaciones gráficas de las ideas para analizar su forma, sus dimensiones y su posible construcción física.</p>
+                    <ul class="list-disc pl-6 mb-6 text-gray-700 space-y-2 font-light">
+                    <li><strong>Diseño 2D:</strong> bocetos y representaciones planas, definición inicial de formas y dimensiones, e identificación de componentes.</li>
+                    <li><strong>Diseño 3D:</strong> modelado de las propuestas, representación de su estructura, análisis de proporciones y preparación conceptual para su fabricación.</li></ul>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-6">
+                    <figure class="journal-evidence"><a class="photo-frame evidence-link" href="assets/bitacora/semana-02/modelado-fusion.png" target="_blank" rel="noopener" aria-label="Ampliar: Modelado tridimensional de una figura en Autodesk Fusion"><img src="assets/bitacora/semana-02/modelado-fusion.png" alt="Modelado tridimensional de una figura en Autodesk Fusion" width="1912" height="1038" loading="lazy" decoding="async" class="w-full h-full object-contain p-2 md:p-4"></a><figcaption>Modelado tridimensional de una figura en Autodesk Fusion. <a href="assets/bitacora/semana-02/modelado-fusion.png" target="_blank" rel="noopener" aria-label="Ver imagen completa: Modelado tridimensional de una figura en Autodesk Fusion">Ver imagen completa <svg class="arrow-icon evidence-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></figcaption></figure>
+                    <figure class="journal-evidence"><a class="photo-frame evidence-link" href="assets/bitacora/semana-02/diseno-figura.png" target="_blank" rel="noopener" aria-label="Ampliar: Vista del diseño de una figura y sus detalles geométricos en Autodesk Fusion"><img src="assets/bitacora/semana-02/diseno-figura.png" alt="Vista del diseño de una figura y sus detalles geométricos en Autodesk Fusion" width="1600" height="783" loading="lazy" decoding="async" class="w-full h-full object-contain p-2 md:p-4"></a><figcaption>Vista del diseño de una figura y sus detalles geométricos en Autodesk Fusion. <a href="assets/bitacora/semana-02/diseno-figura.png" target="_blank" rel="noopener" aria-label="Ver imagen completa: Vista del diseño de una figura y sus detalles geométricos en Autodesk Fusion">Ver imagen completa <svg class="arrow-icon evidence-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></figcaption></figure></div>
+                    <p class="journal-result"><strong>Resultado:</strong> se elaboraron diseños digitales que facilitan comprender las propuestas y preparar las siguientes etapas del prototipo.</p></div>
+                    <div>
+                    <h4 class="text-xl font-bold text-rustic-dark font-mono uppercase mb-3"><span class="text-sage">04.</span> Introducción a la impresión 3D con PLA</h4>
+                    <p class="mb-4">Se conoció el funcionamiento de una impresora 3D de filamento PLA (ácido poliláctico). Esta tecnología transforma un modelo digital en un objeto físico mediante la deposición sucesiva de capas de material fundido.</p>
+                    <ul class="list-disc pl-6 mb-6 text-gray-700 space-y-2 font-light">
+                    <li>Reconocimiento de la impresora y sus componentes principales.</li>
+                    <li>Identificación del filamento PLA y del proceso de fabricación por capas.</li>
+                    <li>Preparación del modelo en un software laminador o slicer.</li>
+                    <li>Revisión de temperatura, altura de capa, velocidad y porcentaje de relleno.</li>
+                    <li>Observación del proceso y revisión del acabado y las dimensiones de las piezas.</li></ul>
+                    <p class="mb-4"><strong>Proceso general de preparación e impresión:</strong></p>
+                    <ol class="list-decimal pl-6 mb-6 text-gray-700 space-y-2 font-light">
+                    <li>Elaborar el modelo tridimensional en un software de diseño.</li>
+                    <li>Exportar un archivo compatible, como STL o 3MF.</li>
+                    <li>Configurar el modelo en el laminador.</li>
+                    <li>Ajustar los parámetros y generar el archivo de instrucciones.</li>
+                    <li>Cargar el filamento PLA en la impresora.</li>
+                    <li>Fabricar la pieza mediante capas sucesivas.</li>
+                    <li>Retirar la pieza y revisar su acabado y sus dimensiones.</li></ol>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-6">
+                    <figure class="journal-evidence"><a class="photo-frame evidence-link" href="assets/bitacora/semana-02/preparacion-slicer.png" target="_blank" rel="noopener" aria-label="Ampliar: Preparación de un modelo digital en el laminador Ultimaker Cura"><img src="assets/bitacora/semana-02/preparacion-slicer.png" alt="Preparación de un modelo digital en el laminador Ultimaker Cura" width="1917" height="1078" loading="lazy" decoding="async" class="w-full h-full object-contain p-2 md:p-4"></a><figcaption>Preparación de un modelo digital en el laminador Ultimaker Cura. <a href="assets/bitacora/semana-02/preparacion-slicer.png" target="_blank" rel="noopener" aria-label="Ver imagen completa: Preparación de un modelo digital en el laminador Ultimaker Cura">Ver imagen completa <svg class="arrow-icon evidence-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></figcaption></figure>
+                    <figure class="journal-evidence"><a class="photo-frame evidence-link" href="assets/bitacora/semana-02/distribucion-piezas-cura.png" target="_blank" rel="noopener" aria-label="Ampliar: Distribución de varias piezas sobre la cama de impresión en Ultimaker Cura"><img src="assets/bitacora/semana-02/distribucion-piezas-cura.png" alt="Distribución de varias piezas sobre la cama de impresión en Ultimaker Cura" width="1916" height="1072" loading="lazy" decoding="async" class="w-full h-full object-contain p-2 md:p-4"></a><figcaption>Distribución de varias piezas sobre la cama de impresión en Ultimaker Cura. <a href="assets/bitacora/semana-02/distribucion-piezas-cura.png" target="_blank" rel="noopener" aria-label="Ver imagen completa: Distribución de varias piezas sobre la cama de impresión en Ultimaker Cura">Ver imagen completa <svg class="arrow-icon evidence-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></figcaption></figure></div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-6">
+                    <figure class="journal-evidence evidence-portrait"><a class="photo-frame evidence-link" href="assets/bitacora/semana-02/impresora-pla.png" target="_blank" rel="noopener" aria-label="Ampliar: Impresora 3D de filamento utilizada durante la práctica"><img src="assets/bitacora/semana-02/impresora-pla.png" alt="Impresora 3D de filamento utilizada durante la práctica" width="960" height="1280" loading="lazy" decoding="async" class="w-full h-full object-contain p-2 md:p-4"></a><figcaption>Impresora 3D de filamento utilizada durante la práctica. <a href="assets/bitacora/semana-02/impresora-pla.png" target="_blank" rel="noopener" aria-label="Ver imagen completa: Impresora 3D de filamento utilizada durante la práctica">Ver imagen completa <svg class="arrow-icon evidence-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></figcaption></figure>
+                    <figure class="journal-evidence evidence-portrait"><a class="photo-frame evidence-link" href="assets/bitacora/semana-02/impresion-proceso.png" target="_blank" rel="noopener" aria-label="Ampliar: Proceso de fabricación de una pieza sobre la cama de la impresora 3D"><img src="assets/bitacora/semana-02/impresion-proceso.png" alt="Proceso de fabricación de una pieza sobre la cama de la impresora 3D" width="960" height="1280" loading="lazy" decoding="async" class="w-full h-full object-contain p-2 md:p-4"></a><figcaption>Proceso de fabricación de una pieza sobre la cama de la impresora 3D. <a href="assets/bitacora/semana-02/impresion-proceso.png" target="_blank" rel="noopener" aria-label="Ver imagen completa: Proceso de fabricación de una pieza sobre la cama de la impresora 3D">Ver imagen completa <svg class="arrow-icon evidence-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></figcaption></figure></div>
+                    <figure class="journal-evidence evidence-portrait"><a class="photo-frame evidence-link" href="assets/bitacora/semana-02/pieza-impresa-pla.png" target="_blank" rel="noopener" aria-label="Ampliar: Pieza fabricada en PLA al finalizar la práctica de impresión 3D"><img src="assets/bitacora/semana-02/pieza-impresa-pla.png" alt="Pieza fabricada en PLA al finalizar la práctica de impresión 3D" width="960" height="1280" loading="lazy" decoding="async" class="w-full h-full object-contain p-2 md:p-4"></a><figcaption>Pieza fabricada en PLA al finalizar la práctica de impresión 3D. <a href="assets/bitacora/semana-02/pieza-impresa-pla.png" target="_blank" rel="noopener" aria-label="Ver imagen completa: Pieza fabricada en PLA al finalizar la práctica de impresión 3D">Ver imagen completa <svg class="arrow-icon evidence-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></figcaption></figure>
+                    <p class="journal-result"><strong>Resultado:</strong> se comprendió el procedimiento básico para pasar de un modelo digital a una pieza física y la importancia de configurar correctamente la impresión.</p></div>
+                    <div>
+                    <h4 class="text-xl font-bold text-rustic-dark font-mono uppercase mb-3"><span class="text-sage">05.</span> Resultados generales</h4>
+                    <ul class="list-disc pl-6 mb-6 text-gray-700 space-y-2 font-light">
+                    <li>Generación de propuestas mediante una lluvia de ideas colaborativa.</li>
+                    <li>Investigación de herramientas de diseño técnico y modelado 3D.</li>
+                    <li>Desarrollo de diseños preliminares en dos y tres dimensiones.</li>
+                    <li>Reconocimiento de una impresora 3D que utiliza filamento PLA.</li>
+                    <li>Comprensión de las etapas de transformación de un diseño digital en un prototipo físico.</li>
+                    <li>Identificación de la fabricación aditiva como herramienta para crear piezas y validar diseños.</li></ul></div>
+                    <div>
+                    <h4 class="text-xl font-bold text-rustic-dark font-mono uppercase mb-3"><span class="text-sage">06.</span> Conclusión</h4>
+                    <p class="mb-4">Las actividades de creatividad, investigación y diseño se complementaron con el aprendizaje de la impresión 3D en PLA. Esto permitió relacionar el diseño digital con la fabricación física y adquirir conocimientos técnicos para las siguientes etapas del proyecto.</p></div></div>
                 `;
-         } else if (s.num === 3) {
+            } else if (s.num === 3) {
                 contenidoEspecifico = `
                     <div class="space-y-12">
                         <!-- BLOQUE 1: JTBD -->
@@ -560,6 +792,32 @@
                             </div>
                         </div>
                     </div>
+                `;
+            } else if (s.num === 5) {
+                contenidoEspecifico = `
+                    <p class="text-lg font-medium text-dustyBlue mb-8 border-l-4 border-sage pl-4">El avance de la semana 5 se centró en la impresión 2D de una fotografía en formato PNG sobre MDF o acrílico mediante una máquina de impresión UV.</p>
+                    <div class="space-y-12">
+                    <div>
+                    <h4 class="text-xl font-bold text-rustic-dark font-mono uppercase mb-3"><span class="text-sage">01.</span> Objetivo y selección de la imagen</h4>
+                    <p class="mb-4">Conocer el proceso de impresión UV sobre distintos materiales y preparar una fotografía para su reproducción en 2D. La selección de imágenes se realizó de manera digital y colaborativa entre los integrantes del equipo.</p>
+                    <ul class="list-disc pl-6 mb-6 text-gray-700 space-y-2 font-light">
+                    <li>Identificación de una fotografía en formato PNG.</li>
+                    <li>Selección del material de soporte: MDF o acrílico.</li>
+                    <li>Preparación de la imagen para su impresión.</li></ul></div>
+                    <div>
+                    <h4 class="text-xl font-bold text-rustic-dark font-mono uppercase mb-3"><span class="text-sage">02.</span> Configuración y calibración</h4>
+                    <p class="mb-4">Se trabajó en el ajuste de los parámetros del software y en la revisión y calibración de la máquina antes de ejecutar la impresión.</p>
+                    <ul class="list-disc pl-6 mb-6 text-gray-700 space-y-2 font-light">
+                    <li>Ajuste de los parámetros de impresión en el software.</li>
+                    <li>Análisis del estado y la configuración de la máquina.</li>
+                    <li>Calibración previa al trabajo sobre el material escogido.</li></ul></div>
+                    <div>
+                    <h4 class="text-xl font-bold text-rustic-dark font-mono uppercase mb-3"><span class="text-sage">03.</span> Impresión y evaluación del resultado</h4>
+                    <p class="mb-4">La actividad contempló la ejecución de la impresión de la fotografía PNG y la evaluación del resultado sobre el soporte. El uso previsto de las imágenes impresas fue su aplicación como distintivos, adornos o placas.</p>
+                    <p class="journal-result"><strong>Resultado:</strong> generación de imágenes impresas sobre MDF o acrílico, según el material escogido para la práctica.</p></div>
+                    <div>
+                    <h4 class="text-xl font-bold text-rustic-dark font-mono uppercase mb-3"><span class="text-sage">04.</span> Evidencias del avance</h4>
+                    <p class="mb-4">La evidencia prevista para esta práctica corresponde a fotografías de la ejecución en la máquina. <strong>Registro fotográfico pendiente de incorporar.</strong></p></div></div>
                 `;
             } else {
                 contenidoEspecifico = `

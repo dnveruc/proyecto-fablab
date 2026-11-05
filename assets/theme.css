@@ -201,3 +201,27 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--sand); outline-
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation: none !important; transition-duration: .01ms !important; }
 }
+
+/* Weekly evidence uses the existing night palette and preserves the full image. */
+.journal-evidence { min-width: 0; margin: 24px 0 0; }
+.evidence-link { display: block; width: 100%; height: clamp(260px, 38vw, 448px); cursor: zoom-in; }
+.evidence-portrait .evidence-link { height: 384px; }
+.evidence-infographic { max-width: 760px; margin-inline: auto; }
+.evidence-infographic .evidence-link { height: auto; aspect-ratio: 815 / 856; }
+.journal-evidence figcaption { margin-top: 12px; font-size: 12px; line-height: 1.7; color: var(--muted); }
+.journal-evidence figcaption a { color: var(--sand); text-decoration: underline; text-underline-offset: 3px; }
+.journal-result { margin-top: 24px; padding: 16px 20px; border-left: 2px solid var(--sand); background: #c7a3750a; font-size: 15px; line-height: 1.85; color: #d4d9df; }
+.journal-data-table table { min-width: 680px; }
+.journal-data-table th, .journal-data-table td { overflow-wrap: anywhere; vertical-align: top; }
+.journal-data-table:focus-visible { outline: 2px solid var(--sand); outline-offset: 4px; }
+@media (max-width: 639px) {
+  .evidence-portrait .evidence-link { height: 360px; }
+  .journal-evidence figcaption { font-size: 11px; }
+}
+
+.evidence-arrow { display: inline-block; width: 11px; height: 11px; margin-left: 3px; vertical-align: middle; }
+.flow-arrow { display: inline-block; width: 14px; height: 14px; margin-inline: 3px; fill: none; stroke: currentColor; stroke-width: 1.5; vertical-align: middle; }
+.table-scroll-hint { display: none; }
+@media (max-width: 767px) {
+  .table-scroll-hint { display: block; margin-top: 20px; font-size: 11px; line-height: 1.7; color: var(--sand); }
+}

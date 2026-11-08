@@ -26,4 +26,4 @@ npx --yes tailwindcss@3.4.17 -c assets/tailwind.config.cjs -i assets/theme.css -
 
 Guardar también `assets/styles.css`. La página publicada no necesita ejecutar Node ni descargar Tailwind desde un CDN. Actualizar la versión de los recursos en `index.html` cuando cambien para renovar la caché del navegador.
 
-GitHub Pages publica la rama `main` con el flujo de despliegue del repositorio.
+GitHub Pages publica la rama `main` con el flujo de despliegue del repositorio. El marcador `.nojekyll` conserva los archivos estáticos y las plantillas Markdown descargables sin transformarlos.

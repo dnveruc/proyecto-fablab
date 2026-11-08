@@ -1,6 +1,8 @@
 # Visual assets
 
-- Desert landscape: photograph served by Unsplash, downloaded from https://images.unsplash.com/photo-1509316785289-025f5b846b35. Used as a decorative backdrop; the blue night treatment is applied in CSS. Unsplash license: https://unsplash.com/license.
-- Oswald SemiBold: The Oswald Project Authors. Google Fonts; SIL Open Font License, included in fonts/Oswald-OFL.txt.
-- DM Sans: retained from the existing site, license in fonts/OFL.txt.
-- Team and process photographs: existing project content, unchanged.
+- Cover photograph: fotogrupo.jpg, existing photograph of the YuraFab team working in the FabLab.
+- Group and individual photographs: existing team images, copied unchanged from the GitHub attachments already used by this site into assets/equipo/.
+- Weekly photographs and screenshots: existing project records, including the 20 images extracted from the supplied weekly report. Original images are retained without cropping or colour filters.
+- Layout marks, registration corners, logomark and diagrams: SVG and CSS drawn for YuraFab.
+- Oswald SemiBold: The Oswald Project Authors. SIL Open Font License, in fonts/Oswald-OFL.txt.
+- DM Sans: retained from the existing site. License in fonts/OFL.txt.

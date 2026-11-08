@@ -1,4 +1,29 @@
-<img width="3410" height="2273" alt="Grupoo" src="https://github.com/user-attachments/assets/6266174d-715e-480a-94a4-2c3d8fa7365a" />
-<img width="4284" height="4284" alt="Paulperfil" src="https://github.com/user-attachments/assets/fd06973e-a2a0-47b2-95ba-a652ff202856" />
-<img width="3700" height="3700" alt="Dereckperfil" src="https://github.com/user-attachments/assets/9051a2b0-4a13-4e63-8c1f-b043dc86dddf" />
-<img width="4284" height="4284" alt="Dennysperfil" src="https://github.com/user-attachments/assets/69f3b389-de15-42cd-8aa6-88e2a67513ce" />
+# YuraFab · Bitácora de taller
+
+Proyecto académico del equipo YuraFab en el FabLab de la Universidad de Cuenca.
+
+La bitácora sigue las nueve semanas de la guía del curso. Las evidencias existentes se conservan; cada entrada diferencia el trabajo documentado de los entregables pendientes.
+
+## Editar
+
+- `index.html`: portada, proyecto, acerca de nosotros y biblioteca.
+- `assets/bitacora-data.js`: contenido, apartados, pendientes y archivos de cada semana.
+- `assets/app.js`: fichas semanales, perfiles y navegación accesible.
+- `assets/theme.css`: estilos editables.
+- `assets/equipo/`: fotografías del equipo.
+- `assets/bitacora/`: evidencias del informe semanal original.
+- `assets/descargas/`: plantilla y registro de pendientes.
+
+Cuando se complete una actividad, añadir su evidencia y su archivo real antes de retirar el pendiente correspondiente. Las reflexiones deben redactarse con la experiencia del equipo.
+
+## Publicar estilos
+
+Desde la raíz del repositorio:
+
+```sh
+npx --yes tailwindcss@3.4.17 -c assets/tailwind.config.cjs -i assets/theme.css -o assets/styles.css --minify
+```
+
+Guardar también `assets/styles.css`. La página publicada no necesita ejecutar Node ni descargar Tailwind desde un CDN. Actualizar la versión de los recursos en `index.html` cuando cambien para renovar la caché del navegador.
+
+GitHub Pages publica la rama `main` con el flujo de despliegue del repositorio.

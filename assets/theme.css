@@ -119,8 +119,6 @@ h1, h2, .project-brief > h3, .about-copy h3, .file-note h3, .project-notebook > 
 .journal-card h3 { font-size: 20px; font-weight: 550; line-height: 1.35; letter-spacing: -.03em; }
 .journal-card-summary { color: var(--muted); font-size: 12px; line-height: 1.75; margin: 13px 0 23px; }
 .journal-status { font-size: 9px; color: var(--blue); margin-top: auto; padding-top: 14px; border-top: 1px solid var(--line); }
-.journal-card--featured { border-top: 3px solid var(--blue); background: #e9edfb; }
-.journal-highlight { align-self: flex-start; margin: -5px 0 20px; padding: 5px 9px; background: var(--blue); color: white; font-size: 10px; font-weight: 600; }
 .is-pending { background: transparent; }
 .is-pending .journal-card-top, .is-pending .journal-status { color: #64707a; }
 body[data-show-pending="false"] [data-editorial-pending],
@@ -166,13 +164,8 @@ dialog::backdrop { background: #111b26c9; backdrop-filter: blur(5px); }
 .weekly-content > p, .weekly-content > div > p { margin-bottom: 16px; }
 .weekly-content .font-mono { font-family: 'DM Sans', sans-serif; }
 .weekly-content .step-subheading { font-size: 16px; color: var(--ink); font-weight: 600; margin: 30px 0 16px; }
-.overhang-feature { padding: clamp(20px,4vw,36px); border: 1px solid #b6c3ef; border-top: 4px solid var(--blue); background: #eef1fb; }
-.overhang-feature > .eyebrow { color: var(--blue); margin-bottom: 16px; }
-.overhang-feature h4 { font-family: 'Oswald', 'Arial Narrow', sans-serif; font-size: clamp(34px,4.5vw,52px); line-height: 1.12; letter-spacing: -.02em; color: var(--ink); margin-bottom: 22px; }
-.overhang-feature > p { margin-bottom: 20px; }
-.overhang-meta { display: flex; flex-wrap: wrap; gap: 8px; }
-.overhang-meta span { padding: 4px 9px; background: white; border: 1px solid #c7d0ed; color: var(--blue); font-size: 10px; line-height: 1.7; font-weight: 600; }
-.overhang-download .primary-link { gap: 14px; font-size: 12px; line-height: 1.6; }
+.overhang-subsection { margin-top: 32px; border-top: 1px solid var(--line); }
+.weekly-content .overhang-subsection > h4 { font-size: 18px; color: var(--blue); }
 .overhang-gallery { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 22px; margin: 28px 0; }
 .overhang-gallery .journal-evidence { margin: 0; }
 .overhang-gallery .photo-frame { display: block; padding: 0; height: auto; background: transparent; }

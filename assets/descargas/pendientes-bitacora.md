@@ -32,7 +32,8 @@ Organizado según la guía de nueve semanas. Un pendiente no implica que la acti
 - [x] Comparar FLSUN y Prusa según la experiencia del equipo y justificar la elección de FLSUN por rapidez.
 - [ ] Completar el registro de boquilla y del perfil utilizado con PLA: temperaturas, altura de capa, velocidad, relleno y retracción.
 - [ ] Identificar el objeto plano y adjuntar su archivo nativo.
-- [ ] Adjuntar el STL o 3MF de la pieza con voladizo y una captura del laminador con su orientación y los soportes configurados.
+- [x] Enlazar el STL original aportado por el equipo: Combinacion Figuras con Soporte.stl (Google Drive).
+- [ ] Adjuntar una captura del laminador con la orientación y los soportes configurados.
 - [ ] Registrar el tipo de soportes, el ángulo de activación, la densidad y la separación de contacto utilizados.
 - [ ] Añadir una fotografía del resultado después de retirar los soportes y evaluar el acabado, la cara inferior del voladizo y la precisión dimensional.
 - [ ] Incorporar la prueba de calibración predefinida y los resultados comparativos.

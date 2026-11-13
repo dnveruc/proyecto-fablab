@@ -16,6 +16,14 @@ La bitácora sigue las nueve semanas de la guía del curso. Las evidencias exist
 
 Cuando se complete una actividad, añadir su evidencia y su archivo real antes de retirar el pendiente correspondiente. Las reflexiones deben redactarse con la experiencia del equipo.
 
+## Presentación pública y pendientes
+
+La página usa `data-show-pending="false"` en `<body>` para mostrar las semanas con evidencias y ocultar temporalmente avisos, plantillas de edición y semanas marcadas como `draft`. Los datos originales y el registro Markdown se conservan.
+
+Para volver a mostrar los pendientes y las nueve semanas, cambiar el atributo a `data-show-pending="true"`. Los fragmentos `data-editorial-pending` reaparecen; los textos alternativos `data-presentation-only` se ocultan. La navegación se adapta a las semanas visibles.
+
+Los valores convencionales de impresión se presentan como referencias; no sustituyen el registro de los parámetros que se utilizaron en el taller.
+
 ## Publicar estilos
 
 Desde la raíz del repositorio:

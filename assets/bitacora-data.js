@@ -25,9 +25,9 @@ window.YURAFAB_WEEKLY = [
       }
     ],
     "pending": [
-      "Confirmar la elección del proyecto final después de evaluar viabilidad, presupuesto, tiempo y disponibilidad de materiales."
+      "Continuar explorando alternativas e integrando los conocimientos del curso antes de definir el proyecto final en una etapa posterior."
     ],
-    "conclusion": "La lluvia de ideas y la búsqueda de referentes ampliaron nuestra visión del proyecto. La votación priorizó Medio ambiente y orientó la exploración hacia el uso del agua; la maceta inteligente continúa como propuesta inicial, sujeta a cambios. Recomendamos comparar recursos, costos y alcance antes de confirmar el proyecto final, y seguir documentando las decisiones del equipo.",
+    "conclusion": "Esta primera etapa nos permitió ampliar las posibilidades del proyecto mediante la lluvia de ideas, la búsqueda de referentes y la organización de la bitácora. Seguiremos integrando los conocimientos y las herramientas del curso para explorar sus aplicaciones y evaluar propuestas útiles y factibles. El proyecto continúa en desarrollo; la elección final permanece abierta y se definirá más adelante, a medida que avance nuestro aprendizaje.",
     "downloads": [
       {
         "path": "assets/bitacora/semana-01/bitacora-semana-1.docx",

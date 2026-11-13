@@ -46,7 +46,7 @@
       else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first?.focus(); }
     });
     dialog.addEventListener('click', event => {if(event.target===dialog){const r=dialog.getBoundingClientRect();if(event.clientX<r.left||event.clientX>r.right||event.clientY<r.top||event.clientY>r.bottom)dialog.close();}});
-    dialog.addEventListener('close',()=>{const n=dialog.id.replace('modal-semana','');if(location.hash===`#semana-${n}`)history.replaceState(null,'','#bitacora');});
+    dialog.addEventListener('close',()=>{if(dialog.id==='modal-semana5')dialog.querySelectorAll('video').forEach(video=>video.pause());const n=dialog.id.replace('modal-semana','');if(location.hash===`#semana-${n}`)history.replaceState(null,'','#bitacora');});
   });
   const openHash = () => {const match=location.hash.match(/^#(?:semana-|modal-semana)([1-9])$/);if(match)openDialog(`modal-semana${match[1]}`,false);};
   window.addEventListener('hashchange', openHash); openHash();

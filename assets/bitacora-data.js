@@ -148,38 +148,69 @@ window.YURAFAB_WEEKLY = [
   },
   {
     "num": 5,
-    "title": "Caso IKEA",
-    "topic": "Silla infantil + flat-pack",
-    "summary": "Silla para un niño de cinco años, ensamble sin pegamento y empaque plano.",
+    "title": "Dinosilla: diseño, empaque e impresión UV",
+    "topic": "Caso IKEA + impresión UV",
+    "summary": "Del modelo en Fusion 360 a la silla dinosaurio desmontable: corte láser, pruebas de encaje, caja y manual de armado. También documentamos la práctica de impresión UV.",
     "sections": [
       {
         "number": "5.1",
-        "title": "Silla infantil parametrizada y empaque plano",
-        "html": "<p class=\"mb-4\">El docente introduce como referente el modelo flat-pack de IKEA. El principio fundamental es el diseño para un ensamblaje fácil e intuitivo, donde las piezas se acoplan exclusivamente mediante uniones mecánicas (encastres). Esta metodología elimina el uso de pegamentos o tornillos; la firmeza de la estructura depende enteramente de la precisión con la que las piezas encajan entre sí.</p>\n                            <p class=\"mb-4\">Con lo antes mencionado, el propósito de esto es poder crear una silla infantil utilizando este principio. Por lo que se hizo un “boceto” de como posiblemente a grandes rasgos podría ser el diseño de la silla con la metodología de ikea.</p>\n                            \n                            <div class=\"photo-frame bg-gray-100 h-[28rem] md:h-[32rem] flex flex-col items-center justify-center border border-rustic-border relative overflow-hidden rounded-lg mt-6\">\n                                <img src=\"boseto.silla.dino.jpeg\" alt=\"Boceto Silla\" class=\"absolute inset-0 w-full h-full object-contain p-2 md:p-4\" width=\"960\" height=\"1280\">\n                            </div>\n                        <p>El objetivo es diseñar una silla para niños de cinco años que sea llamativa, armable y desarmable, con uniones sin pegamento. Tanto la silla como su caja deben parametrizarse y permitir un empaque plano.</p><div class=\"journal-data-table\" tabindex=\"0\" role=\"region\" aria-label=\"Entregable\"><table><thead><tr><th scope=\"col\">Entregable</th><th scope=\"col\">Registro actual</th></tr></thead><tbody><tr><td>Boceto de la silla</td><td>Disponible: propuesta con motivo de dinosaurio.</td></tr><tr><td>Modelo paramétrico de silla y caja</td><td>Pendiente de incorporar.</td></tr><tr><td>Uniones y ensamblaje sin pegamento</td><td>Pendiente: geometría, tolerancias y pruebas de montaje.</td></tr><tr><td>Empaque flat-pack</td><td>Pendiente: despiece y disposición de las piezas dentro de la caja.</td></tr><tr><td>Manual de armado</td><td>Pendiente: secuencia ilustrada de montaje y desmontaje.</td></tr></tbody></table></div>",
-        "pending": [
-          "Completar el diseño paramétrico de la silla y la caja.",
-          "Validar las uniones, el montaje y la disposición para empaque plano.",
-          "Preparar y adjuntar el manual de instrucciones de armado."
-        ]
+        "title": "Concepto y diseño de la Dinosilla",
+        "html": "<p>Tomamos como referencia el concepto flat-pack de IKEA: componentes desmontables que se organizan en una caja plana para facilitar su almacenamiento y transporte. La propuesta tiene temática de dinosaurio y está dirigida a niños de aproximadamente cinco años.</p><p>En Fusion 360 modelamos los paneles laterales, los elementos transversales y las bases de fijación. La parametrización permite ajustar espesores, dimensiones y puntos de unión antes de fabricar.</p><div class=\"grid grid-cols-1 sm:grid-cols-2 gap-6 mt-6\"><figure class=\"journal-evidence\"><a href=\"assets/bitacora/semana-05/diseno-fusion.jpg\" target=\"_blank\" rel=\"noopener\"><img src=\"assets/bitacora/semana-05/diseno-fusion.jpg\" alt=\"Geometrías principales de la silla en Fusion 360.\" loading=\"lazy\" style=\"width:100%;height:auto;max-height:32rem;object-fit:contain\"></a><figcaption>Geometrías principales de la silla en Fusion 360.</figcaption></figure><figure class=\"journal-evidence\"><a href=\"assets/bitacora/semana-05/parametrizacion.jpg\" target=\"_blank\" rel=\"noopener\"><img src=\"assets/bitacora/semana-05/parametrizacion.jpg\" alt=\"Parámetros del modelo y sus encastres.\" loading=\"lazy\" style=\"width:100%;height:auto;max-height:32rem;object-fit:contain\"></a><figcaption>Parámetros del modelo y sus encastres.</figcaption></figure></div>",
+        "pending": []
       },
       {
         "number": "5.2",
-        "title": "Personalización con impresión UV",
-        "html": "<p class=\"mb-4\">Conocer el proceso de impresión UV sobre distintos materiales y preparar una fotografía para su reproducción en 2D. La selección de imágenes se realizó de manera digital y colaborativa entre los integrantes del equipo.</p>\n                    <ul class=\"list-disc pl-6 mb-6 text-gray-700 space-y-2 font-light\">\n                    <li>Identificación de una fotografía en formato PNG.</li>\n                    <li>Selección del material de soporte: MDF o acrílico.</li>\n                    <li>Preparación de la imagen para su impresión.</li></ul><p class=\"mb-4\">Se trabajó en el ajuste de los parámetros del software y en la revisión y calibración de la máquina antes de ejecutar la impresión.</p>\n                    <ul class=\"list-disc pl-6 mb-6 text-gray-700 space-y-2 font-light\">\n                    <li>Ajuste de los parámetros de impresión en el software.</li>\n                    <li>Análisis del estado y la configuración de la máquina.</li>\n                    <li>Calibración previa al trabajo sobre el material escogido.</li></ul><p class=\"mb-4\">La actividad contempló la ejecución de la impresión de la fotografía PNG y la evaluación del resultado sobre el soporte. El uso previsto de las imágenes impresas fue su aplicación como distintivos, adornos o placas.</p>\n                    <p class=\"journal-result\"><strong>Resultado:</strong> generación de imágenes impresas sobre MDF o acrílico, según el material escogido para la práctica.</p><div class=\"lab-note\"><strong>Registro fotográfico pendiente</strong><p>El avance escrito de impresión UV está disponible; faltan las fotografías, la identificación del equipo, sus parámetros y las medidas de seguridad empleadas.</p></div>",
-        "pending": [
-          "Registrar equipo, material, parámetros y medidas de seguridad.",
-          "Incorporar fotografías del proceso y del resultado de impresión."
-        ]
+        "title": "Material, corte láser y pruebas de encaje",
+        "html": "<p>Para el prototipo utilizamos MDF de 4 mm. Preparamos las geometrías, colocamos el material en la cortadora láser y cortamos las piezas para comprobar su montaje.</p><p>La principal dificultad fue el kerf: aunque la compensación parecía correcta en el diseño, las piezas no encajaban al cortarlas. Realizamos pruebas y ajustamos las ranuras hasta conseguir un encaje adecuado.</p><div class=\"grid grid-cols-1 sm:grid-cols-2 gap-6 mt-6\"><figure class=\"journal-evidence\"><a href=\"assets/bitacora/semana-05/material-corte.jpg\" target=\"_blank\" rel=\"noopener\"><img src=\"assets/bitacora/semana-05/material-corte.jpg\" alt=\"MDF colocado en la cortadora láser.\" loading=\"lazy\" style=\"width:100%;height:auto;max-height:32rem;object-fit:contain\"></a><figcaption>MDF colocado en la cortadora láser.</figcaption></figure><figure class=\"journal-evidence\"><a href=\"assets/bitacora/semana-05/tolerancias.jpg\" target=\"_blank\" rel=\"noopener\"><img src=\"assets/bitacora/semana-05/tolerancias.jpg\" alt=\"Detalle de las ranuras parametrizadas.\" loading=\"lazy\" style=\"width:100%;height:auto;max-height:32rem;object-fit:contain\"></a><figcaption>Detalle de las ranuras parametrizadas.</figcaption></figure><figure class=\"journal-evidence\"><a href=\"assets/bitacora/semana-05/pruebas-corte.jpg\" target=\"_blank\" rel=\"noopener\"><img src=\"assets/bitacora/semana-05/pruebas-corte.jpg\" alt=\"Piezas de prueba antes del producto final.\" loading=\"lazy\" style=\"width:100%;height:auto;max-height:32rem;object-fit:contain\"></a><figcaption>Piezas de prueba antes del producto final.</figcaption></figure><figure class=\"journal-evidence\"><a href=\"assets/bitacora/semana-05/prueba-montaje.jpg\" target=\"_blank\" rel=\"noopener\"><img src=\"assets/bitacora/semana-05/prueba-montaje.jpg\" alt=\"Comprobación del montaje de los componentes.\" loading=\"lazy\" style=\"width:100%;height:auto;max-height:32rem;object-fit:contain\"></a><figcaption>Comprobación del montaje de los componentes.</figcaption></figure></div>",
+        "pending": []
+      },
+      {
+        "number": "5.3",
+        "title": "Ensamblaje, caja y manual",
+        "html": "<p>Los dos laterales con silueta de dinosaurio se unen mediante piezas transversales y dos bases inferiores. Los encastres permiten montar y desmontar el conjunto. Las piezas separadas se acomodan dentro de su caja para reducir el volumen de transporte.</p><p>El folleto descargable contiene el despiece y la secuencia ilustrada de armado. Antes de utilizar la silla con niños deben verificarse sus dimensiones, bordes, uniones, resistencia y estabilidad.</p><div class=\"grid grid-cols-1 sm:grid-cols-2 gap-6 mt-6\"><figure class=\"journal-evidence\"><a href=\"assets/bitacora/semana-05/silla-armada.jpg\" target=\"_blank\" rel=\"noopener\"><img src=\"assets/bitacora/semana-05/silla-armada.jpg\" alt=\"Prototipo de Dinosilla ensamblado.\" loading=\"lazy\" style=\"width:100%;height:auto;max-height:32rem;object-fit:contain\"></a><figcaption>Prototipo de Dinosilla ensamblado.</figcaption></figure><figure class=\"journal-evidence\"><a href=\"assets/bitacora/semana-05/piezas-caja.jpg\" target=\"_blank\" rel=\"noopener\"><img src=\"assets/bitacora/semana-05/piezas-caja.jpg\" alt=\"Componentes desmontados dentro de la caja.\" loading=\"lazy\" style=\"width:100%;height:auto;max-height:32rem;object-fit:contain\"></a><figcaption>Componentes desmontados dentro de la caja.</figcaption></figure><figure class=\"journal-evidence\"><a href=\"assets/bitacora/semana-05/caja.jpg\" target=\"_blank\" rel=\"noopener\"><img src=\"assets/bitacora/semana-05/caja.jpg\" alt=\"Caja del prototipo.\" loading=\"lazy\" style=\"width:100%;height:auto;max-height:32rem;object-fit:contain\"></a><figcaption>Caja del prototipo.</figcaption></figure><figure class=\"journal-evidence\"><a href=\"assets/bitacora/semana-05/manual-armado.jpg\" target=\"_blank\" rel=\"noopener\"><img src=\"assets/bitacora/semana-05/manual-armado.jpg\" alt=\"Manual ilustrado de armado, disponible también en PDF.\" loading=\"lazy\" style=\"width:100%;height:auto;max-height:32rem;object-fit:contain\"></a><figcaption>Manual ilustrado de armado, disponible también en PDF.</figcaption></figure></div>",
+        "pending": []
+      },
+      {
+        "number": "5.4",
+        "title": "Práctica de impresión UV",
+        "html": "<p>Seleccionamos una imagen PNG de forma colaborativa para imprimirla sobre un soporte como MDF o acrílico. La práctica incluyó preparar la imagen, ajustar el software, revisar y calibrar el equipo, ejecutar la impresión y observar el resultado.</p><div class=\"grid grid-cols-1 sm:grid-cols-2 gap-6 mt-6\"><figure class=\"journal-evidence\"><a href=\"assets/bitacora/semana-05/preparacion-uv.jpg\" target=\"_blank\" rel=\"noopener\"><img src=\"assets/bitacora/semana-05/preparacion-uv.jpg\" alt=\"Preparación de la imagen en el software de impresión.\" loading=\"lazy\" style=\"width:100%;height:auto;max-height:32rem;object-fit:contain\"></a><figcaption>Preparación de la imagen en el software de impresión.</figcaption></figure><figure class=\"journal-evidence\"><a href=\"assets/bitacora/semana-05/impresora-uv.jpg\" target=\"_blank\" rel=\"noopener\"><img src=\"assets/bitacora/semana-05/impresora-uv.jpg\" alt=\"Uso de la impresora UV durante la práctica.\" loading=\"lazy\" style=\"width:100%;height:auto;max-height:32rem;object-fit:contain\"></a><figcaption>Uso de la impresora UV durante la práctica.</figcaption></figure><figure class=\"journal-evidence\"><a href=\"assets/bitacora/semana-05/resultado-uv.jpg\" target=\"_blank\" rel=\"noopener\"><img src=\"assets/bitacora/semana-05/resultado-uv.jpg\" alt=\"Resultado de la imagen impresa.\" loading=\"lazy\" style=\"width:100%;height:auto;max-height:32rem;object-fit:contain\"></a><figcaption>Resultado de la imagen impresa.</figcaption></figure></div><figure class=\"journal-evidence\"><video controls playsinline preload=\"metadata\" aria-label=\"Video del uso y funcionamiento de la impresora UV\" style=\"display:block;width:100%;max-height:32rem\" poster=\"assets/bitacora/semana-05/impresora-uv.jpg\"><source src=\"assets/bitacora/semana-05/uso-impresora-uv.mp4\" type=\"video/mp4\">Tu navegador no permite reproducir este video. <a href=\"assets/bitacora/semana-05/uso-impresora-uv.mp4\">Descargar video</a>.</video><figcaption>Video del uso y funcionamiento de la impresora UV. <a href=\"assets/bitacora/semana-05/uso-impresora-uv.mp4\" download>Descargar video</a></figcaption></figure>",
+        "pending": []
       }
     ],
     "pending": [
-      "Añadir los archivos de silla, caja y manual cuando estén listos.",
-      "Redactar aprendizajes, errores, dificultad principal, conclusiones y recomendaciones."
+      "Validar las dimensiones, la resistencia y la estabilidad antes de utilizar el diseño como mobiliario infantil.",
+      "Completar el modelo de impresora UV, el soporte utilizado y los parámetros de impresión y corte."
     ],
-    "conclusion": "Hay un boceto de silla y un avance escrito de impresión UV. El diseño paramétrico, la caja, el manual y la validación del ensamblaje quedan como próximos entregables.",
-    "downloads": [],
-    "status": "Con evidencias · por completar",
-    "objective": "Diseñar una silla infantil y su caja con criterios de ensamble sin pegamento, parametrización y empaque plano."
+    "conclusion": "La práctica integró modelado paramétrico, corte láser, ensamblaje y empaque plano. Las pruebas de corte permitieron corregir el encaje de las piezas; la impresión UV mostró otra forma de personalizar materiales. El prototipo en MDF de 4 mm requiere validación antes de su uso con niños.",
+    "downloads": [
+      {
+        "path": "assets/bitacora/semana-05/DINOSILLAFELIZ.dxf",
+        "title": "Dinosilla: piezas de la silla",
+        "description": "DXF · archivo de corte"
+      },
+      {
+        "path": "assets/bitacora/semana-05/CAJADINOSILLA.dxf",
+        "title": "Caja de la Dinosilla",
+        "description": "DXF · archivo de corte"
+      },
+      {
+        "path": "assets/bitacora/semana-05/DINOFOLLETO.pdf",
+        "title": "Folleto y manual de armado",
+        "description": "PDF · instrucciones ilustradas"
+      },
+      {
+        "path": "assets/bitacora/semana-05/uso-impresora-uv.mp4",
+        "title": "Uso de la impresora UV",
+        "description": "MP4 · video de la práctica"
+      }
+    ],
+    "status": "Con evidencias y descargables",
+    "objective": "Diseñar y fabricar un prototipo de silla dinosaurio y su caja siguiendo el concepto flat-pack de IKEA, y conocer el proceso de impresión UV de una imagen PNG sobre MDF o acrílico.",
+    "reflections": [
+      "Aprendimos a integrar el diseño de la silla, sus encastres y la caja para facilitar el montaje, desmontaje y transporte.",
+      "La compensación del kerf parecía adecuada en el diseño, pero al cortar las piezas no encajaban como esperábamos.",
+      "Ajustar las ranuras mediante prueba y error hasta conseguir un encaje adecuado fue la principal dificultad."
+    ]
   },
   {
     "num": 6,

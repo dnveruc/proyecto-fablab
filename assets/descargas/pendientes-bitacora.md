@@ -35,15 +35,14 @@ Organizado según la guía de nueve semanas. Un pendiente no implica que la acti
 - [ ] Completar el registro de seguridad utilizado durante la práctica.
 - [ ] Redactar aprendizajes, errores, dificultad principal y recomendaciones.
 
-## Semana 5 — Caso IKEA
+## Semana 5 — Dinosilla e impresión UV
 
-- [ ] Completar el diseño paramétrico de la silla y la caja.
-- [ ] Validar las uniones, el montaje y la disposición para empaque plano.
-- [ ] Preparar y adjuntar el manual de instrucciones de armado.
-- [ ] Registrar equipo, material, parámetros y medidas de seguridad.
-- [ ] Incorporar fotografías del proceso y del resultado de impresión.
-- [ ] Añadir los archivos de silla, caja y manual cuando estén listos.
-- [ ] Redactar aprendizajes, errores, dificultad principal, conclusiones y recomendaciones.
+- [x] Incorporar diseño, parametrización y fotografías de corte y ensamblaje.
+- [x] Adjuntar los DXF de silla y caja y el manual de armado en PDF.
+- [x] Incorporar las fotografías y el video de la práctica de impresión UV.
+- [x] Documentar el problema con el kerf, las pruebas de encaje y los aprendizajes.
+- [ ] Validar dimensiones, resistencia y estabilidad antes de su uso como mobiliario infantil.
+- [ ] Completar modelo de impresora UV, soporte utilizado y parámetros de impresión y corte.
 
 ## Semana 6 — Programación embebida
 

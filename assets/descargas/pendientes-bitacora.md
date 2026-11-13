@@ -42,11 +42,12 @@ Organizado según la guía de nueve semanas. Un pendiente no implica que la acti
 
 ## Semana 4 — Corte controlado por un ordenador
 
-- [ ] Explicar los parámetros y restricciones del kit modular y la estabilidad de sus uniones.
-- [ ] Adjuntar la prueba para determinar el kerf y justificar la compensación aplicada.
-- [ ] Identificar modelo de cortadora y registrar potencia, velocidad, número de pasadas y material.
-- [ ] Completar el registro de seguridad utilizado durante la práctica.
-- [ ] Redactar aprendizajes, errores, dificultad principal y recomendaciones.
+- [x] Explicar los parámetros y restricciones del kit modular y el criterio de estabilidad de las uniones.
+- [x] Documentar el ajuste de la pestaña: referencia de 0,05 mm por lado y compensación aplicada de 0,1 mm por lado (+0,2 mm total).
+- [x] Registrar MDF de 4 mm, potencia mínima y máxima del 40 %, velocidad de 15 mm/s y una pasada.
+- [x] Documentar colocación del MDF, tapa cerrada, extracción activa y espera aproximada de 30 segundos antes de abrir.
+- [x] Añadir recomendaciones de supervisión y protección personal para próximas prácticas.
+- [x] Conservar fotografías y archivos DXF y completar aprendizajes, ajustes, dificultad principal y conclusiones.
 
 ## Semana 5 — Dinosilla e impresión UV
 

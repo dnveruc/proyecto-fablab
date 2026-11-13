@@ -19,9 +19,13 @@ Organizado según la guía de nueve semanas. Un pendiente no implica que la acti
 
 ## Semana 3 — Impresión y escáner 3D
 
+- [x] Incorporar el video del equipo durante la práctica de impresión con voladizos.
 - [ ] Completar el inventario y la comparación de impresoras del FabLab y justificar la más adecuada.
-- [ ] Confirmar la boquilla de 0,4 mm y registrar temperatura, altura de capa, velocidad y relleno de la práctica en PLA.
-- [ ] Identificar el objeto plano y su archivo nativo; añadir una pieza con voladizo y evaluar su acabado y precisión.
+- [ ] Confirmar modelo de impresora, material y boquilla; registrar temperaturas, altura de capa, velocidad, relleno y retracción de esta impresión.
+- [ ] Identificar el objeto plano y adjuntar su archivo nativo.
+- [ ] Adjuntar el STL o 3MF de la pieza con voladizo y una captura del laminador con su orientación y los soportes configurados.
+- [ ] Registrar el tipo de soportes, el ángulo de activación, la densidad y la separación de contacto utilizados.
+- [ ] Añadir una fotografía del resultado después de retirar los soportes y evaluar el acabado, la cara inferior del voladizo y la precisión dimensional.
 - [ ] Incorporar la prueba de calibración predefinida y los resultados comparativos.
 - [ ] Añadir la fuente o ficha de las especificaciones del Creality CR-SCAN 01.
 - [ ] Documentar la reparación de la malla y el paso a sólido, con el software utilizado.

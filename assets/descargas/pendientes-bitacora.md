@@ -9,11 +9,13 @@ Organizado según la guía de nueve semanas. Un pendiente no implica que la acti
 
 ## Semana 2 — Herramientas de diseño digital
 
-- [ ] Confirmar las tres herramientas 2D y las tres herramientas 3D.
-- [ ] Incorporar el trabajo raster solicitado.
-- [ ] Añadir las capturas que falten y seis archivos nativos identificados por software.
-- [ ] Redactar qué aprendimos, en qué nos equivocamos y qué fue lo más difícil.
-- [ ] Completar conclusiones y recomendaciones a partir de la comparación de programas.
+- [x] Incorporar el informe actualizado de exploración de seis herramientas.
+- [x] Documentar CAD, diseño vectorial y edición raster con sus capturas.
+- [x] Documentar los ejercicios de modelado en Fusion 360 y Tinkercad.
+- [x] Incorporar la práctica de simulación electrónica con enlace a Wokwi.
+- [x] Añadir el informe PDF y los cinco enlaces de Drive incluidos en el documento.
+- [x] Actualizar la comparación, la participación y las conclusiones.
+- [ ] Redactar los errores y la dificultad principal a partir de la experiencia del equipo.
 
 ## Semana 3 — Impresión y escáner 3D
 

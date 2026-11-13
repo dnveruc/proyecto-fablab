@@ -22,19 +22,23 @@ Organizado según la guía de nueve semanas. Un pendiente no implica que la acti
 
 ## Semana 3 — Impresión y escáner 3D
 
-- [x] Incorporar el video del equipo durante la práctica de impresión con voladizos.
-- [ ] Completar el inventario y la comparación de impresoras del FabLab y justificar la más adecuada.
-- [ ] Confirmar modelo de impresora, material y boquilla; registrar temperaturas, altura de capa, velocidad, relleno y retracción de esta impresión.
+- [x] Conservar las fotografías, el archivo CTP y el video de impresión con voladizos.
+- [x] Documentar el flujo Fusion 360 → Cura → PLA y separar los valores de referencia de los parámetros utilizados.
+- [x] Identificar la Anycubic Photon M3 Plus en la fotografía e incorporar las características del fabricante.
+- [x] Registrar resina lavable con agua, altura aproximada de 4 cm con soportes y duración de impresión de 3–4 horas.
+- [x] Documentar protección personal, revisión de cubeta y plataforma, filtrado, drenado, lavado y curado UV.
+- [x] Añadir fuentes del CR-Scan 01, corregir su distancia de trabajo y completar la comparación general de PLA y resina.
+- [x] Redactar aprendizajes, oportunidades de mejora, dificultad principal y recomendaciones.
+- [x] Comparar FLSUN y Prusa según la experiencia del equipo y justificar la elección de FLSUN por rapidez.
+- [ ] Completar el registro de boquilla y del perfil utilizado con PLA: temperaturas, altura de capa, velocidad, relleno y retracción.
 - [ ] Identificar el objeto plano y adjuntar su archivo nativo.
 - [ ] Adjuntar el STL o 3MF de la pieza con voladizo y una captura del laminador con su orientación y los soportes configurados.
 - [ ] Registrar el tipo de soportes, el ángulo de activación, la densidad y la separación de contacto utilizados.
 - [ ] Añadir una fotografía del resultado después de retirar los soportes y evaluar el acabado, la cara inferior del voladizo y la precisión dimensional.
 - [ ] Incorporar la prueba de calibración predefinida y los resultados comparativos.
-- [ ] Añadir la fuente o ficha de las especificaciones del Creality CR-SCAN 01.
 - [ ] Documentar la reparación de la malla y el paso a sólido, con el software utilizado.
-- [ ] Incorporar la ficha técnica y de seguridad de la resina y el registro del equipo de lavado y curado.
-- [ ] Completar el análisis de ventajas y desventajas de resina frente a PLA con los resultados de las pruebas.
-- [ ] Redactar aprendizajes, errores, dificultad principal y recomendaciones del equipo.
+- [ ] Registrar marca y referencia exactas de la resina lavable con agua y adjuntar su ficha técnica y de seguridad; completar el perfil de exposición.
+- [ ] Completar la evaluación del acabado y las dimensiones de las piezas; contrastar el lavado y los aproximadamente 6 minutos de curado con la ficha de la resina utilizada.
 
 ## Semana 4 — Corte controlado por un ordenador
 

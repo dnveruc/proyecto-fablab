@@ -15,7 +15,7 @@ Organizado según la guía de nueve semanas. Un pendiente no implica que la acti
 - [x] Incorporar la práctica de simulación electrónica con enlace a Wokwi.
 - [x] Añadir el informe PDF y los cinco enlaces de Drive incluidos en el documento.
 - [x] Actualizar la comparación, la participación y las conclusiones.
-- [ ] Redactar los errores y la dificultad principal a partir de la experiencia del equipo.
+- [x] Registrar el aprendizaje inicial y la dificultad para familiarizarse con Wokwi, GIMP e Inkscape.
 
 ## Semana 3 — Impresión y escáner 3D
 

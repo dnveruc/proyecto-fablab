@@ -112,10 +112,15 @@ window.YURAFAB_WEEKLY = [
     ],
     "status": "Con informe, evidencias y enlaces",
     "objective": "Explorar herramientas de diseño 2D, modelado 3D y simulación mediante ejercicios que permitan reconocer sus funciones, resultados y aplicaciones en el proyecto.",
-    "reflections": [
-      "Aprendimos a distinguir el dibujo CAD, los gráficos vectoriales, las imágenes raster, el modelado 3D y la simulación electrónica, y a elegir la herramienta según la tarea.",
-      null,
-      null
+    "reflectionItems": [
+      {
+        "title": "Qué aprendimos",
+        "text": "Aprendimos a distinguir el dibujo CAD, los gráficos vectoriales, las imágenes raster, el modelado 3D y la simulación electrónica, y a elegir la herramienta según la tarea."
+      },
+      {
+        "title": "Qué fue lo más difícil",
+        "text": "La principal dificultad fue aprender desde cero el manejo de Wokwi, GIMP e Inkscape, herramientas con las que teníamos poca experiencia. Tuvimos que familiarizarnos con sus interfaces y funciones y practicar para aplicar lo investigado en los ejercicios."
+      }
     ]
   },
   {

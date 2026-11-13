@@ -176,6 +176,9 @@ dialog::backdrop { background: #111b26c9; backdrop-filter: blur(5px); }
 .profile-layout h2 { font-size: 36px; line-height: 1.2; margin: 0 0 15px; }
 .profile-layout p { font-size: 14px; line-height: 1.85; margin-bottom: 15px; color: var(--muted); }
 .profile-layout .profile-area { color: var(--blue); font-size: 11px; font-weight: 600; }
+.profile-layout .profile-meta { font-size: 11px; color: var(--muted); line-height: 1.8; }
+.profile-layout .profile-contribution { border-top: 1px solid var(--line); padding-top: 16px; margin-top: 20px; font-size: 12px; }
+.profile-dialog > .dialog-heading { position: sticky; top: 0; z-index: 2; }
 /* Evidence remains complete, unmasked and available at its original size. */
 .photo-frame { position: relative; isolation: isolate; overflow: visible; border-radius: 0; background: #e5e9e2; border-color: #cbd1c8; }
 .photo-frame img, .journal-evidence img { object-fit: contain; object-position: center; border-radius: 0; clip-path: none; mask-image: none; mix-blend-mode: normal; transform: none; }

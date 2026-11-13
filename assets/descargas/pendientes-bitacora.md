@@ -4,8 +4,11 @@ Organizado según la guía de nueve semanas. Un pendiente no implica que la acti
 
 ## Semana 1 — Investigación, desarrollo web y nosotros
 
-- [ ] Completar la reflexión personal del equipo: aprendizajes, errores y dificultad principal.
-- [ ] Revisar y validar la conclusión de selección del proyecto.
+- [x] Conservar la infografía, las fotografías y los contenidos de investigación y desarrollo web.
+- [x] Incorporar la matriz de ocho categorías, sus puntuaciones y las siete referencias.
+- [x] Adjuntar la bitácora Word y el Excel, organizados como semana 1.
+- [x] Registrar aprendizajes, oportunidades de mejora y la dificultad para elegir ideas factibles.
+- [ ] Confirmar la elección del proyecto final tras evaluar viabilidad, presupuesto, tiempo y materiales.
 
 ## Semana 2 — Herramientas de diseño digital
 

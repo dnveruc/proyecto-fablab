@@ -37,11 +37,13 @@ Organizado según la guía de nueve semanas. Un pendiente no implica que la acti
 - [ ] Añadir una fotografía del resultado después de retirar los soportes y evaluar el acabado, la cara inferior del voladizo y la precisión dimensional.
 - [ ] Incorporar la prueba de calibración predefinida y los resultados comparativos.
 - [ ] Documentar la reparación de la malla y el paso a sólido, con el software utilizado.
-- [ ] Registrar marca y referencia exactas de la resina lavable con agua y adjuntar su ficha técnica y de seguridad; completar el perfil de exposición.
-- [ ] Completar la evaluación del acabado y las dimensiones de las piezas; contrastar el lavado y los aproximadamente 6 minutos de curado con la ficha de la resina utilizada.
+- [x] Identificar JAMG HE Water Washable Resin, color Clear Green, y enlazar las fichas SDS y TDS oficiales.
+- [ ] Completar el perfil de exposición realmente utilizado en la Photon M3 Plus.
+- [ ] Completar la evaluación del acabado y las dimensiones y verificar la adecuación del curado para la pieza hueca y la estación utilizada.
 
 ## Semana 4 — Corte controlado por un ordenador
 
+- [x] Incorporar generalidades de la cortadora CO₂, referencia NEXTION y flujo Fusion 360 → DXF → RDWorks → cortadora.
 - [x] Explicar los parámetros y restricciones del kit modular y el criterio de estabilidad de las uniones.
 - [x] Documentar el ajuste de la pestaña: referencia de 0,05 mm por lado y compensación aplicada de 0,1 mm por lado (+0,2 mm total).
 - [x] Registrar MDF de 4 mm, potencia mínima y máxima del 40 %, velocidad de 15 mm/s y una pasada.

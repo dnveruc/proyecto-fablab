@@ -41,8 +41,10 @@ Organizado según la guía de nueve semanas. Un pendiente no implica que la acti
 - [x] Adjuntar los DXF de silla y caja y el manual de armado en PDF.
 - [x] Incorporar las fotografías y el video de la práctica de impresión UV.
 - [x] Documentar el problema con el kerf, las pruebas de encaje y los aprendizajes.
-- [ ] Validar dimensiones, resistencia y estabilidad antes de su uso como mobiliario infantil.
-- [ ] Completar modelo de impresora UV, soporte utilizado y parámetros de impresión y corte.
+- [x] Registrar la maqueta al 25 % (escala 1:4), sus medidas aproximadas y sus 11 piezas.
+- [x] Documentar la preparación de la imagen, la limpieza, la alineación y el ajuste de altura de la impresora UV.
+
+Alcance de la actividad: diseño, corte y ensamblaje de una maqueta académica. No se realizaron ensayos de carga o resistencia; no se incluyen como entregables pendientes.
 
 ## Semana 6 — Programación embebida
 

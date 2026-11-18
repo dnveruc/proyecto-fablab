@@ -25,7 +25,7 @@ Para volver a mostrar los pendientes y las nueve semanas, cambiar el atributo a 
 
 Los valores convencionales de impresión se presentan como referencias; no sustituyen el registro de los parámetros que se utilizaron en el taller.
 
-El examen interciclo tiene su propia entrada junto a las semanas y un enlace directo `#examen-interciclo`. Sus evidencias se conservan en `assets/bitacora/examen-interciclo/`. Los tres videos se reproducen desde la página; el original del armado también está enlazado en Google Drive. Al cerrar la entrada se detienen los videos.
+El examen interciclo tiene su propia entrada junto a las semanas y un enlace directo `#examen-interciclo`. Sus evidencias se conservan en `assets/bitacora/examen-interciclo/`. Los videos se reproducen desde la página; el original del armado también está enlazado en Google Drive. Al cerrar la entrada se detienen los videos.
 
 ## Publicar estilos
 

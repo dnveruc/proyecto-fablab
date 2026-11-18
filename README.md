@@ -8,7 +8,7 @@ La bitácora sigue las nueve semanas de la guía del curso. Las evidencias exist
 
 - `index.html`: portada, proyecto, acerca de nosotros y biblioteca.
 - `assets/bitacora-data.js`: contenido, apartados, pendientes y archivos de cada semana.
-- `assets/examen-data.js`: registro del examen interciclo, con el proceso y los archivos de NOMAD TABLE 4.
+- `assets/examen-data.js`: registro del examen interciclo, con el proceso y los archivos de YuraTable.
 - `assets/app.js`: fichas semanales, perfiles y navegación accesible.
 - `assets/theme.css`: estilos editables.
 - `assets/equipo/`: fotografías del equipo.

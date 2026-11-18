@@ -28,6 +28,11 @@
     grid.insertAdjacentHTML('beforeend', `<button class="journal-card ${week.draft?'is-pending':''}" data-open-week="${week.num}" aria-haspopup="dialog"><div class="journal-card-top"><span class="journal-number">${number}</span>${arrow}</div><p class="journal-topic">${escape(week.topic)}</p><h3>${escape(week.title)}</h3><p class="journal-card-summary">${escape(week.summary)}</p><span class="journal-status">${escape(status)}</span></button>`);
     dialogs.insertAdjacentHTML('beforeend', `<dialog id="modal-semana${week.num}" class="week-dialog" aria-labelledby="week-title-${week.num}"><div class="dialog-heading"><p class="eyebrow">Bitácora / Semana ${number}</p><button class="dialog-close" data-close aria-label="Cerrar semana ${week.num}">×</button></div><div class="dialog-scroll"><header class="week-heading"><span class="week-status">${escape(status)}</span><h2 id="week-title-${week.num}">${escape(week.title)}</h2><p>${escape(week.summary)}</p></header><section class="week-objective"><h3>Objetivo de la semana</h3><p>${escape(week.objective)}</p></section>${week.sections.map(section=>`<section class="academic-section"><h3><span>${escape(section.number)}</span> ${escape(section.title)}</h3><div class="weekly-content">${displayContent(section.html)}</div>${pending(section.pending)}</section>`).join('')}${week.downloads.length || showPending ? `<section class="academic-section"><h3>Archivos y documentos descargables</h3>${downloadRows(week.downloads)}</section>` : ''}${reflectionSection(week)}<section class="academic-section"><h3>Conclusiones y recomendaciones</h3><p>${escape(conclusion)}</p>${pending(week.pending)}</section><nav class="modal-nav" aria-label="Navegación entre semanas">${previous?`<button data-open-week="${previous.num}"><svg class="direction-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12H4m6-6-6 6 6 6"/></svg> Semana ${previous.num}</button>`:'<span></span>'}${showPending?'<a href="assets/descargas/plantilla-semanal.md" download>Plantilla semanal</a>':''}${next?`<button data-open-week="${next.num}">Semana ${next.num} <svg class="direction-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6"/></svg></button>`:'<span></span>'}</nav></div></dialog>`);
   }
+  const exam = window.YURAFAB_EXAM;
+  if (exam) {
+    grid.insertAdjacentHTML('beforeend', `<button class="journal-card" data-open-exam aria-haspopup="dialog"><div class="journal-card-top"><span class="journal-number">EI</span>${arrow}</div><p class="journal-topic">${escape(exam.topic)}</p><h3>${escape(exam.title)}</h3><p class="journal-card-summary">${escape(exam.summary)}</p><span class="journal-status">Con evidencias</span></button>`);
+    dialogs.insertAdjacentHTML('beforeend', `<dialog id="modal-examen-interciclo" class="week-dialog" aria-labelledby="exam-title"><div class="dialog-heading"><p class="eyebrow">Bitácora / Examen interciclo</p><button class="dialog-close" data-close aria-label="Cerrar examen interciclo">×</button></div><div class="dialog-scroll"><header class="week-heading"><span class="week-status">Con evidencias</span><h2 id="exam-title">${escape(exam.title)}</h2><p>${escape(exam.summary)}</p></header><section class="week-objective"><h3>Objetivo del examen</h3><p>${escape(exam.objective)}</p></section>${exam.sections.map(section=>`<section class="academic-section"><h3><span>${escape(section.number)}</span> ${escape(section.title)}</h3><div class="weekly-content">${displayContent(section.html)}</div></section>`).join('')}<section class="academic-section"><h3>Archivos y documentos descargables</h3>${downloadRows(exam.downloads)}</section>${reflectionSection(exam)}${exam.conclusion?`<section class="academic-section"><h3>Conclusiones y recomendaciones</h3><p>${escape(exam.conclusion)}</p></section>`:''}<nav class="modal-nav" aria-label="Navegación del examen"><button data-close>Volver a la bitácora</button></nav></div></dialog>`);
+  }
   // Every legacy photograph can be opened at its original size as well.
   document.querySelectorAll('.weekly-content .photo-frame > img').forEach(img => {
     if (img.closest('a')) return;
@@ -40,14 +45,18 @@
     const dialog = document.getElementById(id);
     if (!(dialog instanceof HTMLDialogElement)) return;
     document.querySelectorAll('dialog[open]').forEach(other => {if (other!==dialog) other.close();});
-    const scroll = dialog.querySelector('.dialog-scroll'); if (scroll) scroll.scrollTop=0;
+    const scroll = dialog.querySelector('.dialog-scroll');
     if (!dialog.open) dialog.showModal();
+    if (scroll) scroll.scrollTop=0;
     if (updateHash && id.startsWith('modal-semana')) history.replaceState(null,'',`#semana-${id.replace('modal-semana','')}`);
+    if (updateHash && id==='modal-examen-interciclo') history.replaceState(null,'','#examen-interciclo');
   }
   function closeDialog(dialog) { if (dialog?.open) dialog.close(); }
   document.addEventListener('click', event => {
     const week = event.target.closest('[data-open-week]');
     if (week) {event.preventDefault(); openDialog(`modal-semana${week.dataset.openWeek}`); return;}
+    const examTrigger = event.target.closest('[data-open-exam]');
+    if (examTrigger) {event.preventDefault(); openDialog('modal-examen-interciclo'); return;}
     const profile = event.target.closest('[data-open-profile]');
     if (profile) {openDialog(`modal-${profile.dataset.openProfile}`,false); return;}
     const closer=event.target.closest('[data-close], [data-close-dialog]');
@@ -62,9 +71,9 @@
       else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first?.focus(); }
     });
     dialog.addEventListener('click', event => {if(event.target===dialog){const r=dialog.getBoundingClientRect();if(event.clientX<r.left||event.clientX>r.right||event.clientY<r.top||event.clientY>r.bottom)dialog.close();}});
-    dialog.addEventListener('close',()=>{if(dialog.id==='modal-semana3'||dialog.id==='modal-semana5')dialog.querySelectorAll('video').forEach(video=>video.pause());const n=dialog.id.replace('modal-semana','');if(location.hash===`#semana-${n}`)history.replaceState(null,'','#bitacora');});
+    dialog.addEventListener('close',()=>{dialog.querySelectorAll('video').forEach(video=>video.pause());const hash=dialog.id==='modal-examen-interciclo'?'#examen-interciclo':`#semana-${dialog.id.replace('modal-semana','')}`;if(location.hash===hash)history.replaceState(null,'','#bitacora');});
   });
-  const openHash = () => {const match=location.hash.match(/^#(?:semana-|modal-semana)([1-9])$/);if(match){const id=`modal-semana${match[1]}`;if(document.getElementById(id))openDialog(id,false);else history.replaceState(null,'','#bitacora');}};
+  const openHash = () => {if(location.hash==='#examen-interciclo'){openDialog('modal-examen-interciclo',false);return;}const match=location.hash.match(/^#(?:semana-|modal-semana)([1-9])$/);if(match){const id=`modal-semana${match[1]}`;if(document.getElementById(id))openDialog(id,false);else history.replaceState(null,'','#bitacora');}};
   window.addEventListener('hashchange', openHash); openHash();
   window.abrirModal = openDialog;
   window.cerrarModal = id => closeDialog(document.getElementById(id));

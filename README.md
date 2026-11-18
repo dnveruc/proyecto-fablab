@@ -8,6 +8,7 @@ La bitácora sigue las nueve semanas de la guía del curso. Las evidencias exist
 
 - `index.html`: portada, proyecto, acerca de nosotros y biblioteca.
 - `assets/bitacora-data.js`: contenido, apartados, pendientes y archivos de cada semana.
+- `assets/examen-data.js`: registro del examen interciclo, con el proceso y los archivos de NOMAD TABLE 4.
 - `assets/app.js`: fichas semanales, perfiles y navegación accesible.
 - `assets/theme.css`: estilos editables.
 - `assets/equipo/`: fotografías del equipo.
@@ -23,6 +24,8 @@ La página usa `data-show-pending="false"` en `<body>` para mostrar las semanas 
 Para volver a mostrar los pendientes y las nueve semanas, cambiar el atributo a `data-show-pending="true"`. Los fragmentos `data-editorial-pending` reaparecen; los textos alternativos `data-presentation-only` se ocultan. La navegación se adapta a las semanas visibles.
 
 Los valores convencionales de impresión se presentan como referencias; no sustituyen el registro de los parámetros que se utilizaron en el taller.
+
+El examen interciclo tiene su propia entrada junto a las semanas y un enlace directo `#examen-interciclo`. Sus evidencias se conservan en `assets/bitacora/examen-interciclo/`. Los tres videos se reproducen desde la página; el original del armado también está enlazado en Google Drive. Al cerrar la entrada se detienen los videos.
 
 ## Publicar estilos
 
